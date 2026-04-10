@@ -7,6 +7,9 @@ const App = () => {
     <>
       <BrowserRouter>
         <Navbar />
+        <div className='h-[5000px]'>
+
+        </div>
       </BrowserRouter>
     </>
   )
