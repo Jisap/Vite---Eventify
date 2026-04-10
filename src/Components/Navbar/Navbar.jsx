@@ -1,6 +1,8 @@
 import Logo from "../../Components/Navbar/Logo/Logo";
 import { useEffect, useState } from "react";
 import Navmenu from "./Navmenu/Navmenu";
+import Fancybtn from "../Buttons/Fancybtn";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -38,6 +40,13 @@ const Navbar = () => {
           menuOpen={menuOpen}
           toggleMenu={toggleMenu}
         />
+
+        <Link to="contact">
+          <Fancybtn
+            onFancyClick={handleFancyClick}
+            toggleMenu={toggleMenu}
+          />
+        </Link>
       </div>
     </>
   )
