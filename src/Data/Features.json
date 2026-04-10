@@ -1,0 +1,42 @@
+[
+  {
+    "icon": "/src/assets/Images/Index/Features/features-icon01.svg",
+    "title": "Live Coding Sessions",
+    "description": "Engage with real-time coding demonstrations led by industry experts, allowing participants to learn best practices and modern development techniques."
+  },
+  {
+    "icon": "/src/assets/Images/Index/Features/features-icon02.svg",
+    "title": "Networking Opportunities",
+    "description": "Connect with developers, engineers, and tech enthusiasts from around the world through interactive chat rooms and virtual meetups."
+  },
+  {
+    "icon": "/src/assets/Images/Index/Features/features-icon03.svg",
+    "title": "Expert Speakers",
+    "description": "Learn from experienced professionals and industry leaders who share insights on cutting-edge technologies and trends."
+  },
+  {
+    "icon": "/src/assets/Images/Index/Features/features-icon04.svg",
+    "title": "On-Demand Content",
+    "description": "Access recorded sessions anytime, allowing attendees to revisit key topics and learn at their own pace."
+  },
+  {
+    "icon": "/src/assets/Images/Index/Features/features-icon05.svg",
+    "title": "Workshops & Hands-on Labs",
+    "description": "Participate in interactive workshops and practical labs designed to deepen your technical skills through real-world scenarios and guided exercises."
+  },
+  {
+    "icon": "/src/assets/Images/Index/Features/features-icon06.svg",
+    "title": "AI-Powered Recommendations",
+    "description": "Get personalized session suggestions based on your interests and activity, helping you make the most out of every event experience."
+  },
+  {
+    "icon": "/src/assets/Images/Index/Features/features-icon07.svg",
+    "title": "Advanced Technical Setup",
+    "description": "Our platform is powered by a robust and scalable infrastructure, ensuring high-performance streaming, real-time data processing, and seamless integration with modern development tools."
+  },
+  {
+    "icon": "/src/assets/Images/Index/Features/features-icon08.svg",
+    "title": "User-Friendly Platform",
+    "description": "Deliver seamless virtual experiences with high-quality streaming and interactive tools."
+  }
+]

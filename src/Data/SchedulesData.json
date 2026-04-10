@@ -1,0 +1,146 @@
+[
+  {
+    "id": "creative-entrepreneurship-forum",
+    "day": "day1",
+    "image": "/src/assets/images/SchedulesPage/schedules-image01.jpg",
+    "time": "8 AM - 10 AM",
+    "pplace": "Sterling Conference Hall",
+    "title": "Creative Entrepreneurship Forum"
+  },
+  {
+    "id": "modern-web-architecture",
+    "day": "day1",
+    "image": "/src/assets/images/SchedulesPage/schedules-image02.jpg",
+    "time": "10 AM - 12 PM",
+    "pplace": "Tech Arena A",
+    "title": "Modern Web Architecture"
+  },
+  {
+    "id": "ai-in-development",
+    "day": "day1",
+    "image": "/src/assets/images/SchedulesPage/schedules-image03.jpg",
+    "time": "12 PM - 1 PM",
+    "pplace": "Innovation Room 1",
+    "title": "AI in Software Development"
+  },
+  {
+    "id": "lunch-networking",
+    "day": "day1",
+    "image": "/src/assets/images/SchedulesPage/schedules-image04.jpg",
+    "time": "1 PM - 2 PM",
+    "pplace": "Main Lobby",
+    "title": "Lunch & Networking"
+  },
+  {
+    "id": "cloud-native-apps",
+    "day": "day1",
+    "image": "/src/assets/images/SchedulesPage/schedules-image05.jpg",
+    "time": "2 PM - 4 PM",
+    "pplace": "Cloud Stage",
+    "title": "Building Cloud-Native Applications"
+  },
+  {
+    "id": "frontend-trends-2026",
+    "day": "day1",
+    "image": "/src/assets/images/SchedulesPage/schedules-image06.jpg",
+    "time": "4 PM - 6 PM",
+    "pplace": "UI/UX Lab",
+    "title": "Frontend Trends 2026"
+  },
+  {
+    "id": "cybersecurity-basics",
+    "day": "day2",
+    "image": "/src/assets/images/SchedulesPage/schedules-image01.jpg",
+    "time": "8 AM - 10 AM",
+    "pplace": "Security Hall",
+    "title": "Cybersecurity Essentials"
+  },
+  {
+    "id": "devops-best-practices",
+    "day": "day2",
+    "image": "/src/assets/images/SchedulesPage/schedules-image02.jpg",
+    "time": "10 AM - 12 PM",
+    "pplace": "DevOps Arena",
+    "title": "DevOps Best Practices"
+  },
+  {
+    "id": "microservices-architecture",
+    "day": "day2",
+    "image": "/src/assets/images/SchedulesPage/schedules-image03.jpg",
+    "time": "12 PM - 1 PM",
+    "pplace": "Tech Arena B",
+    "title": "Microservices Architecture Deep Dive"
+  },
+  {
+    "id": "networking-lunch-day2",
+    "day": "day2",
+    "image": "/src/assets/images/SchedulesPage/schedules-image04.jpg",
+    "time": "1 PM - 2 PM",
+    "pplace": "Main Lobby",
+    "title": "Networking Lunch"
+  },
+  {
+    "id": "ai-workshop",
+    "day": "day2",
+    "image": "/src/assets/images/SchedulesPage/schedules-image05.jpg",
+    "time": "2 PM - 4 PM",
+    "pplace": "Workshop Room",
+    "title": "Hands-on AI Workshop"
+  },
+  {
+    "id": "startup-pitch",
+    "day": "day2",
+    "image": "/src/assets/images/SchedulesPage/schedules-image06.jpg",
+    "time": "4 PM - 6 PM",
+    "pplace": "Main Stage",
+    "title": "Startup Pitch Session"
+  },
+  {
+    "id": "future-of-tech",
+    "day": "day3",
+    "image": "/src/assets/images/SchedulesPage/schedules-image01.jpg",
+    "time": "8 AM - 10 AM",
+    "pplace": "Main Auditorium",
+    "title": "The Future of Technology"
+  },
+  {
+    "id": "blockchain-explained",
+    "day": "day3",
+    "image": "/src/assets/images/SchedulesPage/schedules-image02.jpg",
+    "time": "10 AM - 12 PM",
+    "pplace": "Blockchain Hub",
+    "title": "Blockchain Explained"
+  },
+  {
+    "id": "data-science-panel",
+    "day": "day3",
+    "image": "/src/assets/images/SchedulesPage/schedules-image03.jpg",
+    "time": "12 PM - 1 PM",
+    "pplace": "Data Lab",
+    "title": "Data Science Panel Discussion"
+  },
+  {
+    "id": "closing-lunch",
+    "day": "day3",
+    "image": "/src/assets/images/SchedulesPage/schedules-image04.jpg",
+    "time": "1 PM - 2 PM",
+    "pplace": "Main Lobby",
+    "title": "Closing Lunch"
+  },
+  {
+    "id": "career-growth-tech",
+    "day": "day3",
+    "image": "/src/assets/images/SchedulesPage/schedules-image05.jpg",
+    "time": "2 PM - 4 PM",
+    "pplace": "Career Hall",
+    "title": "Career Growth in Tech"
+  },
+  {
+    "id": "closing-ceremony",
+    "day": "day3",
+    "image": "/src/assets/images/SchedulesPage/schedules-image06.jpg",
+    "time": "4 PM - 6 PM",
+    "pplace": "Main Stage",
+    "title": "Closing Ceremony & Awards"
+  }
+]

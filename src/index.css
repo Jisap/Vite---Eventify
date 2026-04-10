@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&family=Unbounded:wght@200..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-prim: #008BFF;
+  --color-prim-dark: #161A2D;
+  --color-secondary: ;
+  --color-secondary-dark: ;
+  --color-gray-light: #f7f7f7;
+
+  --font-unbounded: "Unbounded", sans-serif;
+  --font-sen: "Sen", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Sen", sans-serif;
+}
