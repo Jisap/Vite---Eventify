@@ -52,6 +52,29 @@ const Hero = () => {
             <Link to="/schedules">
               <Mainbtn text="Explore Schedule" />
             </Link>
+
+            <Link
+              to="/"
+              className="flex items-center text-white font-semibold"
+            >
+              <Icon
+                icon="mdi:play"
+                width="24"
+                height="24"
+                className="bg-prim text-white rounded-full me-2"
+              />
+              <span>Watch Video</span>
+            </Link>
+          </div>
+
+          <div className="pt-5 flex items-center gap-5 w-full">
+            <span className="divider-border flex-1 text-sm"></span>
+
+            <h2 className="text-white font-semibold whitespace-nowrap text-sm sm:text-md">
+              Upcoming Speaker Reveal - Dont Miss Out
+            </h2>
+
+            <span className="divider-border flex-1 text-sm"></span>
           </div>
         </div>
       </div>
