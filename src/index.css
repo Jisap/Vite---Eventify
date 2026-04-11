@@ -39,3 +39,7 @@ body {
 .divider-border {
   border-top: 0.5px solid #ffffff1a
 }
+
+.marquee-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
