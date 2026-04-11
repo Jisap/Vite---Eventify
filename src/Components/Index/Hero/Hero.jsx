@@ -2,6 +2,8 @@ import { Icon } from "@iconify/react"
 import author1 from "../../../assets/Images/Index/Hero/author-1.jpg"
 import author2 from "../../../assets/Images/Index/Hero/author-2.jpg"
 import author3 from "../../../assets/Images/Index/Hero/author-3.jpg"
+import Mainbtn from "../../Buttons/Mainbtn"
+import { Link } from "react-router-dom"
 
 
 
@@ -45,6 +47,12 @@ const Hero = () => {
             Experience a powerful gathering of visionaries, creators, and industry experts united
             by one goal-exhanging ideas that spark growth, innovation, and meaningful change.
           </p>
+
+          <div className="flex items-center lg:flex-row flex-col gap-5">
+            <Link to="/schedules">
+              <Mainbtn text="Explore Schedule" />
+            </Link>
+          </div>
         </div>
       </div>
     </>

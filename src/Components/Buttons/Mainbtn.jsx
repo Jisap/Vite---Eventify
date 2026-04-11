@@ -1,9 +1,10 @@
-import styles from "../Buttons/Fancybtn.modules.css"
+import styles from "../Buttons/Fancybtn.module.css"
+import { twMerge } from 'tailwind-merge'
 
-const Mainbtn = () => {
+const Mainbtn = ({ text, className = "" }) => {
   return (
     <>
-      <button className={`${styles.btn} ${className}`}>
+      <button className={twMerge(styles.btn, className)}>
         <span>{text}</span>
       </button>
     </>
