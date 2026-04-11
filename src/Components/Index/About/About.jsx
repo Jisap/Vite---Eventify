@@ -6,9 +6,10 @@ import MarqueeIcon from "../../../assets/Images/Index/About/icon-marquee.svg"
 import aboutIcon1 from "../../../assets/Images/Index/About/about-icon1.svg"
 import aboutIcon2 from "../../../assets/Images/Index/About/about-icon2.svg"
 import { Icon } from "@iconify/react"
-import { Link } from "react-router-dom"
+import { Link, Links } from "react-router-dom"
 import { useState } from "react"
 import Circletext from "../../Circletext/Circletext"
+import Mainbtn from "../../Buttons/Mainbtn"
 
 
 
@@ -150,8 +151,24 @@ const About = () => {
             </li>
           </ul>
 
-          <div>
+          <div className="flex items-center flex-wrap gap-10 mt-8 lg:mt-10">
+            <Link to="/about">
+              <Mainbtn text="Learn More About" />
+            </Link>
 
+            <Link to="/" className="flex items-center gap-2 cursor-pointer">
+              <Icon
+                icon="material-symbols:call"
+                width="24"
+                height="24"
+                className="bg-prim text-white w-10 h-10 p-2"
+              />
+
+              <p className="text-gray-500">
+                <span className="block text-black">Call Now!</span>
+                ++ 123 456 7890
+              </p>
+            </Link>
           </div>
         </div>
       </div>
