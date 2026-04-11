@@ -48,6 +48,112 @@ const About = () => {
 
           <Circletext />
         </div>
+
+        <div className="about-content lg:w-1/2 w-full">
+          <span className="flex items-center bg-prim w-fit rounded-full text-white pe-3 text-sm md:text-md font-medium mb-3">
+            <img src={MarqueeIcon} alt="marquee-icon" className="p-2 w-7 h-7 md:w-8 md:h-8" />
+            About Us
+          </span>
+
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">
+            Uncover our mission & purpose behind this event
+          </h2>
+
+          <p className="text-gray-500 text-sm md:text-xl">
+            Discover the vision that drives this event-a commitment to bringing together innovators, leaders, amd changemakers
+            to share knowledge, spark inspiration, and create meaninful connections.
+          </p>
+
+          <ul className="flex justify-between items-center flex-col md:flex-row bg-gray-light mt-5 rounded-lg gap-3 p-3">
+            <li className="w-full">
+              <button
+                onClick={() => setActive("mission")}
+                className={`
+                  w-full p-3 rounded-lg text-center font-bold cursor-pointer
+                  ${active === "mission" ? "bg-black text-white" : "bg-white"}
+                `}
+              >
+                Our Mission
+              </button>
+            </li>
+
+            <li className="w-full">
+              <button
+                onClick={() => setActive("vision")}
+                className={`
+                  w-full p-3 rounded-lg text-center font-bold cursor-pointer
+                  ${active === "vision" ? "bg-black text-white" : "bg-white"}
+                `}
+              >
+                Our Vision
+              </button>
+            </li>
+
+            <li className="w-full">
+              <button
+                onClick={() => setActive("goal")}
+                className={`
+                  w-full p-3 rounded-lg text-center font-bold cursor-pointer
+                  ${active === "goal" ? "bg-black text-white" : "bg-white"}
+                `}
+              >
+                Our Goal
+              </button>
+            </li>
+          </ul>
+
+          {active === "mission" && (
+            <p className="my-5 text-gray-500 text-sm md:text-xl">
+              Our mission is to build a global community where collaboration fuels innovation,
+              we aim encourage fresh thinking, spark inspiring dialogues, and create a space.
+            </p>
+          )}
+
+          {active === "vision" && (
+            <p className="my-5 text-gray-500 text-sm md:text-xl">
+              Our vision is to create a world where ideas have no boundaries,
+              where creativity thrives, and where everyone feels empowered to share their unique
+              perspective.
+            </p>
+          )}
+
+          {active === "goal" && (
+            <p className="my-5 text-gray-500 text-sm md:text-xl">
+              Our goal is to bring together the brightest minds from diverse backgrounds,
+              foster meaningful connections, and inspire action that creates a lasting impact.
+            </p>
+          )}
+
+          <ul className="flex items-center flex-wrap gap-5 border-b border-gray-100 pb-5 lg:pb-10">
+            <li className="flex items-center gap-3">
+              <img
+                src={aboutIcon1}
+                alt="about-icon1"
+                className="w-10 h-10 bg-prim p-2 rounded-lg cursor-pointer"
+              />
+
+              <h3 className="text-md sm:text-xl font-semibold">
+                Receive real-time event updates.
+              </h3>
+            </li>
+
+            <li className="flex items-center gap-3">
+              <img
+                src={aboutIcon2}
+                alt="about-icon2"
+                className="w-10 h-10 bg-prim p-2 rounded-lg cursor-pointer"
+              />
+
+              <h3 className="text-md sm:text-xl font-semibold">
+                Network with industry leaders.
+              </h3>
+            </li>
+          </ul>
+
+          <div>
+
+          </div>
+        </div>
       </div>
     </>
   )
