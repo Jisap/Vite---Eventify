@@ -1,0 +1,9 @@
+@keyframes rotate360 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.imgrotate {
+  animation: rotate360 12s infinite forwards linear;
+}
