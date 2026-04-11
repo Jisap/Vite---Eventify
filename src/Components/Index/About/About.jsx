@@ -47,7 +47,9 @@ const About = () => {
             </h3>
           </div>
 
-          <Circletext />
+          <div className="flex justify-center md:justify-start mt-10 md:mt-0">
+            <Circletext />
+          </div>
         </div>
 
         <div className="about-content lg:w-1/2 w-full">
