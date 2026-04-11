@@ -1,8 +1,12 @@
-import React from 'react'
+import styles from "../Buttons/Fancybtn.modules.css"
 
 const Mainbtn = () => {
   return (
-    <div>Mainbtn</div>
+    <>
+      <button className={`${styles.btn} ${className}`}>
+        <span>{text}</span>
+      </button>
+    </>
   )
 }
 

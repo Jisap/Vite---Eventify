@@ -30,8 +30,8 @@ const Navbar = () => {
       <div className={`
         w-full z-20 px-[2%] sm:px-[8%] lg:px-[10%] py-4 flex justify-between items-center fixed top-0 left-0 transition-all duration-300
         ${scrolled
-          ? "bg-black shadow-md border-b border-gray-50/20"
-          : "bg-white bg-opacity-20 backdrop-blur-md border-b border-gray-300/20"
+          ? "bg-white/30 backdrop-blur-md  shadow-lg border-b border-gray-700 py-3"
+          : "bg-white/10 backdrop-blur-md border-b border-gray-300/20 py-4"
         }  
       `}>
         <Logo />
@@ -41,12 +41,10 @@ const Navbar = () => {
           toggleMenu={toggleMenu}
         />
 
-        <Link to="contact">
-          <Fancybtn
-            onFancyClick={handleFancyClick}
-            toggleMenu={toggleMenu}
-          />
-        </Link>
+        <Fancybtn
+          onFancyClick={handleFancyClick}
+          toggleMenu={toggleMenu}
+        />
       </div>
     </>
   )
