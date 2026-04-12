@@ -1,5 +1,8 @@
 import MarqueeIcon from "../../../assets/Images/Index/About/icon-marquee.svg"
 import featuresimg from "../../../assets/Images/bg-image.png"
+import featureData from "../../../Data/Features.json"
+import FeatureCard from "../../FeatureCard/FeatureCard"
+import featureArrow from "../../../assets/Images/Index/Features/feature-arrow.svg"
 
 const Features = () => {
   return (
@@ -26,6 +29,24 @@ const Features = () => {
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
             Core features that power our exceptional services
           </h2>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-8 xl:gap-10">
+          {featureData.slice(0, 4).map((item) => {
+            // Resolve the icon URL dynamically for Vite
+            const iconName = item.icon.split('/').pop()
+            const iconUrl = new URL(`../../../assets/Images/Index/Features/${iconName}`, import.meta.url).href
+
+            return (
+              <FeatureCard
+                key={item.id}
+                icon={iconUrl}
+                title={item.title}
+                description={item.description}
+                featurearrow={featureArrow}
+              />
+            )
+          })}
         </div>
       </div>
     </>
