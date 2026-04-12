@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&family=Unbounded:wght@200..900&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 @theme {
   --color-prim: #008BFF;
   --color-prim-dark: #161A2D;
@@ -13,11 +15,14 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Sen", sans-serif;
 }
 
 .hero-bg {
+  position: relative;
   background-image: url(assets/Images/Index/Hero/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center center;

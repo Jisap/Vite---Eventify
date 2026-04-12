@@ -9,7 +9,7 @@ import Marquee from './Index/Marquee/Marquee'
 const Index = () => {
   return (
     <>
-      <div className='h-[5000px]'>
+      <div>
         <Hero />
         <Marquee />
         <About />
