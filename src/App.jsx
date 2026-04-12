@@ -9,6 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 // Si no lo tienes instalado localmente, esto fallará.
 // Para este ejemplo, lo registramos asumiendo que está disponible.
 import { ScrollSmoother } from 'gsap/ScrollSmoother'
+import ScrollToTop from './Components/utils/ScrollToTop'
 
 const App = () => {
 
@@ -52,11 +53,14 @@ const App = () => {
       <Navbar />
       <div id="smooth-wrapper" ref={smootherWrapperRef}>
         <div id="smooth-content" ref={smootherContentRef}>
-          <Routes>
-            <Route path='/' element={<Index />} />
-          </Routes>
+          <div className='min-h-screen overflow-clip'>
+            <Routes>
+              <Route path='/' element={<Index />} />
+            </Routes>
+          </div>
         </div>
       </div>
+      <ScrollToTop />
     </>
   )
 }
