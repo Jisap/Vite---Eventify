@@ -35,7 +35,10 @@ const Features = () => {
           {featureData.slice(0, 4).map((item) => {
             // Resolve the icon URL dynamically for Vite
             const iconName = item.icon.split('/').pop()
-            const iconUrl = new URL(`../../../assets/Images/Index/Features/${iconName}`, import.meta.url).href
+            const iconUrl = new URL(
+              `../../../assets/Images/Index/Features/${iconName}`,  // 1. Que buscas
+              import.meta.url                                       // 2. Desde donde lo buscas
+            ).href                                                  // 3. Cierre y propiedad
 
             return (
               <FeatureCard
