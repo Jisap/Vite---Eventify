@@ -61,3 +61,29 @@ body {
   transition: all 600ms linear !important;
   background-color: transparent;
 }
+
+.benefits-image::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url("/src/assets/Images/Index/Benefits/benefits-images-icon01.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 140px;
+  height: 140px;
+}
+
+.benefits-image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: url("/src/assets/Images/Index/Benefits/benefits-images-icon02.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+}

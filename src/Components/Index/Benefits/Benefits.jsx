@@ -82,6 +82,22 @@ const Benefits = () => {
             </Link>
           </div>
         </div>
+
+        <div className="benefits-image xl:w-1/2 h-auto w-full relative">
+          <div className="glass-effect overflow-hidden rounded-xl relative w-full">
+            <img
+              src={benefitImg1}
+              alt="benefit-img1"
+              className="rounded-xl w-full xl:max-w-112.5"
+            />
+          </div>
+
+          <img
+            src={benefitImg2}
+            alt="benefitimg2"
+            className="rounded-xl mt-5 h-100 w-112.5 absolute right-0 top-50 glass-effect hidden xl:block"
+          />
+        </div>
       </div>
     </>
   )
