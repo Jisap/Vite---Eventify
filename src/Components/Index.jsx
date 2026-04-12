@@ -1,5 +1,6 @@
 
 import About from './Index/About/About'
+import Features from './Index/Features/Features'
 import Hero from './Index/Hero/Hero'
 import Marquee from './Index/Marquee/Marquee'
 
@@ -10,6 +11,7 @@ const Index = () => {
         <Hero />
         <Marquee />
         <About />
+        <Features />
       </div>
     </>
   )
