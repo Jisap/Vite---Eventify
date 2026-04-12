@@ -46,7 +46,41 @@ const Benefits = () => {
                 </p>
               </div>
             </li>
+
+            <li className="flex items-start xl:items-center flex-col xl:flex-row gap-3">
+              <img
+                src={benefitsicon2}
+                alt="benefits-icon2"
+                className="bg-prim hover:bg-black transition-colors duration-300 w-10 h-10 lg:w-15 lg:h-15 p-3 rounded-lg cursor-pointer"
+              />
+
+              <div className="text-md sm:text-xl font-semibold pb-1">
+                <h3>
+                  Advanced Event Technology
+                </h3>
+
+                <p className="text-gray-500 text-sm md:text-lg">
+                  Leverage cutting-edge event technologies, including AI-powered matchmaking, virtual
+                  environments, and seamless streaming, to create immersive and engaging experiences for
+                  your attendees.
+                </p>
+              </div>
+            </li>
           </ul>
+
+          <div className="flex items-center flex-wrap gap-10 mt-8 lg:mt-10">
+            <Link to="/schedules">
+              <Mainbtn text="View Our Schedules" />
+            </Link>
+
+            <Link to="/" className="flex items-center gap-2">
+              <Icon icon="material-symbols:call" width="24" height="24" className="bg-prim text-white w-10 h-10 p-2 rounded-s" />
+              <p className="text-gray-500">
+                <span className="block text-black">Call Now!</span>
+                ++ 00 123 456 789
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
     </>
