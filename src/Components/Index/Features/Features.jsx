@@ -3,6 +3,7 @@ import featuresimg from "../../../assets/Images/bg-image.png"
 import featureData from "../../../Data/Features.json"
 import FeatureCard from "../../FeatureCard/FeatureCard"
 import featureArrow from "../../../assets/Images/Index/Features/feature-arrow.svg"
+import { Icon } from "@iconify/react"
 
 const Features = () => {
   return (
@@ -50,6 +51,26 @@ const Features = () => {
               />
             )
           })}
+        </div>
+
+        <div className="text-white text-center gap-4">
+          <p className="font-medium pb-2">
+            Join our team and help weave innovation, quality, and success together worldwide.
+          </p>
+
+          <div className="flex items-center justify-center gap-3 font-semibold text-md sm:text-xl">
+            <span>4.9/5</span>
+
+            <div className="flex items-center justify-center text-yellow-400">
+              <Icon icon="material-symbols:star-rounded" width="24" height="24" />
+              <Icon icon="material-symbols:star-rounded" width="24" height="24" />
+              <Icon icon="material-symbols:star-rounded" width="24" height="24" />
+              <Icon icon="material-symbols:star-rounded" width="24" height="24" />
+              <Icon icon="material-symbols:star-rounded" width="24" height="24" />
+            </div>
+
+            <span>Our 4300 Reviews</span>
+          </div>
         </div>
       </div>
     </>
