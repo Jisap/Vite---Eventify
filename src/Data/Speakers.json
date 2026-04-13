@@ -1,7 +1,7 @@
 [
   {
     "id": "speaker-01",
-    "image": "/src/assets/images/SpeakersPage/speakers-1.jpg",
+    "image": "/src/assets/Images/Index/Speakers/speaker-1.jpg",
     "name": "Sarah Johnson",
     "role": "Keynote Speaker",
     "company": "TechCorp International",
@@ -26,7 +26,7 @@
   },
   {
     "id": "speaker-02",
-    "image": "/src/assets/images/SpeakersPage/speakers-image02.jpg",
+    "image": "/src/assets/Images/Index/Speakers/speaker-2.jpg",
     "name": "Michael Chen",
     "role": "Panelist",
     "company": "Cloud Solutions Inc.",
@@ -41,12 +41,17 @@
         "name": "LinkedIn",
         "icon": "mdi:linkedin",
         "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "icon": "mdi:instagram",
+        "url": "#"
       }
     ]
   },
   {
     "id": "speaker-03",
-    "image": "/src/assets/images/SpeakersPage/speakers-image03.jpg",
+    "image": "/src/assets/Images/Index/Speakers/speaker-3.jpg",
     "name": "Emily Rodriguez",
     "role": "Workshop Facilitator",
     "company": "Design Innovations",
@@ -61,12 +66,17 @@
         "name": "Instagram",
         "icon": "mdi:instagram",
         "url": "#"
+      },
+      {
+        "name": "Twitter",
+        "icon": "mdi:twitter",
+        "url": "#"
       }
     ]
   },
   {
     "id": "speaker-04",
-    "image": "/src/assets/images/SpeakersPage/speakers-image04.jpg",
+    "image": "/src/assets/Images/Index/Speakers/speaker-4.jpg",
     "name": "David Wilson",
     "role": "Keynote Speaker",
     "company": "CyberSec Experts",
@@ -81,12 +91,17 @@
         "name": "LinkedIn",
         "icon": "mdi:linkedin",
         "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "icon": "mdi:instagram",
+        "url": "#"
       }
     ]
   },
   {
     "id": "speaker-05",
-    "image": "/src/assets/images/SpeakersPage/speakers-image05.jpg",
+    "image": "/src/assets/Images/Index/Speakers/speaker-5.jpg",
     "name": "Jessica Lee",
     "role": "Panelist",
     "company": "Startup Hub Ventures",
@@ -101,12 +116,17 @@
         "name": "Twitter",
         "icon": "mdi:twitter",
         "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "icon": "mdi:instagram",
+        "url": "#"
       }
     ]
   },
   {
     "id": "speaker-06",
-    "image": "/src/assets/images/SpeakersPage/speakers-image06.jpg",
+    "image": "/src/assets/Images/Index/Speakers/speaker-6.jpg",
     "name": "James Brown",
     "role": "Workshop Facilitator",
     "company": "DevOps Academy",
@@ -121,12 +141,17 @@
         "name": "LinkedIn",
         "icon": "mdi:linkedin",
         "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "icon": "mdi:instagram",
+        "url": "#"
       }
     ]
   },
   {
     "id": "speaker-07",
-    "image": "/src/assets/images/SpeakersPage/speakers-image07.jpg",
+    "image": "/src/assets/Images/Index/Speakers/speaker-1.jpg",
     "name": "Lisa Martinez",
     "role": "Keynote Speaker",
     "company": "Data Insights Corp.",
@@ -141,12 +166,17 @@
         "name": "Instagram",
         "icon": "mdi:instagram",
         "url": "#"
+      },
+      {
+        "name": "Twitter",
+        "icon": "mdi:twitter",
+        "url": "#"
       }
     ]
   },
   {
     "id": "speaker-08",
-    "image": "/src/assets/images/SpeakersPage/speakers-image08.jpg",
+    "image": "/src/assets/Images/Index/Speakers/speaker-2.jpg",
     "name": "Robert Taylor",
     "role": "Panelist",
     "company": "Blockchain Innovations Ltd.",
@@ -161,12 +191,17 @@
         "name": "LinkedIn",
         "icon": "mdi:linkedin",
         "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "icon": "mdi:instagram",
+        "url": "#"
       }
     ]
   },
   {
     "id": "speaker-09",
-    "image": "/src/assets/images/SpeakersPage/speakers-image09.jpg",
+    "image": "/src/assets/Images/Index/Speakers/speaker-3.jpg",
     "name": "Maria Garcia",
     "role": "Workshop Facilitator",
     "company": "Frontend Masters",
@@ -181,12 +216,17 @@
         "name": "Instagram",
         "icon": "mdi:instagram",
         "url": "#"
+      },
+      {
+        "name": "LinkedIn",
+        "icon": "mdi:linkedin",
+        "url": "#"
       }
     ]
   },
   {
     "id": "speaker-10",
-    "image": "/src/assets/images/SpeakersPage/speakers-image10.jpg",
+    "image": "/src/assets/Images/Index/Speakers/speaker-4.jpg",
     "name": "William Anderson",
     "role": "Keynote Speaker",
     "company": "Future Tech Institute",
@@ -200,6 +240,11 @@
       {
         "name": "Twitter",
         "icon": "mdi:twitter",
+        "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "icon": "mdi:instagram",
         "url": "#"
       }
     ]

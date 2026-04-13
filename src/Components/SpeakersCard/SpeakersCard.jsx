@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react"
 import SpeakerIcon from "../../assets/Images/Index/Speakers/speaker-icon.svg"
+import { Link } from "react-router-dom"
 
 
 
@@ -19,7 +20,7 @@ const SpeakersCard = ({
       <div className={`speakers-item bg-gray-light rounded-md relative ${className}`}>
         <div className="spealers-image p-3 relative overflow-hidden group h-90 lg:h-135 glass-effect">
           <img
-            srcv={image}
+            src={image}
             alt={name}
             className="w-full h-full rounded-md object-cover"
           />

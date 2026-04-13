@@ -25,7 +25,25 @@ const Speakers = () => {
         </div>
 
         <div className="speakers-wrap grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 xl:gap-10">
+          {speakerData.slice(0, 3).map((item, index) => {
+            // Resolve the image URL dynamically for Vite
+            const imageName = item.image.split('/').pop()
+            const imageUrl = new URL(
+              `../../../assets/Images/Index/Speakers/${imageName}`,
+              import.meta.url
+            ).href
 
+            return (
+              <SpeakersCard
+                key={index}
+                id={item.id}
+                image={imageUrl}
+                name={item.name}
+                role={item.role}
+                socials={item.socials}
+              />
+            )
+          })}
         </div>
       </div>
     </>
