@@ -4,49 +4,44 @@ import Navbar from './Components/Navbar/Navbar'
 import Index from './Components/Index'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-// NOTA: ScrollSmoother es un plugin premium (Club GSAP). 
-// Si no lo tienes instalado localmente, esto fallará.
-// Para este ejemplo, lo registramos asumiendo que está disponible.
 import { ScrollSmoother } from 'gsap/ScrollSmoother'
 import ScrollToTop from './Components/utils/ScrollToTop'
 
 const App = () => {
 
-  const smootherWrapperRef = useRef(null);
-  const smootherContentRef = useRef(null);
-  const smoother = useRef(null);
-  const location = useLocation();
+  const smootherWrapperRef = useRef(null)
+  const smootherContentRef = useRef(null)
+  const smoother = useRef(null)
+  const location = useLocation()
 
   useEffect(() => {
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.registerPlugin(ScrollSmoother);
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
     smoother.current = ScrollSmoother.create({
       wrapper: smootherWrapperRef.current,
       content: smootherContentRef.current,
       smooth: 1.8,
       effects: true,
-    });
+      normalizeScroll: true,   // Evita conflictos con eventos de scroll nativos
+      ignoreMobileResize: true, // Evita recálculos innecesarios en móvil
+    })
 
     return () => {
-      smoother.current && smoother.current.kill();
-      ScrollTrigger.getAll().forEach(t => t.kill());
+      smoother.current && smoother.current.kill()
+      ScrollTrigger.getAll().forEach(t => t.kill())
     }
   }, [])
 
   // Resetear scroll y refrescar triggers al cambiar de página
   useEffect(() => {
     if (smoother.current) {
-      smoother.current.scrollTop(0);
-      ScrollTrigger.refresh();
+      smoother.current.scrollTop(0)
+      ScrollTrigger.refresh()
     } else {
-      window.scrollTo(0, 0);
-      ScrollTrigger.refresh();
+      window.scrollTo(0, 0)
+      ScrollTrigger.refresh()
     }
-  }, [location]);
+  }, [location])
 
   return (
     <>
