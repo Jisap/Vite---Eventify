@@ -45,6 +45,27 @@ const Speakers = () => {
             )
           })}
         </div>
+
+        <div className="flex items-center gap-3 text-center w-full justify-center flex-wrap">
+          <div className="flex items-center">
+            <img
+              src={authore1}
+              alt="authore-img"
+              className="w-8 h-8 rounded-full -me-4 border border-gray-400"
+            />
+
+            <Icon
+              icon="famicons:call-outline"
+              width="10"
+              height="10"
+              className="w-8 p-1 h-8 rounded-full bg-prim text-white "
+            />
+          </div>
+
+          <p className="text-gray-400">
+            Join our speaker and help weave innovation, quality, and success together worldwide.
+          </p>
+        </div>
       </div>
     </>
   )
