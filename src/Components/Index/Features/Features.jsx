@@ -5,6 +5,20 @@ import FeatureCard from "../../FeatureCard/FeatureCard"
 import featureArrow from "../../../assets/Images/Index/Features/feature-arrow.svg"
 import { Icon } from "@iconify/react"
 
+// Importaciones estáticas de iconos de features para evitar saltos (layout shifts)
+const featureIcons = import.meta.glob(
+  '../../../assets/Images/Index/Features/*.{svg,png,jpg,jpeg,webp}',
+  { eager: true }
+)
+
+// Mapa nombre-de-archivo -> URL resuelta por Vite
+const iconMap = Object.fromEntries(
+  Object.entries(featureIcons).map(([path, mod]) => {
+    const fileName = path.split('/').pop()
+    return [fileName, mod.default]
+  })
+)
+
 const Features = () => {
   return (
     <>
@@ -34,12 +48,8 @@ const Features = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-8 xl:gap-10">
           {featureData.slice(0, 4).map((item) => {
-            // Resolve the icon URL dynamically for Vite
             const iconName = item.icon.split('/').pop()
-            const iconUrl = new URL(
-              `../../../assets/Images/Index/Features/${iconName}`,  // 1. Que buscas
-              import.meta.url                                       // 2. Desde donde lo buscas
-            ).href                                                  // 3. Cierre y propiedad
+            const iconUrl = iconMap[iconName]
 
             return (
               <FeatureCard

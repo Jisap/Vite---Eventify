@@ -4,6 +4,21 @@ import authore1 from "../../../assets/Images/Index/Speakers/author-1.jpg"
 import SpeakersCard from "../../SpeakersCard/SpeakersCard"
 import speakerData from "../../../Data/Speakers.json"
 
+// Importaciones estáticas de todas las imágenes posibles de speakers
+// Vite las procesa en build time — sin resolución dinámica en render
+const speakerImages = import.meta.glob(
+  '../../../assets/Images/Index/Speakers/*.{jpg,jpeg,png,webp}',
+  { eager: true }
+)
+
+// Mapa nombre-de-archivo → URL resuelta, disponible antes del primer render
+const imageMap = Object.fromEntries(
+  Object.entries(speakerImages).map(([path, mod]) => {
+    const fileName = path.split('/').pop()
+    return [fileName, mod.default] // mod.default es la URL resuelta por Vite
+  })
+)
+
 const Speakers = () => {
   return (
     <>
@@ -26,12 +41,9 @@ const Speakers = () => {
 
         <div className="speakers-wrap grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 xl:gap-10">
           {speakerData.slice(0, 3).map((item, index) => {
-            // Resolve the image URL dynamically for Vite
             const imageName = item.image.split('/').pop()
-            const imageUrl = new URL(
-              `../../../assets/Images/Index/Speakers/${imageName}`,
-              import.meta.url
-            ).href
+            // Lookup directo al mapa — ya resuelto, sin cálculo en render
+            const imageUrl = imageMap[imageName]
 
             return (
               <SpeakersCard
