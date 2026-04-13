@@ -92,3 +92,32 @@ body {
   width: 100px;
   height: 100px;
 }
+
+.highlights-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-prim);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.highlights-item {
+  border-right: 1px solid #ffffff17;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.highlights-item:last-child {
+  border-right: none;
+}
+
+.highlights-item.active {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+
+}
