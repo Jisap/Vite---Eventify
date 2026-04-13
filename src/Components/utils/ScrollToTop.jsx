@@ -1,15 +1,11 @@
-
 import { Icon } from "@iconify/react";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { gsap } from "gsap";
 import { useEffect, useState } from "react"
-
-
-
-
 
 const ScrollToTop = () => {
 
-  const [visible, setVisible] = useState();
+  const [visible, setVisible] = useState(false);
 
   const toggleVisibility = () => {
     window.scrollY > 300 ? setVisible(true) : setVisible(false);
@@ -18,7 +14,12 @@ const ScrollToTop = () => {
   const scrollToTop = () => {
     const smoother = ScrollSmoother.get();
     if (smoother) {
-      smoother.scrollTo(0, true);
+      // Animar scrollTop del smoother directamente con GSAP
+      gsap.to(smoother, {
+        scrollTop: 0,
+        duration: 1.2,
+        ease: "power3.inOut",
+      });
     } else {
       window.scrollTo({
         top: 0,

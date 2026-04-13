@@ -6,6 +6,7 @@ import Features from './Index/Features/Features'
 import Hero from './Index/Hero/Hero'
 import Highlights from './Index/Highlights/Highlights'
 import Marquee from './Index/Marquee/Marquee'
+import Pricing from './Index/Pricing/Pricing'
 import Speakers from './Index/Speakers/Speakers'
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
         <Events />
         <Speakers />
         <Highlights />
+        <Pricing />
       </div>
     </>
   )
