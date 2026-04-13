@@ -24,41 +24,50 @@ const Highlights = () => {
 
   return (
     <>
-      <div className="relative h-200 overflow-hidden">
+    <div className="relative h-200 overflow-hidden bg-prim-dark">
+      {/* Background Images Layer */}
+      <div className="absolute inset-0 z-0">
         {items.map((item, index) => (
           <div
             key={index}
             className={`
-              absolute inset-0 bg-cover bg-center transition-all duration-700 ease-out transform highlights-effect
-              ${activeIndex === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}
+              absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out transform highlights-effect
+              ${activeIndex === index ? 'opacity-100 scale-100' : 'opacity-0 scale-110'}
             `}
             style={{
               backgroundImage: `url(${item.img})`
             }}
-          >
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 h-full">
-              {items.map((item, index) => (
-                <div
-                  key={index}
-                  onMouseEnter={() => setActiveIndex(index)}
-                  className={`
-                    highlights-item h-full flex flex-col justify-end p-5 transition-all duration-300
-                    ${activeIndex === index ? 'active' : ''}  
-                  `}
-                >
-                  <h4 className="text-xl sm:text-2xl font-semibold text-white">
-                    {item.title}
-                  </h4>
+          />
+        ))}
+      </div>
 
-                  <span className="text-gray-200 text-md">
-                    {item.desc}
-                  </span>
-                </div>
-              ))}
+      {/* Interactive Grid Layer */}
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 h-full">
+        {items.map((item, index) => (
+          <div
+            key={index}
+            onMouseEnter={() => setActiveIndex(index)}
+            className={`
+              highlights-item h-full flex flex-col justify-end p-10 cursor-pointer transition-all duration-500
+              ${activeIndex === index ? 'active' : ''}
+            `}
+          >
+            <div className="space-y-4">
+              <h4 className="text-2xl sm:text-4xl font-bold text-white leading-tight">
+                {item.title}
+              </h4>
+
+              <p className={`
+                text-gray-200 text-lg transition-all duration-500
+                ${activeIndex === index ? 'opacity-100 max-h-40' : 'opacity-0 max-h-0 lg:opacity-40 lg:max-h-40'}
+              `}>
+                {item.desc}
+              </p>
             </div>
           </div>
         ))}
       </div>
+    </div>
     </>
   )
 }
