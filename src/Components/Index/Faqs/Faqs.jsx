@@ -15,7 +15,7 @@ const Faqs = () => {
     <section className="faqs px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] bg-white overflow-hidden">
       <div className="flex flex-col lg:flex-row gap-16 items-start">
         {/* Left Side: Interactive Image & Info Card */}
-        <div className="faq-img lg:w-[45%] w-full relative group">
+        <div className="faqs-image lg:w-[45%] w-full relative group">
           <div className="relative rounded-[2rem] overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
             <img
               src={faqimg}
