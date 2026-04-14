@@ -130,8 +130,16 @@ const Pricing = () => {
           ))}
         </div>
 
-        <ul>
+        <ul className="flex justify-center items-center flex-wrap gap-8">
+          <li className="flex items-center gap-1">
+            <img src={pricingicon4} alt="pricing-icon" />
+            <span>Get 30 day free trial</span>
+          </li>
 
+          <li className="flex items-center gap-1">
+            <img src={pricingicon5} alt="pricing-icon" />
+            <span>You can cancel anytime</span>
+          </li>
         </ul>
       </div>
     </>
