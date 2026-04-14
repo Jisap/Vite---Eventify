@@ -1,5 +1,6 @@
 
 import About from './Index/About/About'
+import Banner from './Index/Banner/Banner'
 import Benefits from './Index/Benefits/Benefits'
 import Events from './Index/Events/Events'
 import Features from './Index/Features/Features'
@@ -22,6 +23,7 @@ const Index = () => {
         <Speakers />
         <Highlights />
         <Pricing />
+        <Banner />
       </div>
     </>
   )
