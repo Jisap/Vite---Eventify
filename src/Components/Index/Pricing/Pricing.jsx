@@ -66,12 +66,12 @@ const Pricing = () => {
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-prim/10 rounded-full blur-[100px] -z-1" />
 
       <div className="pricing-content text-center mx-auto max-w-3xl mb-16 relative">
-        <span className="inline-flex items-center bg-prim/10 px-4 py-2 rounded-full text-prim text-sm font-semibold mb-6 border border-prim/20">
+        <span className="flex items-center bg-prim w-fit mx-auto rounded-full text-white pe-3 text-sm md:text-md font-medium mb-3">
           <img src={MarqueeIcon}
             alt="marquee-icon"
-            className="w-5 h-5 mr-2 brightness-0 invert-[0.3] sepia-[1] saturate-[10] hue-rotate-[190deg]"
+            className="w-7 h-7 md:w-8 md:h-8 p-2"
           />
-          Pricing Plans
+          Pricing Plan
         </span>
 
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black tracking-tight">
@@ -86,9 +86,11 @@ const Pricing = () => {
         {pricingPlans.map((plan) => (
           <div
             key={plan.id}
-            className={`pricing-item relative group flex flex-col rounded-3xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border ${
-              plan.popular ? "bg-prim-dark border-prim-dark scale-105 z-10" : "bg-gray-light border-gray-100 hover:border-prim/30"
-            }`}
+            className={`
+              pricing-item relative group flex flex-col rounded-3xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border ${plan.popular
+                ? "bg-prim-dark border-prim-dark scale-105 z-10"
+                : "bg-gray-light border-gray-100 hover:border-prim/30"
+              }`}
           >
             {plan.popular && (
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-prim text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
@@ -98,17 +100,31 @@ const Pricing = () => {
 
             <div className="p-8 pb-4">
               <div className="flex items-start justify-between mb-8">
-                <div className={`p-3 rounded-2xl ${plan.popular ? "bg-white/10" : "bg-prim/10 border border-prim/10 shadow-sm"}`}>
+                <div className={`
+                  p-3 rounded-2xl 
+                  ${plan.popular
+                    ? "bg-white/10"
+                    : "bg-prim/10 border border-prim/10 shadow-sm"
+                  }`}
+                >
                   <img
                     src={plan.icon}
                     alt={plan.title}
-                    className={`w-10 h-10 ${!plan.popular ? "brightness-0 invert-[0.4] sepia-[1] saturate-[20] hue-rotate-[190deg]" : ""}`}
+                    className={
+                      `w-10 h-10 
+                      ${!plan.popular
+                        ? "brightness-0 invert-[0.4] sepia-[1] saturate-[20] hue-rotate-[190deg]"
+                        : ""
+                      }`
+                    }
                   />
                 </div>
+
                 <div className="text-right">
                   <div className={`text-sm font-medium ${plan.popular ? "text-white/60" : "text-gray-500"}`}>
                     {plan.subtitle}
                   </div>
+
                   <h4 className={`text-xl font-bold ${plan.popular ? "text-white" : "text-black"}`}>
                     {plan.title}
                   </h4>
@@ -130,6 +146,7 @@ const Pricing = () => {
                 <h5 className={`font-semibold mb-1 ${plan.popular ? "text-white" : "text-black"}`}>
                   Key Features
                 </h5>
+
                 <p className={`text-xs ${plan.popular ? "text-white/40" : "text-gray-400"}`}>
                   Everything you need to succeed
                 </p>
@@ -138,14 +155,13 @@ const Pricing = () => {
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3 group/item">
-                    <div className={`mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center transition-colors ${
-                      plan.popular ? "bg-prim text-white" : "bg-prim/10 text-prim"
-                    }`}>
+                    <div className={`mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center transition-colors ${plan.popular ? "bg-prim text-white" : "bg-prim/10 text-prim"
+                      }`}>
                       <Icon icon="lucide:check" width="12" height="12" />
                     </div>
-                    <span className={`text-sm leading-tight transition-colors ${
-                      plan.popular ? "text-white/80 group-hover/item:text-white" : "text-gray-600 group-hover/item:text-black"
-                    }`}>
+
+                    <span className={`text-sm leading-tight transition-colors ${plan.popular ? "text-white/80 group-hover/item:text-white" : "text-gray-600 group-hover/item:text-black"
+                      }`}>
                       {feature}
                     </span>
                   </li>
@@ -155,11 +171,10 @@ const Pricing = () => {
               <Link to="/pricingPlan">
                 <Mainbtn
                   text={plan.buttonText}
-                  className={`w-full py-4 text-sm font-bold transition-all ${
-                    plan.popular
+                  className={`w-full py-4 text-sm font-bold transition-all ${plan.popular
                       ? "bg-prim hover:bg-white hover:text-prim border-prim shadow-prim/20 shadow-lg"
                       : "bg-black hover:bg-prim text-white"
-                  }`}
+                    }`}
                 />
               </Link>
             </div>
@@ -172,6 +187,7 @@ const Pricing = () => {
           <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-500 border border-green-100 shadow-sm">
             <Icon icon="solar:shield-check-bold" width="20" height="20" />
           </div>
+
           <div className="text-left">
             <div className="text-sm font-bold text-black">Secure Checkout</div>
             <div className="text-xs text-gray-400 text-nowrap">Protected by 256-bit SSL</div>
@@ -182,6 +198,7 @@ const Pricing = () => {
           <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 border border-blue-100 shadow-sm">
             <Icon icon="solar:star-fall-bold" width="20" height="20" />
           </div>
+
           <div className="text-left">
             <div className="text-sm font-bold text-black">Money Back Guarantee</div>
             <div className="text-xs text-gray-400 text-nowrap">7-day no questions asked</div>
@@ -192,4 +209,4 @@ const Pricing = () => {
   )
 }
 
-export default Pricing
+export default Pricing
