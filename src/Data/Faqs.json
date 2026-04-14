@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "How does the complete event registration process actually work?",
+    "answer": "The registration process is designed to be simple and straightforward. First, create an account on our platform. Then, browse through the available events and select the one you'd like to attend. After selecting, provide the required information and complete the payment process to receive your digital ticket instantly."
+  },
+  {
+    "id": 2,
+    "question": "Where is the main event venue located precisely?",
+    "answer": "The event will take place at the Tech Innovators Center, located at 123 Future Avenue, Silicon Valley. It's easily accessible by public transport, and there is ample parking available for those driving. Detailed directions will be sent to your registered email one week before the event."
+  },
+  {
+    "id": 3,
+    "question": "Can attendees freely switch between sessions and tracks?",
+    "answer": "Yes! We believe in a self-directed learning experience. Once you're inside, you can attend any session across all tracks, provided the room hasn't reached its safety capacity. We recommend arriving 5-10 minutes early for highly popular sessions."
+  },
+  {
+    "id": 4,
+    "question": "Does the event provide virtual participation options online?",
+    "answer": "Absolutely. For those who cannot travel, we offer a Digital Pass that includes live streaming of all keynote sessions, access to virtual breakout rooms, and the ability to participate in Q&A sessions via our mobile app."
+  },
+  {
+    "id": 5,
+    "question": "What is the event refund and cancellation policy?",
+    "answer": "We offer a full refund if you cancel at least 30 days before the event. Cancellations made between 30 and 7 days prior are eligible for a 50% refund. Unfortunately, we cannot offer refunds for cancellations made within 7 days of the event, but tickets are fully transferable to another person."
+  }
+]
