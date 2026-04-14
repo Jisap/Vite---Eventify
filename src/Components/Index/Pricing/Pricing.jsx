@@ -5,145 +5,191 @@ import pricingicon2 from "../../../assets/Images/Index/Pricing/pricing-icon02.sv
 import pricingicon3 from "../../../assets/Images/Index/Pricing/pricing-icon03.svg"
 import pricingicon4 from "../../../assets/Images/Index/Pricing/pricing-icon04.svg"
 import pricingicon5 from "../../../assets/Images/Index/Pricing/pricing-icon05.svg"
-import pricingicon6 from "../../../assets/Images/Index/Pricing/pricing-icon06.svg"
 import Mainbtn from "../../Buttons/Mainbtn"
 import { Link } from "react-router-dom"
 
-const features = [
-  "Entry to all standard sessions",
-  "Reserved seating in select session",
-  "Meet & greet with speakers",
-  "Premium networking lounge"
-]
-
 const pricingPlans = [
   {
+    id: 1,
     icon: pricingicon1,
-    title: "Basic Package",
-    subtitle: "Perfect fot first-time attend",
-    price: "49$",
-    buttonText: "Get Basic pass"
+    title: "Basic Pass",
+    subtitle: "Perfect for students & hobbyists",
+    price: "$49",
+    buttonText: "Get Basic pass",
+    features: [
+      "Entry to all standard sessions",
+      "Digital certificate of attendance",
+      "Access to community slack group",
+      "Basic networking opportunities"
+    ],
+    popular: false
   },
   {
+    id: 2,
     icon: pricingicon2,
     title: "Standard Pass",
-    subtitle: "Perfect for first-time attend",
-    price: "60$",
-    buttonText: "Get Standard pass"
+    subtitle: "Ideal for professionals",
+    price: "$99",
+    buttonText: "Get Standard pass",
+    features: [
+      "All Basic Pass features",
+      "Lunch & refreshments included",
+      "Q&A sessions with speakers",
+      "Physical certificate & ID badge",
+      "Priority workshop registration"
+    ],
+    popular: true
   },
   {
+    id: 3,
     icon: pricingicon3,
     title: "Premium Pass",
-    subtitle: "For those who want more",
-    price: "80$",
-    buttonText: "Get Premium pass"
+    subtitle: "The ultimate experience",
+    price: "$199",
+    buttonText: "Get Premium pass",
+    features: [
+      "All Standard Pass features",
+      "VIP networking dinner event",
+      "Exclusive swag kit & gear",
+      "1-on-1 speaker brief sessions",
+      "Reserved front-row seating"
+    ],
+    popular: false
   },
 ]
-
 
 const Pricing = () => {
   return (
-    <>
-      <div className="pricing px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] relative space-y-10 lg:space-y-20">
-        <div className="pricing-content text-center mx-auto max-w-full lg:max-w-180 z-1 relative">
-          <span className="flex items-center bg-prim w-fit mx-auto rounded-full text-white pe-3 text-sm md:text-md font-medium mb-3">
-            <img src={MarqueeIcon}
-              alt="marquee-icon"
-              className="w-7 h-7 md:w-8 md:h-8 p-2"
-            />
-            Pricing Plan
-          </span>
+    <section className="pricing px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] relative overflow-hidden bg-white">
+      {/* Background Decorative Elements */}
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-prim/5 rounded-full blur-[120px] -z-1" />
+      <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-prim/10 rounded-full blur-[100px] -z-1" />
 
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 text-black">
-            Discover our flexible pricing plans for attendees
-          </h2>
-        </div>
+      <div className="pricing-content text-center mx-auto max-w-3xl mb-16 relative">
+        <span className="inline-flex items-center bg-prim/10 px-4 py-2 rounded-full text-prim text-sm font-semibold mb-6 border border-prim/20">
+          <img src={MarqueeIcon}
+            alt="marquee-icon"
+            className="w-5 h-5 mr-2 brightness-0 invert-[0.3] sepia-[1] saturate-[10] hue-rotate-[190deg]"
+          />
+          Pricing Plans
+        </span>
 
-        <div className="pricing-wrap grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
-          {pricingPlans.map((plan) => (
-            <div key={plan.id} className="pricing-item bg-gray-light rounded-md">
-              <div className="p-5 sm:p-10 pb-5">
-                <div className="pricing-top flex items-center gap-3">
-                  <div className="bg-prim hover:bg-black transition-colors duration-300 cursor-pointer w-fit p-2 rounded-sm">
-                    <img
-                      src={plan.icon}
-                      alt="pricing-icon"
-                      className="w-10 h-10"
-                    />
-                  </div>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-black tracking-tight">
+          Flexible options for <span className="text-prim">every attendee</span>
+        </h2>
+        <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+          Choose the plan that fits your needs. Join thousands of developers and designers for the event of the year.
+        </p>
+      </div>
 
-                  <div>
-                    <h4 className="text-xl font-semibold">
-                      {plan.title}
-                    </h4>
+      <div className="pricing-wrap grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mb-20">
+        {pricingPlans.map((plan) => (
+          <div
+            key={plan.id}
+            className={`pricing-item relative group flex flex-col rounded-3xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border ${
+              plan.popular ? "bg-prim-dark border-prim-dark scale-105 z-10" : "bg-gray-light border-gray-100 hover:border-prim/30"
+            }`}
+          >
+            {plan.popular && (
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-prim text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+                Most Popular
+              </div>
+            )}
 
-                    <span className="text-gray-500">
-                      {plan.subtitle}
-                    </span>
-                  </div>
+            <div className="p-8 pb-4">
+              <div className="flex items-start justify-between mb-8">
+                <div className={`p-3 rounded-2xl ${plan.popular ? "bg-white/10" : "bg-prim/10 border border-prim/10 shadow-sm"}`}>
+                  <img
+                    src={plan.icon}
+                    alt={plan.title}
+                    className={`w-10 h-10 ${!plan.popular ? "brightness-0 invert-[0.4] sepia-[1] saturate-[20] hue-rotate-[190deg]" : ""}`}
+                  />
                 </div>
+                <div className="text-right">
+                  <div className={`text-sm font-medium ${plan.popular ? "text-white/60" : "text-gray-500"}`}>
+                    {plan.subtitle}
+                  </div>
+                  <h4 className={`text-xl font-bold ${plan.popular ? "text-white" : "text-black"}`}>
+                    {plan.title}
+                  </h4>
+                </div>
+              </div>
 
-                <p className="text-gray-500 pt-10">
-                  <span className="text-4xl font-bold font-unbounded text-black">
-                    {plan.price}
-                  </span>
-                  One-Time
+              <div className="flex items-baseline gap-1 mb-6">
+                <span className={`text-5xl font-bold font-unbounded ${plan.popular ? "text-white" : "text-black"}`}>
+                  {plan.price}
+                </span>
+                <span className={`text-sm ${plan.popular ? "text-white/60" : "text-gray-500"}`}>
+                  / All inclusive
+                </span>
+              </div>
+            </div>
+
+            <div className={`flex-grow p-4 m-4 rounded-2xl ${plan.popular ? "bg-white/5 backdrop-blur-sm" : "bg-white"}`}>
+              <div className="mb-6">
+                <h5 className={`font-semibold mb-1 ${plan.popular ? "text-white" : "text-black"}`}>
+                  Key Features
+                </h5>
+                <p className={`text-xs ${plan.popular ? "text-white/40" : "text-gray-400"}`}>
+                  Everything you need to succeed
                 </p>
               </div>
 
-              <div className="pricing-content bg-white p-4 sm:`-8 m-4 rounded-md">
-                <div className="pricing-title pb-10 border-b border-gray-100">
+              <ul className="space-y-4 mb-8">
+                {plan.features.map((feature, index) => (
+                  <li key={index} className="flex items-start gap-3 group/item">
+                    <div className={`mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center transition-colors ${
+                      plan.popular ? "bg-prim text-white" : "bg-prim/10 text-prim"
+                    }`}>
+                      <Icon icon="lucide:check" width="12" height="12" />
+                    </div>
+                    <span className={`text-sm leading-tight transition-colors ${
+                      plan.popular ? "text-white/80 group-hover/item:text-white" : "text-gray-600 group-hover/item:text-black"
+                    }`}>
+                      {feature}
+                    </span>
+                  </li>
+                ))}
+              </ul>
 
-
-                  <h4 className="text-xl font-semibold">
-                    What's included:
-                  </h4>
-
-                  <span className="text-gray-500">
-                    It could relate to a subscription
-                  </span>
-                </div>
-
-                <ul className="sapce-y-5 my-7">
-                  {features.map((feature, index) => (
-                    <li key={feature} className="flex items-center gap-2">
-                      <Icon
-                        icon="material-symbols:check-rounded"
-                        width="18"
-                        height="18"
-                        className="bg-prim text-white rounded-full"
-                      />
-
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Link to="/pricingPlan">
-                  <Mainbtn
-                    text={plan.buttonText}
-                    className="w-full rounded-full!"
-                  />
-                </Link>
-              </div>
+              <Link to="/pricingPlan">
+                <Mainbtn
+                  text={plan.buttonText}
+                  className={`w-full py-4 text-sm font-bold transition-all ${
+                    plan.popular
+                      ? "bg-prim hover:bg-white hover:text-prim border-prim shadow-prim/20 shadow-lg"
+                      : "bg-black hover:bg-prim text-white"
+                  }`}
+                />
+              </Link>
             </div>
-          ))}
+          </div>
+        ))}
+      </div>
+
+      <div className="flex justify-center items-center flex-wrap gap-12 pt-10 border-t border-gray-100">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-500 border border-green-100 shadow-sm">
+            <Icon icon="solar:shield-check-bold" width="20" height="20" />
+          </div>
+          <div className="text-left">
+            <div className="text-sm font-bold text-black">Secure Checkout</div>
+            <div className="text-xs text-gray-400 text-nowrap">Protected by 256-bit SSL</div>
+          </div>
         </div>
 
-        <ul className="flex justify-center items-center flex-wrap gap-8">
-          <li className="flex items-center gap-1">
-            <img src={pricingicon4} alt="pricing-icon" />
-            <span>Get 30 day free trial</span>
-          </li>
-
-          <li className="flex items-center gap-1">
-            <img src={pricingicon5} alt="pricing-icon" />
-            <span>You can cancel anytime</span>
-          </li>
-        </ul>
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 border border-blue-100 shadow-sm">
+            <Icon icon="solar:star-fall-bold" width="20" height="20" />
+          </div>
+          <div className="text-left">
+            <div className="text-sm font-bold text-black">Money Back Guarantee</div>
+            <div className="text-xs text-gray-400 text-nowrap">7-day no questions asked</div>
+          </div>
+        </div>
       </div>
-    </>
+    </section>
   )
 }
 
-export default Pricing
+export default Pricing
