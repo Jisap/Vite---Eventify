@@ -16,11 +16,11 @@ const Faqs = () => {
       <div className="flex flex-col lg:flex-row gap-16 items-start">
         {/* Left Side: Interactive Image & Info Card */}
         <div className="faqs-image lg:w-[45%] w-full relative group">
-          <div className="relative rounded-[2rem] overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+          <div className="relative rounded-4xl overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
             <img
               src={faqimg}
               alt="faq-image"
-              className="w-full aspect-[4/5] lg:aspect-auto lg:h-[600px] object-cover"
+              className="w-full aspect-4/5 lg:aspect-auto lg:h-[600px] object-cover"
             />
             {/* Overlay Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
@@ -37,7 +37,7 @@ const Faqs = () => {
               href="tel:+00123456789"
               className="group/contact flex items-center gap-4 transition-all"
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center text-prim transition-transform group-hover/contact:scale-110 group-hover/contact:bg-black group-hover/contact:text-white">
+              <div className="shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center text-prim transition-transform group-hover/contact:scale-110 group-hover/contact:bg-black group-hover/contact:text-white">
                 <Icon icon="solar:phone-calling-bold" width="24" height="24" />
               </div>
 
@@ -61,7 +61,7 @@ const Faqs = () => {
 
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-10 text-black leading-tight">
             Your questions <br />
-            <span className="text-prim italic">clearly</span> answered
+            <span className="text-prim">clearly</span> answered
           </h2>
 
           <div className="accordion-wrap space-y-4">
