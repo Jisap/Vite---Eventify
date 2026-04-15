@@ -2,6 +2,7 @@
 import About from './Index/About/About'
 import Banner from './Index/Banner/Banner'
 import Benefits from './Index/Benefits/Benefits'
+import Blogs from './Index/Blogs/Blogs'
 import Events from './Index/Events/Events'
 import Faqs from './Index/Faqs/Faqs'
 import Features from './Index/Features/Features'
@@ -28,6 +29,7 @@ const Index = () => {
         <Banner />
         <Faqs />
         <Testimonials />
+        <Blogs />
       </div>
     </>
   )
