@@ -182,6 +182,7 @@ const Testimonials = () => {
             modules={[Autoplay]}
             spaceBetween={40}
             slidesPerView={5}
+            loop={true}
             autoplay={{
               delay: 0,
               disableOnInteraction: false
@@ -192,7 +193,7 @@ const Testimonials = () => {
               640: { slidesPerView: 3 },
               1024: { slidesPerView: 5 }
             }}
-            className="mt-10 w-full"
+            className="mt-10 w-full marquee-swiper"
           >
             {brands.map((brand) => (
               <SwiperSlide key={brand.id}>
