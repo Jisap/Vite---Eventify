@@ -12,6 +12,7 @@ import Marquee from './Index/Marquee/Marquee'
 import Pricing from './Index/Pricing/Pricing'
 import Speakers from './Index/Speakers/Speakers'
 import Testimonials from './Index/Testimonials/Testimonials'
+import bannerimg from "../assets/Images/Index/Banner/intro-video-image.jpg"
 
 const Index = () => {
   return (
@@ -26,7 +27,16 @@ const Index = () => {
         <Speakers />
         <Highlights />
         <Pricing />
-        <Banner />
+        <Banner
+          image={bannerimg}
+          title={
+            <>
+              Relive the moments that <span className="text-prim">defined the future</span>
+            </>
+          }
+          subtitle="Step inside the most influential tech gathering of the continent."
+          onPlay={() => console.log("Play video")}
+        />
         <Faqs />
         <Testimonials />
         <Blogs />
