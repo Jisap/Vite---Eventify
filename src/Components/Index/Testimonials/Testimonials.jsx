@@ -167,8 +167,45 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="">
+        <div className="brands text-center text-white font-medium w-full">
+          <div className="flex items-center gap-5 w-full">
+            <span className="divider-border flex-2 text-sm"></span>
 
+            <h2 className="text-white font-semibold whitespace-nowrap text-sm sm:text-md">
+              Upcoming Speaker Reveal - Dont't Miss Out
+            </h2>
+
+            <span className="divider-border flex-2 text-sm"></span>
+          </div>
+
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={40}
+            slidesPerView={5}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false
+            }}
+            speed={4000}
+            breakpoints={{
+              0: { slidesPerView: 2 },
+              640: { slidesPerView: 3 },
+              1024: { slidesPerView: 5 }
+            }}
+            className="mt-10 w-full"
+          >
+            {brands.map((brand) => (
+              <SwiperSlide key={brand.id}>
+                <div className="brand-image flex justify-center items-center w-full ">
+                  <img
+                    src={brand.imag}
+                    alt={brand.id}
+                    className="opacity-70 hover:opacity-100 cursor-pointer transition-all duration-300"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </>
