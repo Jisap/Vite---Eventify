@@ -1,7 +1,7 @@
 import { Autoplay } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
-import MarqueeIcon from "../../../assets/Images/Index/Marquee/icon-marquee.svg"
+
 
 
 
@@ -44,8 +44,8 @@ const Marquee = () => {
           {items.map((text, index) => (
             <SwiperSlide key={index} className="w-auto!">
               <div className="flex items-center">
-                <img
-                  src={MarqueeIcon}
+                 <img
+                  src="/Images/Index/Marquee/icon-marquee.svg"
                   alt="marquee-icon"
                   className="me-7"
                 />

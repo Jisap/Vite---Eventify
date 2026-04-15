@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react"
-import SpeakerIcon from "../../assets/Images/Index/Speakers/speaker-icon.svg"
+
 import { Link } from "react-router-dom"
 
 
@@ -52,7 +52,7 @@ const SpeakersCard = ({
 
           <div className="w-12 h-12 bg-prim p-3 rounded-full hover:bg-black">
             <img
-              src={SpeakerIcon}
+              src="/Images/Index/Speakers/speaker-icon.svg"
               alt="speaker-icon"
             />
           </div>

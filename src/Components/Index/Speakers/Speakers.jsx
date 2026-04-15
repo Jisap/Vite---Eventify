@@ -1,23 +1,6 @@
 import { Icon } from "@iconify/react"
-import MarqueeIcon from "../../../assets/Images/Index/About/icon-marquee.svg"
-import authore1 from "../../../assets/Images/Index/Speakers/author-1.jpg"
 import SpeakersCard from "../../SpeakersCard/SpeakersCard"
 import speakerData from "../../../Data/Speakers.json"
-
-// Importaciones estáticas de todas las imágenes posibles de speakers
-// Vite las procesa en build time — sin resolución dinámica en render
-const speakerImages = import.meta.glob(
-  '../../../assets/Images/Index/Speakers/*.{jpg,jpeg,png,webp}',
-  { eager: true }
-)
-
-// Mapa nombre-de-archivo → URL resuelta, disponible antes del primer render
-const imageMap = Object.fromEntries(
-  Object.entries(speakerImages).map(([path, mod]) => {
-    const fileName = path.split('/').pop()
-    return [fileName, mod.default] // mod.default es la URL resuelta por Vite
-  })
-)
 
 const Speakers = () => {
   return (
@@ -27,7 +10,7 @@ const Speakers = () => {
         <div className="features-content text-center mx-auto max-w-full lg:max-w-180 z-1 relative">
           <span className="flex items-center bg-prim w-fit mx-auto rounded-full text-white pe-3 text-sm md:text-md font-medium mb-3">
             <img
-              src={MarqueeIcon}
+              src="/Images/Index/About/icon-marquee.svg"
               alt="marquee-icon"
               className="w-7 h-7 md:w-8 md:h-8 p-2"
             />
@@ -42,8 +25,7 @@ const Speakers = () => {
         <div className="speakers-wrap grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 xl:gap-10">
           {speakerData.slice(0, 3).map((item, index) => {
             const imageName = item.image.split('/').pop()
-            // Lookup directo al mapa — ya resuelto, sin cálculo en render
-            const imageUrl = imageMap[imageName]
+            const imageUrl = `/Images/Index/Speakers/${imageName}`
 
             return (
               <SpeakersCard
@@ -61,7 +43,7 @@ const Speakers = () => {
         <div className="flex items-center gap-3 text-center w-full justify-center flex-wrap">
           <div className="flex items-center">
             <img
-              src={authore1}
+              src="/Images/Index/Speakers/author-1.jpg"
               alt="authore-img"
               className="w-8 h-8 rounded-full -me-4 border border-gray-400"
             />

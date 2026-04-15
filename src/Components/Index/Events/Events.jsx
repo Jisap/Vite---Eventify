@@ -1,37 +1,30 @@
-import MarqueeIcon from "../../../assets/Images/Index/About/icon-marquee.svg"
-import eventsBg from "../../../assets/Images/bg-image.png"
-import eventimg1 from "../../../assets/Images/Index/Events/event-schedule-item-1.jpg"
-import eventimg2 from "../../../assets/Images/Index/Events/event-schedule-item-2.jpg"
-import eventimg3 from "../../../assets/Images/Index/Events/event-schedule-item-3.jpg"
-import eventimg4 from "../../../assets/Images/Index/Events/event-schedule-item-4.jpg"
-import eventicon from "../../../assets/Images/Index/Events/eventicon.svg"
 import { useState } from "react"
 
 const events = {
   day1: [
     {
-      img: eventimg1,
+      img: "/Images/Index/Events/event-schedule-item-1.jpg",
       time: "9:00 AM - 5:30 PM",
       date: "22 March 2026",
       title: "Digital Marketing Masterclass",
       desc: "Master the latest digital marketing strategies and tools to boost your business growth. Perfect for entrepreneurs, marketers, and business owners."
     },
     {
-      img: eventimg2,
+      img: "/Images/Index/Events/event-schedule-item-2.jpg",
       time: "10:00 AM - 4:00 PM",
       date: "22 March 2026",
       title: "Professional Skills Development Workshop",
       desc: "Unlock your potential and elevate your career with this hands-on workshop focused on communication, leadership, and productivity skills."
     },
     {
-      img: eventimg3,
+      img: "/Images/Index/Events/event-schedule-item-3.jpg",
       time: "11:30 AM - 1:30 PM",
       date: "22 March 2026",
       title: "Startup Pitch & Networking Session",
       desc: "Connect with innovators and investors while discovering exciting startup ideas. A great opportunity to expand your professional network."
     },
     {
-      img: eventimg4,
+      img: "/Images/Index/Events/event-schedule-item-4.jpg",
       time: "3:00 PM - 6:00 PM",
       date: "22 March 2026",
       title: "Introduction to AI for Business",
@@ -41,28 +34,28 @@ const events = {
 
   day2: [
     {
-      img: eventimg1,
+      img: "/Images/Index/Events/event-schedule-item-1.jpg",
       time: "9:30 AM - 12:30 PM",
       date: "23 March 2026",
       title: "Creative Design Thinking Workshop",
       desc: "Learn how to approach problems creatively using design thinking methodologies. Ideal for designers, developers, and product teams."
     },
     {
-      img: eventimg2,
+      img: "/Images/Index/Events/event-schedule-item-2.jpg",
       time: "11:00 AM - 2:00 PM",
       date: "23 March 2026",
       title: "Social Media Growth Strategies",
       desc: "Discover proven techniques to grow your audience and increase engagement across major social media platforms."
     },
     {
-      img: eventimg3,
+      img: "/Images/Index/Events/event-schedule-item-3.jpg",
       time: "2:30 PM - 4:30 PM",
       date: "23 March 2026",
       title: "Web Development Trends 2026",
       desc: "Stay ahead of the curve with the latest trends in web development, including frameworks, performance optimization, and UX best practices."
     },
     {
-      img: eventimg4,
+      img: "/Images/Index/Events/event-schedule-item-4.jpg",
       time: "5:00 PM - 7:00 PM",
       date: "23 March 2026",
       title: "Evening Networking & Panel Talk",
@@ -72,28 +65,28 @@ const events = {
 
   day3: [
     {
-      img: eventimg1,
+      img: "/Images/Index/Events/event-schedule-item-1.jpg",
       time: "9:00 AM - 11:00 AM",
       date: "24 March 2026",
       title: "Leadership & Team Management",
       desc: "Develop essential leadership skills and learn how to effectively manage and motivate high-performing teams."
     },
     {
-      img: eventimg2,
+      img: "/Images/Index/Events/event-schedule-item-2.jpg",
       time: "11:30 AM - 1:30 PM",
       date: "24 March 2026",
       title: "Entrepreneurship Essentials",
       desc: "Gain insights into building and scaling a successful business, from idea validation to funding strategies."
     },
     {
-      img: eventimg3,
+      img: "/Images/Index/Events/event-schedule-item-3.jpg",
       time: "2:00 PM - 4:00 PM",
       date: "24 March 2026",
       title: "Personal Branding & Online Presence",
       desc: "Learn how to build a strong personal brand and stand out in the digital world through effective online presence strategies."
     },
     {
-      img: eventimg4,
+      img: "/Images/Index/Events/event-schedule-item-4.jpg",
       time: "4:30 PM - 6:30 PM",
       date: "24 March 2026",
       title: "Closing Ceremony & Awards",
@@ -111,7 +104,7 @@ const Events = () => {
       <div className="features px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] bg-prim-dark relative space-y-10 lg:space-y-20">
         <div className="absolute top-0 left-0 w-full h-full">
           <img
-            src={eventsBg}
+            src="/Images/bg-image.png"
             alt="events-image"
             className="w-full h-full"
           />
@@ -120,7 +113,7 @@ const Events = () => {
         <div className="features-content text-center mx-auto max-w-full lg:max-w-180 z-1 relative">
           <span className="flex items-center bg-prim w-fit mx-auto rounded-full text-white pe-3 text-sm md:text-md font-medium mb-3">
             <img
-              src={MarqueeIcon}
+              src="/Images/Index/About/icon-marquee.svg"
               alt="marquee-icon"
               className="w-7 h-7 md:w-8 md:h-8 p-2"
             />
@@ -179,7 +172,7 @@ const Events = () => {
                 </div>
 
                 <div className="flex items-center gap-5">
-                  <img src={eventicon} alt="event-icon" className="border border-gray-300/20 rounded-full p-2" />
+                  <img src="/Images/Index/Events/eventicon.svg" alt="event-icon" className="border border-gray-300/20 rounded-full p-2" />
 
                   <p className="text-md">
                     Street, Block 12 Sector 4, Ipsum City

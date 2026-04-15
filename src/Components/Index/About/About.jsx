@@ -1,10 +1,3 @@
-import aboutImg from "../../../assets/Images/Index/About/about-us-image.jpg"
-import AchievementImg from "../../../assets/Images/Index/About/about-achievement-image.png"
-import CircleText from "../../Circletext/Circletext"
-import MarqueeIcon from "../../../assets/Images/Index/About/icon-marquee.svg"
-
-import aboutIcon1 from "../../../assets/Images/Index/About/about-icon1.svg"
-import aboutIcon2 from "../../../assets/Images/Index/About/about-icon2.svg"
 import { Icon } from "@iconify/react"
 import { Link, Links } from "react-router-dom"
 import { useState } from "react"
@@ -22,13 +15,13 @@ const About = () => {
       <div className='about px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] flex items-center justify-between flex-col lg:flex-row lg:gap-20'>
         <div className='about-image lg:w-1/2 w-full relative'>
           <div className='glass-effect relative overflow-hidden rounded-xl'>
-            <img src={aboutImg} alt="about-image" className="w-full rounded-xl" />
+            <img src="/Images/Index/About/about-us-image.jpg" alt="about-image" className="w-full rounded-xl" />
           </div>
 
           <div className="achievement bg-white shadow-xl max-w-90 rounded-xl text-center ms-auto absolute top-70 -right-15 md:block hidden">
             <div className="achievement-content w-full text-center mb-8 px-5 pt-6">
               <img
-                src={AchievementImg}
+                src="/Images/Index/About/about-achievement-image.png"
                 alt="achievement-image"
                 className="w-45 h-45 object-contain mx-auto mb-10 pt-5"
               />
@@ -54,7 +47,7 @@ const About = () => {
 
         <div className="about-content lg:w-1/2 w-full">
           <span className="flex items-center bg-prim w-fit rounded-full text-white pe-3 text-sm md:text-md font-medium mb-3">
-            <img src={MarqueeIcon} alt="marquee-icon" className="p-2 w-7 h-7 md:w-8 md:h-8" />
+            <img src="/Images/Index/About/icon-marquee.svg" alt="marquee-icon" className="p-2 w-7 h-7 md:w-8 md:h-8" />
             About Us
           </span>
 
@@ -130,7 +123,7 @@ const About = () => {
           <ul className="flex items-center flex-wrap gap-5 border-b border-gray-100 pb-5 lg:pb-10">
             <li className="flex items-center gap-3">
               <img
-                src={aboutIcon1}
+                src="/Images/Index/About/about-icon1.svg"
                 alt="about-icon1"
                 className="w-10 h-10 bg-prim p-2 rounded-lg cursor-pointer"
               />
@@ -142,7 +135,7 @@ const About = () => {
 
             <li className="flex items-center gap-3">
               <img
-                src={aboutIcon2}
+                src="/Images/Index/About/about-icon2.svg"
                 alt="about-icon2"
                 className="w-10 h-10 bg-prim p-2 rounded-lg cursor-pointer"
               />

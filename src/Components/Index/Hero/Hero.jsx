@@ -1,7 +1,4 @@
 import { Icon } from "@iconify/react"
-import author1 from "../../../assets/Images/Index/Hero/author-1.jpg"
-import author2 from "../../../assets/Images/Index/Hero/author-2.jpg"
-import author3 from "../../../assets/Images/Index/Hero/author-3.jpg"
 import Mainbtn from "../../Buttons/Mainbtn"
 import { Link } from "react-router-dom"
 
@@ -16,19 +13,19 @@ const Hero = () => {
           <div className='flex items-center px-2 py-1 rounded-full bg-white/20 backdrop-blur-md text-white mb-3'>
             <div className="flex items-center authro-images">
               <img
-                src={author1}
+                src="/Images/Index/Hero/author-1.jpg"
                 alt=""
                 className="h-5 w-5 lg:w-6 lg:h-6 rounded-full border border-white"
               />
 
               <img
-                src={author2}
+                src="/Images/Index/Hero/author-2.jpg"
                 alt=""
                 className="h-5 w-5 lg:w-6 lg:h-6 -translate-x-2 rounded-full border border-white"
               />
 
               <img
-                src={author3}
+                src="/Images/Index/Hero/author-3.jpg"
                 alt=""
                 className="h-5 w-5 lg:w-6 lg:h-6 -translate-x-3 rounded-full border border-white"
               />

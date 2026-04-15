@@ -12,7 +12,6 @@ import Marquee from './Index/Marquee/Marquee'
 import Pricing from './Index/Pricing/Pricing'
 import Speakers from './Index/Speakers/Speakers'
 import Testimonials from './Index/Testimonials/Testimonials'
-import bannerimg from "../assets/Images/Index/Banner/intro-video-image.jpg"
 
 const Index = () => {
   return (
@@ -28,7 +27,7 @@ const Index = () => {
         <Highlights />
         <Pricing />
         <Banner
-          image={bannerimg}
+          image="/Images/Index/Banner/intro-video-image.jpg"
           title={
             <>
               Relive the moments that <span className="text-prim">defined the future</span>

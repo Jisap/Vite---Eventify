@@ -1,17 +1,11 @@
 import { Icon } from "@iconify/react"
-import MarqueeIcon from "../../../assets/Images/Index/About/icon-marquee.svg"
-import pricingicon1 from "../../../assets/Images/Index/Pricing/pricing-icon01.svg"
-import pricingicon2 from "../../../assets/Images/Index/Pricing/pricing-icon02.svg"
-import pricingicon3 from "../../../assets/Images/Index/Pricing/pricing-icon03.svg"
-import pricingicon4 from "../../../assets/Images/Index/Pricing/pricing-icon04.svg"
-import pricingicon5 from "../../../assets/Images/Index/Pricing/pricing-icon05.svg"
 import Mainbtn from "../../Buttons/Mainbtn"
 import { Link } from "react-router-dom"
 
 const pricingPlans = [
   {
     id: 1,
-    icon: pricingicon1,
+    icon: "/Images/Index/Pricing/pricing-icon01.svg",
     title: "Basic Pass",
     subtitle: "Perfect for students & hobbyists",
     price: "$49",
@@ -26,7 +20,7 @@ const pricingPlans = [
   },
   {
     id: 2,
-    icon: pricingicon2,
+    icon: "/Images/Index/Pricing/pricing-icon02.svg",
     title: "Standard Pass",
     subtitle: "Ideal for professionals",
     price: "$99",
@@ -42,7 +36,7 @@ const pricingPlans = [
   },
   {
     id: 3,
-    icon: pricingicon3,
+    icon: "/Images/Index/Pricing/pricing-icon03.svg",
     title: "Premium Pass",
     subtitle: "The ultimate experience",
     price: "$199",
@@ -67,7 +61,7 @@ const Pricing = () => {
 
       <div className="pricing-content text-center mx-auto max-w-3xl mb-16 relative">
         <span className="flex items-center bg-prim w-fit mx-auto rounded-full text-white pe-3 text-sm md:text-md font-medium mb-3">
-          <img src={MarqueeIcon}
+          <img src="/Images/Index/About/icon-marquee.svg"
             alt="marquee-icon"
             className="w-7 h-7 md:w-8 md:h-8 p-2"
           />

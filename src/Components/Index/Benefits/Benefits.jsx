@@ -1,8 +1,4 @@
-import MarqueeIcon from "../../../assets/Images/Index/About/icon-marquee.svg";
-import benefitImg1 from "../../../assets/Images/Index/Benefits/benefits-image01.jpg"
-import benefitImg2 from "../../../assets/Images/Index/Benefits/benefits-image02.jpg"
-import benefitsicon1 from "../../../assets/Images/Index/Benefits/benefits-icon01.svg"
-import benefitsicon2 from "../../../assets/Images/Index/Benefits/benefits-icon02.svg"
+
 import Mainbtn from "../../Buttons/Mainbtn";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
@@ -16,7 +12,7 @@ const Benefits = () => {
         <div className='benefits-content xl:w-1/2 w-full'>
           <span className="flex items-center bg-prim w-fit  rounded-full text-white pe-3 text-sm md:text-md font-medium mb-3">
             <img
-              src={MarqueeIcon}
+              src="/Images/Index/About/icon-marquee.svg"
               alt="marquee-icon"
               className="w-7 h-7 md:w-8 md:h-8 p-2"
             />
@@ -30,7 +26,7 @@ const Benefits = () => {
           <ul className="flex items-center flex-wrap gap-5 border-b border-t border-gray-100 py-5 lg:py-8">
             <li className="flex items-start xl:items-center flex-col xl:flex-row gap-3">
               <img
-                src={benefitsicon1}
+                src="/Images/Index/Benefits/benefits-icon01.svg"
                 alt="benefits-icon1"
                 className="bg-prim hover:bg-black transition-colors duration-300 w-10 h-10 lg:w-15 lg:h-15 p-3 rounded-lg cursor-pointer"
               />
@@ -49,7 +45,7 @@ const Benefits = () => {
 
             <li className="flex items-start xl:items-center flex-col xl:flex-row gap-3">
               <img
-                src={benefitsicon2}
+                src="/Images/Index/Benefits/benefits-icon02.svg"
                 alt="benefits-icon2"
                 className="bg-prim hover:bg-black transition-colors duration-300 w-10 h-10 lg:w-15 lg:h-15 p-3 rounded-lg cursor-pointer"
               />
@@ -86,14 +82,14 @@ const Benefits = () => {
         <div className="benefits-image xl:w-1/2 h-auto w-full relative">
           <div className="glass-effect overflow-hidden rounded-xl relative w-full">
             <img
-              src={benefitImg1}
+              src="/Images/Index/Benefits/benefits-image01.jpg"
               alt="benefit-img1"
               className="rounded-xl w-full xl:max-w-112.5"
             />
           </div>
 
           <img
-            src={benefitImg2}
+            src="/Images/Index/Benefits/benefits-image02.jpg"
             alt="benefitimg2"
             className="rounded-xl mt-5 h-100 w-112.5 absolute right-0 top-50 glass-effect hidden xl:block"
           />

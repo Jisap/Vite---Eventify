@@ -1,16 +1,12 @@
 import { useEffect, useState, useRef } from "react"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
-import highlights1 from "../../../assets/Images/Index/Highlights/highlights-image01.jpg"
-import highlights2 from "../../../assets/Images/Index/Highlights/highlights-image02.jpg"
-import highlights3 from "../../../assets/Images/Index/Highlights/highlights-image03.jpg"
-import highlights4 from "../../../assets/Images/Index/Highlights/highlights-image04.jpg"
 
 const items = [
-  { title: "Interactive Panel Discussions", desc: "Build meaningful relationships with industry leaders, innovators", img: highlights1 },
-  { title: "Connect With Top Professionals", desc: "Meet and connect with industry leaders, innovators, and experts from around the world", img: highlights2 },
-  { title: "Exclusive Access Event Material", desc: "Gain exclusive access to presentations, resources, and materials from all sessions", img: highlights3 },
-  { title: "Real Time Event Announcement", desc: "Stay updated with real-time announcements, schedules, and important notifications", img: highlights4 },
+  { title: "Interactive Panel Discussions", desc: "Build meaningful relationships with industry leaders, innovators", img: "/Images/Index/Highlights/highlights-image01.jpg" },
+  { title: "Connect With Top Professionals", desc: "Meet and connect with industry leaders, innovators, and experts from around the world", img: "/Images/Index/Highlights/highlights-image02.jpg" },
+  { title: "Exclusive Access Event Material", desc: "Gain exclusive access to presentations, resources, and materials from all sessions", img: "/Images/Index/Highlights/highlights-image03.jpg" },
+  { title: "Real Time Event Announcement", desc: "Stay updated with real-time announcements, schedules, and important notifications", img: "/Images/Index/Highlights/highlights-image04.jpg" },
 ]
 
 const Highlights = () => {

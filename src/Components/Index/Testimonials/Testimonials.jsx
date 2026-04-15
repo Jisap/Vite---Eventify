@@ -1,21 +1,10 @@
 import { Icon } from "@iconify/react"
-import author1 from "../../../assets/Images/Index/Testimonials/author-1.jpg"
-import author2 from "../../../assets/Images/Index/Testimonials/author-2.jpg"
-import author3 from "../../../assets/Images/Index/Testimonials/author-3.jpg"
-import author4 from "../../../assets/Images/Index/Testimonials/author-4.jpg"
-import tstbg from "../../../assets/Images/bg-image.png"
-
 import Mainbtn from "../../Buttons/Mainbtn"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/pagination"
-import brand1 from "../../../assets/Images/Index/Testimonials/company-logo-1.svg"
-import brand2 from "../../../assets/Images/Index/Testimonials/company-logo-2.svg"
-import brand3 from "../../../assets/Images/Index/Testimonials/company-logo-3.svg"
-import brand4 from "../../../assets/Images/Index/Testimonials/company-logo-4.svg"
 import { Link } from "react-router-dom"
-import MarqueeIcon from "../../../assets/Images/Index/About/icon-marquee.svg"
 
 
 
@@ -29,33 +18,33 @@ const Testimonials = () => {
       text: "The interface is incredibly user-friendly and the event setup process was seamless. Highly recommended!",
       name: "Sophia Rodriguez",
       role: "CEO of TechCorp",
-      image: author1,
+      image: "/Images/Index/Testimonials/author-1.jpg",
     },
     {
       id: 2,
       text: "The platform is incredibly intuitive and easy to use. I was able to set up my event in minutes and the support team was always available to help.",
       name: "Ralph Edwards",
       role: "Director of Innovate Inc",
-      image: author2,
+      image: "/Images/Index/Testimonials/author-2.jpg",
     },
     {
       id: 3,
       text: "The event management tools are top-notch. From ticketing to attendee engagement, everything is streamlined and efficient.",
       name: "Kristin Watson",
       role: "Global Marketin Director",
-      image: author3,
+      image: "/Images/Index/Testimonials/author-3.jpg",
     },
   ]
 
   const brands = [
-    { id: "brand-1", imag: brand1 },
-    { id: "brand-2", imag: brand2 },
-    { id: "brand-3", imag: brand3 },
-    { id: "brand-4", imag: brand4 },
-    { id: "brand-5", imag: brand1 },
-    { id: "brand-6", imag: brand2 },
-    { id: "brand-7", imag: brand3 },
-    { id: "brand-8", imag: brand4 },
+    { id: "brand-1", imag: "/Images/Index/Testimonials/company-logo-1.svg" },
+    { id: "brand-2", imag: "/Images/Index/Testimonials/company-logo-2.svg" },
+    { id: "brand-3", imag: "/Images/Index/Testimonials/company-logo-3.svg" },
+    { id: "brand-4", imag: "/Images/Index/Testimonials/company-logo-4.svg" },
+    { id: "brand-5", imag: "/Images/Index/Testimonials/company-logo-1.svg" },
+    { id: "brand-6", imag: "/Images/Index/Testimonials/company-logo-2.svg" },
+    { id: "brand-7", imag: "/Images/Index/Testimonials/company-logo-3.svg" },
+    { id: "brand-8", imag: "/Images/Index/Testimonials/company-logo-4.svg" },
 
   ]
 
@@ -64,7 +53,7 @@ const Testimonials = () => {
       <div className="testimonials px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] bg-prim-dark relative space-y-10 lg:space-y-20">
         <div className="absolute top-0 left-0 w-full h-full">
           <img
-            src={tstbg}
+            src="/Images/bg-image.png"
             alt="testimonials-image"
             className="w-full h-full"
           />
@@ -73,7 +62,7 @@ const Testimonials = () => {
         <div className="testimonials-content text-center mx-auto max-w-full lg:max-w-180 z-1 relative">
           <span className="flex items-center bg-prim w-fit mx-auto rounded-full text-white pe-3 text-sm md:text-md font-medium mb-3">
             <img
-              src={MarqueeIcon}
+              src="/Images/Index/About/icon-marquee.svg"
               alt="marquee-icon"
               className="w-7 h-7 md:w-8 md:h-8 p-2"
             />
@@ -89,10 +78,10 @@ const Testimonials = () => {
           <div className="bg-prim text-white flex justify-between items-start flex-col rounded-2xl p-5 sm:p-8 h-full gap-14 lg:gap-0 w-full sm:w-[50%] lg:w-[30%]">
             <div className="tst-info">
               <div className="author-image flex pb-4">
-                <img src={author1} alt="author-image" className="w-8 h-8 rounded-full -me-3 border border-green-200" />
-                <img src={author2} alt="author-image" className="w-8 h-8 rounded-full -me-3 border border-green-200" />
-                <img src={author3} alt="author-image" className="w-8 h-8 rounded-full -me-3 border border-green-200" />
-                <img src={author4} alt="author-image" className="w-8 h-8 rounded-full -me-3 border border-green-200" />
+                <img src="/Images/Index/Testimonials/author-1.jpg" alt="author-image" className="w-8 h-8 rounded-full -me-3 border border-green-200" />
+                <img src="/Images/Index/Testimonials/author-2.jpg" alt="author-image" className="w-8 h-8 rounded-full -me-3 border border-green-200" />
+                <img src="/Images/Index/Testimonials/author-3.jpg" alt="author-image" className="w-8 h-8 rounded-full -me-3 border border-green-200" />
+                <img src="/Images/Index/Testimonials/author-4.jpg" alt="author-image" className="w-8 h-8 rounded-full -me-3 border border-green-200" />
               </div>
 
               <p className="text-xl font-semibold">

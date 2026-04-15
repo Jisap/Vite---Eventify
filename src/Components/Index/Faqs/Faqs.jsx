@@ -1,6 +1,4 @@
 import { useState } from "react";
-import MarqueeIcon from "../../../assets/Images/Index/About/icon-marquee.svg"
-import faqimg from "../../../assets/Images/Index/Faqs/faq-image.jpg"
 import faqData from "../../../Data/Faqs.json"
 import { Icon } from "@iconify/react"
 
@@ -18,7 +16,7 @@ const Faqs = () => {
         <div className="faqs-image lg:w-[45%] w-full relative group">
           <div className="relative rounded-4xl overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
             <img
-              src={faqimg}
+              src="/Images/Index/Faqs/faq-image.jpg"
               alt="faq-image"
               className="w-full aspect-4/5 lg:aspect-auto lg:h-[600px] object-cover"
             />
@@ -55,7 +53,7 @@ const Faqs = () => {
         {/* Right Side: FAQ Accordion */}
         <div className="faq-content lg:w-[55%] w-full pt-4 lg:pt-0">
           <span className="flex items-center bg-prim w-fit rounded-full text-white pe-3 text-sm md:text-md font-medium mb-6 shadow-lg shadow-prim/20">
-            <img src={MarqueeIcon} alt="marquee-icon" className="p-2 w-7 h-7 md:w-8 md:h-8" />
+            <img src="/Images/Index/About/icon-marquee.svg" alt="marquee-icon" className="p-2 w-7 h-7 md:w-8 md:h-8" />
             Support Center
           </span>
 
