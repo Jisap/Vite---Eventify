@@ -26,21 +26,21 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      text: "Truly outstanding service!",
+      text: "The interface is incredibly user-friendly and the event setup process was seamless. Highly recommended!",
       name: "Sophia Rodriguez",
       role: "CEO of TechCorp",
-      image: author3,
+      image: author1,
     },
     {
       id: 2,
-      text: "Truly outstanding service!",
+      text: "The platform is incredibly intuitive and easy to use. I was able to set up my event in minutes and the support team was always available to help.",
       name: "Ralph Edwards",
       role: "Director of Innovate Inc",
-      image: author3,
+      image: author2,
     },
     {
       id: 3,
-      text: "Truly outstanding service!",
+      text: "The event management tools are top-notch. From ticketing to attendee engagement, everything is streamlined and efficient.",
       name: "Kristin Watson",
       role: "Global Marketin Director",
       image: author3,
@@ -110,6 +110,65 @@ const Testimonials = () => {
               </Link>
             </div>
           </div>
+
+          <div className="relative w-full lg:w-[70%] h-full">
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              autoplay={{ delay: 4000 }}
+              spaceBetween={30}
+              slidesPerView={2}
+              breakpoints={{
+                1600: { slidesPerView: 2 },
+                1000: { slidesPerView: 1.5 },
+                0: { slidesPerView: 1 },
+              }}
+              className="w-full! h-full!"
+            >
+              {testimonials.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <div className="tst-item bg-white/10 p-5 sm:p-8 rounded-2xl h-full flex justify-between items-start flex-col">
+                    <div className="tst-top border-b border-gray-50/10">
+                      <div className="flex items-center gap-2 text-yellow-300 mb-3">
+                        {[...Array(5)].map((_, i) => (
+                          <Icon
+                            key={i}
+                            icon="material-symbols:star-rounded"
+                            width="24"
+                            height="24"
+                          />
+                        ))}
+                      </div>
+
+                      <p className="text-white mb-10 text-lg lg:text-xl font-semibold">
+                        "{item.text}"
+                      </p>
+                    </div>
+
+                    <div className="tst-author flex items-center gap-3 pt-5">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="rounded-full w-12 h-12"
+                      />
+
+                      <div className="flex flex-col text-white">
+                        <strong>{item.name}</strong>
+
+                        <span className="text-gray-300 text-sm">
+                          {item.role}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+
+            </Swiper>
+          </div>
+        </div>
+
+        <div className="">
+
         </div>
       </div>
     </>
