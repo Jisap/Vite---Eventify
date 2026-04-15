@@ -1,8 +1,21 @@
 import { Icon } from "@iconify/react"
 import SpeakersCard from "../../SpeakersCard/SpeakersCard"
 import speakerData from "../../../Data/Speakers.json"
+import { useEffect } from "react"
 
 const Speakers = () => {
+
+  useEffect(() => {
+    speakerData.slice(0, 3).forEach((item) => {
+      const imageName = item.image.split('/').pop()
+      const link = document.createElement('link')
+      link.rel = 'preload'
+      link.as = 'image'
+      link.href = `/Images/Index/Speakers/${imageName}`
+      document.head.appendChild(link)
+    })
+  }, [])
+
   return (
     <>
       <div className="features px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] relative space-y-10 lg:space-y-20">

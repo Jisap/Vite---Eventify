@@ -20,7 +20,7 @@ const App = () => {
     smoother.current = ScrollSmoother.create({
       wrapper: smootherWrapperRef.current,
       content: smootherContentRef.current,
-      smooth: 1.8,
+      smooth: 1,
       effects: true,
       normalizeScroll: true,   // Evita conflictos con eventos de scroll nativos
       ignoreMobileResize: true, // Evita recálculos innecesarios en móvil

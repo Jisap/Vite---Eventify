@@ -18,10 +18,13 @@ const SpeakersCard = ({
   return (
     <>
       <div className={`speakers-item bg-gray-light rounded-md relative ${className}`}>
-        <div className="spealers-image p-3 relative overflow-hidden group h-90 lg:h-135 glass-effect">
+        <div className="speakers-image p-3 relative overflow-hidden group h-90 lg:h-135 glass-effect">
           <img
             src={image}
             alt={name}
+            loading="eager"
+            fetchPriority="high"
+            style={{ aspectRatio: '3/4' }}
             className="w-full h-full rounded-md object-cover"
           />
 
