@@ -1,62 +1,43 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
 import Navbar from './Components/Navbar/Navbar'
 import Index from './Components/Index'
+import SmoothScroll from './Components/utils/SmoothScroll'
+import ScrollToTop from './Components/utils/ScrollToTop'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { ScrollSmoother } from 'gsap/ScrollSmoother'
-import ScrollToTop from './Components/utils/ScrollToTop'
+
+// Registramos ScrollTrigger de forma global
+gsap.registerPlugin(ScrollTrigger)
 
 const App = () => {
-
-  const smootherWrapperRef = useRef(null)
-  const smootherContentRef = useRef(null)
-  const smoother = useRef(null)
   const location = useLocation()
 
+  // Sincronizar ScrollTrigger al cambiar de ruta
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-
-    smoother.current = ScrollSmoother.create({
-      wrapper: smootherWrapperRef.current,
-      content: smootherContentRef.current,
-      smooth: 1,
-      effects: true,
-      normalizeScroll: true,   // Evita conflictos con eventos de scroll nativos
-      ignoreMobileResize: true, // Evita recálculos innecesarios en móvil
-    })
-
-    return () => {
-      smoother.current && smoother.current.kill()
-      ScrollTrigger.getAll().forEach(t => t.kill())
-    }
-  }, [])
-
-  // Resetear scroll y refrescar triggers al cambiar de página
-  useEffect(() => {
-    if (smoother.current) {
-      smoother.current.scrollTop(0)
-      ScrollTrigger.refresh()
-    } else {
-      window.scrollTo(0, 0)
-      ScrollTrigger.refresh()
-    }
+    ScrollTrigger.refresh()
   }, [location])
 
   return (
-    <>
+    <SmoothScroll>
       <Navbar />
-      <div id="smooth-wrapper" ref={smootherWrapperRef}>
-        <div id="smooth-content" ref={smootherContentRef}>
-          <div className='min-h-screen overflow-clip'>
-            <Routes>
-              <Route path='/' element={<Index />} />
-            </Routes>
-          </div>
-        </div>
-      </div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={location.pathname}
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -15 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className='min-h-screen overflow-clip'
+        >
+          <Routes location={location} key={location.pathname}>
+            <Route path='/' element={<Index />} />
+          </Routes>
+        </motion.div>
+      </AnimatePresence>
       <ScrollToTop />
-    </>
+    </SmoothScroll>
   )
 }
 
