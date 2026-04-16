@@ -7,6 +7,9 @@ import PageHeader from "../../Components/PageHeader/PageHeader"
 import Benefits from "../../Components/Index/Benefits/Benefits"
 import { AnimatedNumber } from "../../Components/utils/AnimatedNumbers"
 import Speakers from "../../Components/Index/Speakers/Speakers"
+import Banner from "../../Components/Index/Banner/Banner"
+import Testimonials from "../../Components/Index/Testimonials/Testimonials"
+import Faqs from "../../Components/Index/Faqs/Faqs"
 
 
 const approachbg = "/Images/bg-image.png"
@@ -202,6 +205,23 @@ const About = () => {
       </div>
 
       <Speakers />
+
+      <Banner
+        image="/Images/Index/Banner/intro-video-image.jpg"
+        title={
+          <>
+            Relive the moments that <span className="text-prim">defined the future</span>
+          </>
+        }
+        subtitle="Step inside the most influential tech gathering of the continent."
+        onPlay={() => console.log("Play video")}
+        bottomFade={false}
+        bottomFadeColor=""
+      />
+
+      <Testimonials />
+
+      <Faqs />
     </>
   )
 }

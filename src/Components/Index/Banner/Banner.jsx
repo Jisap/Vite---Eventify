@@ -9,6 +9,8 @@ const Banner = ({
   subtitle,
   label = "Official Event Aftermovie",
   onPlay,
+  bottomFade = true,
+  bottomFadeColor = "white",
 }) => {
   const containerRef = useRef(null)
 
@@ -99,8 +101,15 @@ const Banner = ({
           </div>
         </div>
 
-        {/* Bottom fade */}
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent z-11" />
+        {/* Bottom fade — opcional */}
+        {bottomFade && (
+          <div
+            className="absolute bottom-0 left-0 w-full h-32 z-11"
+            style={{
+              background: `linear-gradient(to top, ${bottomFadeColor}, transparent)`,
+            }}
+          />
+        )}
       </div>
     </section>
   )
