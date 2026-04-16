@@ -9,18 +9,20 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Footer from './Components/Footer/Footer'
 import About from './Pages/About/About'
+import { useLenis } from 'lenis/react' // 👈 Añade este import
 
-
-// Registramos ScrollTrigger de forma global
 gsap.registerPlugin(ScrollTrigger)
 
 const App = () => {
   const location = useLocation()
+  const lenis = useLenis() // 👈 Obtén la instancia de Lenis
 
-  // Sincronizar ScrollTrigger al cambiar de ruta
   useEffect(() => {
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true }) // 👈 Reset instantáneo al cambiar ruta
+    }
     ScrollTrigger.refresh()
-  }, [location])
+  }, [location, lenis])
 
   return (
     <SmoothScroll>

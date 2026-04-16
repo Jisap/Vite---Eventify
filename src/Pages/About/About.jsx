@@ -6,6 +6,7 @@ import { CountUp } from "react-countup"
 import PageHeader from "../../Components/PageHeader/PageHeader"
 import Benefits from "../../Components/Index/Benefits/Benefits"
 import { AnimatedNumber } from "../../Components/utils/AnimatedNumbers"
+import Speakers from "../../Components/Index/Speakers/Speakers"
 
 
 const approachbg = "/Images/bg-image.png"
@@ -199,6 +200,8 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      <Speakers />
     </>
   )
 }
