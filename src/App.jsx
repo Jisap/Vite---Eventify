@@ -7,6 +7,7 @@ import SmoothScroll from './Components/utils/SmoothScroll'
 import ScrollToTop from './Components/utils/ScrollToTop'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Footer from './Components/Footer/Footer'
 
 // Registramos ScrollTrigger de forma global
 gsap.registerPlugin(ScrollTrigger)
@@ -36,6 +37,7 @@ const App = () => {
           </Routes>
         </motion.div>
       </AnimatePresence>
+      <Footer />
       <ScrollToTop />
     </SmoothScroll>
   )
