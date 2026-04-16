@@ -6,7 +6,7 @@ import Mainbtn from "../../Buttons/Mainbtn"
 
 
 
-const About = () => {
+const AboutComponent = () => {
 
   const [active, setActive] = useState("mission")
 
@@ -171,4 +171,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutComponent

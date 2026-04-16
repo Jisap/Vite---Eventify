@@ -8,6 +8,8 @@ import ScrollToTop from './Components/utils/ScrollToTop'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Footer from './Components/Footer/Footer'
+import About from './Pages/About/About'
+
 
 // Registramos ScrollTrigger de forma global
 gsap.registerPlugin(ScrollTrigger)
@@ -34,6 +36,7 @@ const App = () => {
         >
           <Routes location={location} key={location.pathname}>
             <Route path='/' element={<Index />} />
+            <Route path='/about' element={<About />} />
           </Routes>
         </motion.div>
       </AnimatePresence>

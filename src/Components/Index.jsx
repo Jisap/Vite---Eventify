@@ -1,5 +1,5 @@
 
-import About from './Index/About/About'
+import AboutComponent from './Index/About/About'
 import Banner from './Index/Banner/Banner'
 import Benefits from './Index/Benefits/Benefits'
 import Blogs from './Index/Blogs/Blogs'
@@ -19,7 +19,7 @@ const Index = () => {
       <div>
         <Hero />
         <Marquee />
-        <About />
+        <AboutComponent />
         <Features />
         <Benefits />
         <Events />
