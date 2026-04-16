@@ -1,7 +1,7 @@
 [
   {
     "id": "speaker-01",
-    "image": "/src/assets/Images/Index/Speakers/speaker-1.jpg",
+    "image": "/Images/Index/Speakers/speaker-1.jpg",
     "name": "Sarah Johnson",
     "role": "Keynote Speaker",
     "company": "TechCorp International",
@@ -26,7 +26,7 @@
   },
   {
     "id": "speaker-02",
-    "image": "/src/assets/Images/Index/Speakers/speaker-2.jpg",
+    "image": "/Images/Index/Speakers/speaker-2.jpg",
     "name": "Michael Chen",
     "role": "Panelist",
     "company": "Cloud Solutions Inc.",
@@ -51,7 +51,7 @@
   },
   {
     "id": "speaker-03",
-    "image": "/src/assets/Images/Index/Speakers/speaker-3.jpg",
+    "image": "/Images/Index/Speakers/speaker-3.jpg",
     "name": "Emily Rodriguez",
     "role": "Workshop Facilitator",
     "company": "Design Innovations",
@@ -76,7 +76,7 @@
   },
   {
     "id": "speaker-04",
-    "image": "/src/assets/Images/Index/Speakers/speaker-4.jpg",
+    "image": "/Images/Index/Speakers/speaker-4.jpg",
     "name": "David Wilson",
     "role": "Keynote Speaker",
     "company": "CyberSec Experts",
@@ -101,7 +101,7 @@
   },
   {
     "id": "speaker-05",
-    "image": "/src/assets/Images/Index/Speakers/speaker-5.jpg",
+    "image": "/Images/Index/Speakers/speaker-5.jpg",
     "name": "Jessica Lee",
     "role": "Panelist",
     "company": "Startup Hub Ventures",
@@ -126,7 +126,7 @@
   },
   {
     "id": "speaker-06",
-    "image": "/src/assets/Images/Index/Speakers/speaker-6.jpg",
+    "image": "/Images/Index/Speakers/speaker-6.jpg",
     "name": "James Brown",
     "role": "Workshop Facilitator",
     "company": "DevOps Academy",
@@ -151,7 +151,7 @@
   },
   {
     "id": "speaker-07",
-    "image": "/src/assets/Images/Index/Speakers/speaker-1.jpg",
+    "image": "/Images/Index/Speakers/speaker-1.jpg",
     "name": "Lisa Martinez",
     "role": "Keynote Speaker",
     "company": "Data Insights Corp.",
@@ -176,7 +176,7 @@
   },
   {
     "id": "speaker-08",
-    "image": "/src/assets/Images/Index/Speakers/speaker-2.jpg",
+    "image": "/Images/Index/Speakers/speaker-2.jpg",
     "name": "Robert Taylor",
     "role": "Panelist",
     "company": "Blockchain Innovations Ltd.",
@@ -201,7 +201,7 @@
   },
   {
     "id": "speaker-09",
-    "image": "/src/assets/Images/Index/Speakers/speaker-3.jpg",
+    "image": "/Images/Index/Speakers/speaker-3.jpg",
     "name": "Maria Garcia",
     "role": "Workshop Facilitator",
     "company": "Frontend Masters",
@@ -226,7 +226,7 @@
   },
   {
     "id": "speaker-10",
-    "image": "/src/assets/Images/Index/Speakers/speaker-4.jpg",
+    "image": "Images/Index/Speakers/speaker-4.jpg",
     "name": "William Anderson",
     "role": "Keynote Speaker",
     "company": "Future Tech Institute",

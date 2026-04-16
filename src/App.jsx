@@ -9,19 +9,24 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Footer from './Components/Footer/Footer'
 import About from './Pages/About/About'
-import { useLenis } from 'lenis/react' // 👈 Añade este import
+import { useLenis } from 'lenis/react'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const App = () => {
   const location = useLocation()
-  const lenis = useLenis() // 👈 Obtén la instancia de Lenis
+  const lenis = useLenis()                   // Obtén la instancia de Lenis
 
   useEffect(() => {
     if (lenis) {
-      lenis.scrollTo(0, { immediate: true }) // 👈 Reset instantáneo al cambiar ruta
+      lenis.scrollTo(0, { immediate: true }) // Reset instantáneo al cambiar ruta
     }
-    ScrollTrigger.refresh()
+
+    const timeout = setTimeout(() => {       // Espera a que Framer Motion termine su animación de entrada
+      ScrollTrigger.refresh()
+    }, 350)                                  // un poco más que la duración de la transición (300ms)
+
+    return () => clearTimeout(timeout)
   }, [location, lenis])
 
   return (
@@ -33,8 +38,8 @@ const App = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5, ease: "linear" }}
-          className='min-h-screen overflow-clip'
+          transition={{ duration: 0.3, ease: "linear" }}
+          className='min-h-screen'
         >
           <Routes location={location} key={location.pathname}>
             <Route path='/' element={<Index />} />
