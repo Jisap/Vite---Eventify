@@ -2,17 +2,18 @@ import { Link } from "react-router-dom"
 
 import AboutComponent from "../../Components/Index/About/About"
 import Mainbtn from "../../Components/Buttons/Mainbtn"
-import CountUp from "react-countup"
+import { CountUp } from "react-countup"
 import PageHeader from "../../Components/PageHeader/PageHeader"
 import Benefits from "../../Components/Index/Benefits/Benefits"
+import { AnimatedNumber } from "../../Components/utils/AnimatedNumbers"
 
 
 const approachbg = "/Images/bg-image.png"
 const sectionbanner = "/Images/section-banner.jpg"
 const MarqueeIcon = "/Images/Index/About/icon-marquee.svg"
 
-const achievementIcon1 = "/Images/AboutPage/achievement-icon1.svg"
-const achievementIcon2 = "/Images/AboutPage/achievement-icon2.svg"
+const achievementIcon1 = "/Images/AboutPage/achievements-icon-01.svg"
+const achievementIcon2 = "/Images/AboutPage/achievements-icon-02.svg"
 
 const achievementsImg = "/Images/AboutPage/our-achievements-image.jpg"
 const OurApproachImg01 = "/Images/AboutPage/our-approach-image-1.jpg"
@@ -30,7 +31,7 @@ const achivevementData = [
     icon: achievementIcon1,
     number: 500,
     suffix: "+",
-    label: "Gloval Events Delivered"
+    label: "Global Events Delivered"
   },
   {
     icon: achievementIcon2,
@@ -98,7 +99,7 @@ const About = () => {
             Our Approach
           </span>
 
-          <h2 className="text-2xl sm:text-4xl ms:text-5xl font-bold mb-4 text-white">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
             Our Approach Our unique approach to successful event managenment
           </h2>
         </div>
@@ -153,14 +154,48 @@ const About = () => {
           </div>
 
           <div className="w-full lg:w-1/2 z-2">
-            <span className="flex items-center bg-prim w-fit mx-auto rounded-full text-white pe-3 text-sm md:text-md font-medium mb-3">
+            <span className="flex items-center bg-prim w-fit rounded-full text-white pe-3 text-sm md:text-md font-medium mb-6">
               <img src={MarqueeIcon} alt="marquee-icon" className="p-2 w-7 h-7 md:w-8 md:h-8" />
               Our Achievements
             </span>
 
-            <h2 className="text-2xl sm:text-4xl ms:text-5xl font-bold mb-4 text-white">
-              Our milestones achievement over the tears
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
+              Our milestones achievement over the years
             </h2>
+
+            <p className="text-white mb-4 text-lg">
+              Our journey is marked by years of growth, innovation, and successful event experiences that have
+              brought people together from around the world.
+            </p>
+
+            <div className="grid grid-cols-1 pb-5 md:grid-cols-2 lg:grid-cols-2 gap-3">
+              {achivevementData.map((item, index) => (
+                <div key={index} className="flex text-start sm:items-center flex-col sm:flex-row gap-5 py-4">
+                  <div className="bg-prim w-14 h-14 rounded-xl flex justify-center p-3 group hover:bg-white cursor-pointer transition-all duration-300">
+                    <img
+                      src={item.icon}
+                      alt="achievement-icon"
+                      className="transition-all duration-300 brightness-100 group-hover:brightness-0"
+                    />
+                  </div>
+
+                  <div>
+                    <h4 className="text-2xl text-white font-bold">
+                      <AnimatedNumber end={item.number} duration={3} />
+                      {item.suffix}
+                    </h4>
+
+                    <span className="text-white">
+                      {item.label}
+                    </span>
+                  </div>
+                </div>
+              ))}
+
+              <Link to="/schedules" className="mt-3">
+                <Mainbtn text="Explore Schedules" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
