@@ -1,9 +1,11 @@
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import { Link, useParams } from "react-router-dom"
 import ScheduleData from "../../Data/SchedulesData.json"
+import SpeakersData from "../../Data/Speakers.json"
 import PageHeader from "../../Components/PageHeader/PageHeader"
 import Logo from "../../Components/Navbar/Logo/Logo"
-import { Icon } from "@iconify/react"
+import { PhoneCall, CheckCircle2 } from "lucide-react"
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa"
 
 
 const sectionbanner = "/Images/section-banner.jpg"
@@ -18,7 +20,6 @@ const schedulesicon08 = "/Images/SchedulesPage/ScheduleDetails/scheduledetails-i
 const sidebarimg = "/Images/SchedulesPage/ScheduleDetails/sidebar-image.jpg"
 const schedulesexperctbox1 = "/Images/SchedulesPage/ScheduleDetails/schedule-expect-box-1.jpg"
 const schedulesexperctbox2 = "/Images/SchedulesPage/ScheduleDetails/schedule-expect-box-2.jpg"
-const SpeakerImg1 = "/Images/Index/Speakers/speaker-1.jpg"
 const SpeakerIcon = "/Images/Index/Speakers/speaker-icon.svg"
 
 
@@ -26,7 +27,14 @@ const SchedulesDetails = () => {
 
   const { id } = useParams();
 
-  const schedule = ScheduleData.find((schedule) => schedule.id === id);
+  const schedule = useMemo(() => 
+    ScheduleData.find((s) => s.id === id), [id]
+  );
+
+  const speaker = useMemo(() => {
+    if (!schedule || !schedule.speaker) return null;
+    return SpeakersData.find(s => s.name === schedule.speaker);
+  }, [schedule]);
 
   if (!schedule) {
     return (
@@ -145,13 +153,10 @@ const SchedulesDetails = () => {
             </h3>
 
             <span className="flex items-center font-semibold text-2xl mt-8">
-              <Icon
-                icon="famicons:call-outline"
-                width="45"
-                height="45"
-                className="bg-prim p-2 rounded-full me-3"
+              <PhoneCall 
+                size={45}
+                className="bg-prim p-3 rounded-full me-3 text-white shrink-0"
               />
-
               +91 123 456 789
             </span>
 
@@ -187,23 +192,16 @@ const SchedulesDetails = () => {
           <ul className="pt-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-6">
             <li className="flex items-start gap-4 text-[#737681] text-lg">
               <div className="mt-1 shrink-0">
-                <Icon
-                  icon="material-symbols:check-rounded"
-                  width="22"
-                  height="22"
-                  className="bg-prim text-white rounded-full p-0.5"
-                />
+                <CheckCircle2 size={22} className="text-prim" />
               </div>
               <span className="leading-snug">Hard to stay updated with fast-changing industry trends</span>
             </li>
 
             <li className="flex items-start gap-4 text-[#737681] text-lg">
               <div className="mt-1 shrink-0">
-                <Icon
-                  icon="material-symbols:check-rounded"
-                  width="22"
-                  height="22"
-                  className="bg-prim text-white rounded-full p-0.5"
+                <CheckCircle2
+                  size={22}
+                  className="text-prim"
                 />
               </div>
               <span className="leading-snug">Limited opportunities to meet potential partners or clients</span>
@@ -211,11 +209,9 @@ const SchedulesDetails = () => {
 
             <li className="flex items-start gap-4 text-[#737681] text-lg">
               <div className="mt-1 shrink-0">
-                <Icon
-                  icon="material-symbols:check-rounded"
-                  width="22"
-                  height="22"
-                  className="bg-prim text-white rounded-full p-0.5"
+                <CheckCircle2
+                  size={22}
+                  className="text-prim"
                 />
               </div>
               <span className="leading-snug">Events that don't deliver value for the time invested</span>
@@ -223,12 +219,7 @@ const SchedulesDetails = () => {
 
             <li className="flex items-start gap-4 text-[#737681] text-lg">
               <div className="mt-1 shrink-0">
-                <Icon
-                  icon="material-symbols:check-rounded"
-                  width="22"
-                  height="22"
-                  className="bg-prim text-white rounded-full p-0.5"
-                />
+                <CheckCircle2 size={22} className="text-prim" />
               </div>
               <span className="leading-snug">Speakers who talk theory without real-world examples</span>
             </li>
@@ -248,56 +239,55 @@ const SchedulesDetails = () => {
             </div>
           </div>
 
-          <div className="w-full flex justify-between items-start flex-col lg:flex-row gap-8 pt-8">
-            <div className="speakers-item p-3 relative overflow-hidden group h-100 lg:h-135">
-              <img
-                src={SpeakerImg1}
-                alt="speaker-image"
-                className="w-full h-full rounded-md object-cover"
-              />
+          {/* Speaker Section - Only show if there's a real speaker assigned (not a dash) */}
+          {schedule.speaker && schedule.speaker !== "—" && (
+            <div className="w-full flex justify-between items-stretch flex-col lg:flex-row gap-8 pt-8 animation-fade-in">
+              <div className="speakers-item w-full lg:w-1/2 p-3 relative overflow-hidden group aspect-[3/4] lg:aspect-auto lg:h-[500px] bg-gray-100 rounded-xl">
+                <img
+                  src={speaker ? speaker.image : "/Images/Index/Speakers/speaker-1.jpg"}
+                  alt={schedule.speaker}
+                  className="w-full h-full rounded-md object-cover transition-transform duration-700 group-hover:scale-110"
+                />
 
-              <ul className="space-y-3 absolute right-8 opacity-0 bottom-8 translate-y-10 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                <li className="text-prim bg-white hover:bg-prim hover:text-white w-fit p-2 rounded-full cursor-pointer transition-colors duration-300">
-                  <Link to="https://www.facebook.com/">
-                    <Icon
-                      icon="mage:facebook"
-                      width="24"
-                      height="24"
-                    />
-                  </Link>
-                </li>
-                <li className="text-prim bg-white hover:bg-prim hover:text-white w-fit p-2 rounded-full cursor-pointer transition-colors duration-300">
-                  <Link to="https://www.twitter.com/">
-                    <Icon
-                      icon="codicon:twitter"
-                      width="24"
-                      height="24"
-                    />
-                  </Link>
-                </li>
-                <li className="text-prim bg-white hover:bg-prim hover:text-white w-fit p-2 rounded-full cursor-pointer transition-colors duration-300">
-                  <Link to="https://www.instagram.com/">
-                    <Icon
-                      icon="fe:instagram"
-                      width="24"
-                      height="24"
-                    />
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="speakers-content flex justify-between items-center px-10 py-5">
-              <div>
-                <h4></h4>
-                <p></p>
+                {speaker && speaker.socials && (
+                  <ul className="space-y-3 absolute right-8 opacity-0 bottom-8 translate-y-10 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                    {speaker.socials.map((social, idx) => (
+                      <li key={idx} className="text-prim bg-white hover:bg-prim hover:text-white w-fit p-3 rounded-full cursor-pointer transition-colors duration-300 shadow-lg">
+                        <Link to={social.url} target="_blank" rel="noopener noreferrer">
+                          {social.name.toLowerCase() === 'facebook' && <FaFacebookF size={20} />}
+                          {social.name.toLowerCase() === 'twitter' && <FaTwitter size={20} />}
+                          {social.name.toLowerCase() === 'instagram' && <FaInstagram size={20} />}
+                          {social.name.toLowerCase() === 'linkedin' && <FaLinkedinIn size={20} />}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
 
-              <a>
-                <img />
-              </a>
+              <div className="speakers-content w-full lg:w-1/2 flex flex-col justify-center bg-gray-light p-10 rounded-xl border border-gray-200">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h4 className="text-2xl lg:text-3xl font-bold pb-2 hover:text-prim transition-color duration-300 cursor-pointer font-unbounded">
+                      {schedule.speaker}
+                    </h4>
+                    <p className="text-prim font-medium text-lg">{schedule.role}</p>
+                    {speaker && <p className="text-gray-400 mt-2 font-medium">{speaker.company}</p>}
+                  </div>
+
+                  <div className="w-14 h-14 bg-prim p-4 rounded-full hover:bg-black transition-colors duration-300 cursor-pointer shadow-lg shrink-0">
+                    <img src={SpeakerIcon} alt="speaker-icon" className="w-full h-full object-contain invert" />
+                  </div>
+                </div>
+                
+                <div className="mt-6 border-t border-gray-300 pt-6">
+                   <p className="text-gray-500 leading-relaxed italic">
+                     "{speaker ? speaker.description : "Expert voice sharing knowledge and insights in this session."}"
+                   </p>
+                </div>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </>

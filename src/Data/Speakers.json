@@ -2,221 +2,168 @@
   {
     "id": "speaker-01",
     "image": "/Images/Index/Speakers/speaker-1.jpg",
-    "name": "Sarah Johnson",
-    "role": "Keynote Speaker",
-    "company": "TechCorp International",
-    "description": "Renowned expert in artificial intelligence and machine learning with over 15 years of experience in the tech industry.",
+    "name": "Emma Richardson",
+    "role": "Founder & CEO",
+    "company": "Creative Ventures",
+    "description": "Renowned expert in creative industries and business scaling with over 15 years of leadership experience.",
     "socials": [
-      {
-        "name": "Twitter",
-        "url": "#"
-      },
-      {
-        "name": "LinkedIn",
-        "url": "#"
-      },
-      {
-        "name": "Instagram",
-        "url": "#"
-      }
+      { "name": "Twitter", "url": "#" },
+      { "name": "LinkedIn", "url": "#" },
+      { "name": "Instagram", "url": "#" }
     ]
   },
   {
     "id": "speaker-02",
     "image": "/Images/Index/Speakers/speaker-2.jpg",
-    "name": "Michael Chen",
-    "role": "Panelist",
-    "company": "Cloud Solutions Inc.",
-    "description": "Leading voice in cloud computing and scalable infrastructure, helping businesses transition to cloud-native architectures.",
+    "name": "Daniel Kim",
+    "role": "Senior Software Architect",
+    "company": "Google",
+    "description": "Leading voice in modern web architecture, cloud-native systems, and high-scale infrastructure.",
     "socials": [
-      {
-        "name": "Twitter",
-        "url": "#"
-      },
-      {
-        "name": "LinkedIn",
-        "url": "#"
-      },
-      {
-        "name": "Instagram",
-        "url": "#"
-      }
+      { "name": "Twitter", "url": "#" },
+      { "name": "LinkedIn", "url": "#" },
+      { "name": "Instagram", "url": "#" }
     ]
   },
   {
     "id": "speaker-03",
     "image": "/Images/Index/Speakers/speaker-3.jpg",
-    "name": "Emily Rodriguez",
-    "role": "Workshop Facilitator",
-    "company": "Design Innovations",
-    "description": "Award-winning UX/UI designer passionate about creating user-centric digital experiences.",
+    "name": "Sophia Martinez",
+    "role": "AI Engineer",
+    "company": "OpenAI",
+    "description": "Specialist in machine learning models and AI integration within software development lifecycles.",
     "socials": [
-      {
-        "name": "LinkedIn",
-        "url": "#"
-      },
-      {
-        "name": "Instagram",
-        "url": "#"
-      },
-      {
-        "name": "Twitter",
-        "url": "#"
-      }
+      { "name": "LinkedIn", "url": "#" },
+      { "name": "Instagram", "url": "#" },
+      { "name": "Twitter", "url": "#" }
     ]
   },
   {
     "id": "speaker-04",
     "image": "/Images/Index/Speakers/speaker-4.jpg",
-    "name": "David Wilson",
-    "role": "Keynote Speaker",
-    "company": "CyberSec Experts",
-    "description": "Cybersecurity specialist with extensive experience in enterprise security and data protection.",
+    "name": "Michael Chen",
+    "role": "Cloud Solutions Architect",
+    "company": "AWS",
+    "description": "Expert in cloud-native application design, deployment strategies, and serverless architectures.",
     "socials": [
-      {
-        "name": "Twitter",
-        "url": "#"
-      },
-      {
-        "name": "LinkedIn",
-        "url": "#"
-      },
-      {
-        "name": "Instagram",
-        "url": "#"
-      }
+      { "name": "Twitter", "url": "#" },
+      { "name": "LinkedIn", "url": "#" },
+      { "name": "Instagram", "url": "#" }
     ]
   },
   {
     "id": "speaker-05",
     "image": "/Images/Index/Speakers/speaker-5.jpg",
-    "name": "Jessica Lee",
-    "role": "Panelist",
-    "company": "Startup Hub Ventures",
-    "description": "Venture capitalist and startup mentor with a proven track record of funding successful tech ventures.",
+    "name": "Lucas Fernández",
+    "role": "Lead Frontend Engineer",
+    "company": "Vercel",
+    "description": "Passionate developer focused on the latest web trends, performance optimization, and UI/UX excellence.",
     "socials": [
-      {
-        "name": "LinkedIn",
-        "url": "#"
-      },
-      {
-        "name": "Twitter",
-        "url": "#"
-      },
-      {
-        "name": "Instagram",
-        "url": "#"
-      }
+      { "name": "LinkedIn", "url": "#" },
+      { "name": "Twitter", "url": "#" },
+      { "name": "Instagram", "url": "#" }
     ]
   },
   {
     "id": "speaker-06",
     "image": "/Images/Index/Speakers/speaker-6.jpg",
-    "name": "James Brown",
-    "role": "Workshop Facilitator",
-    "company": "DevOps Academy",
-    "description": "DevOps practitioner focused on automation, CI/CD pipelines, and modern development workflows.",
+    "name": "Olivia Carter",
+    "role": "Security Analyst",
+    "company": "Palo Alto Networks",
+    "description": "Cybersecurity professional dedicated to identifying emerging threats and securing complex digital ecosystems.",
     "socials": [
-      {
-        "name": "Twitter",
-        "url": "#"
-      },
-      {
-        "name": "LinkedIn",
-        "url": "#"
-      },
-      {
-        "name": "Instagram",
-        "url": "#"
-      }
+      { "name": "Twitter", "url": "#" },
+      { "name": "LinkedIn", "url": "#" },
+      { "name": "Instagram", "url": "#" }
     ]
   },
   {
     "id": "speaker-07",
     "image": "/Images/Index/Speakers/speaker-1.jpg",
-    "name": "Lisa Martinez",
-    "role": "Keynote Speaker",
-    "company": "Data Insights Corp.",
-    "description": "Data scientist and analytics expert passionate about leveraging data for business growth.",
+    "name": "James Walker",
+    "role": "DevOps Engineer",
+    "company": "Microsoft",
+    "description": "Streamlining development workflows through automation, CI/CD, and robust infrastructure as code.",
     "socials": [
-      {
-        "name": "LinkedIn",
-        "url": "#"
-      },
-      {
-        "name": "Instagram",
-        "url": "#"
-      },
-      {
-        "name": "Twitter",
-        "url": "#"
-      }
+      { "name": "LinkedIn", "url": "#" },
+      { "name": "Instagram", "url": "#" },
+      { "name": "Twitter", "url": "#" }
     ]
   },
   {
     "id": "speaker-08",
     "image": "/Images/Index/Speakers/speaker-2.jpg",
-    "name": "Robert Taylor",
-    "role": "Panelist",
-    "company": "Blockchain Innovations Ltd.",
-    "description": "Blockchain technology enthusiast and consultant working on next-generation decentralized applications.",
+    "name": "Anna Müller",
+    "role": "Backend Architect",
+    "company": "Spotify",
+    "description": "Specializing in microservices, distributed systems, and backend performance at global scale.",
     "socials": [
-      {
-        "name": "Twitter",
-        "url": "#"
-      },
-      {
-        "name": "LinkedIn",
-        "url": "#"
-      },
-      {
-        "name": "Instagram",
-        "url": "#"
-      }
+      { "name": "Twitter", "url": "#" },
+      { "name": "LinkedIn", "url": "#" },
+      { "name": "Instagram", "url": "#" }
     ]
   },
   {
     "id": "speaker-09",
     "image": "/Images/Index/Speakers/speaker-3.jpg",
-    "name": "Maria Garcia",
-    "role": "Workshop Facilitator",
-    "company": "Frontend Masters",
-    "description": "Frontend developer specializing in modern web technologies and interactive user interfaces.",
+    "name": "David Lee",
+    "role": "ML Engineer",
+    "company": "DeepMind",
+    "description": "Researching and implementing advanced machine learning algorithms to solve real-world problems.",
     "socials": [
-      {
-        "name": "Twitter",
-        "url": "#"
-      },
-      {
-        "name": "Instagram",
-        "url": "#"
-      },
-      {
-        "name": "LinkedIn",
-        "url": "#"
-      }
+      { "name": "Twitter", "url": "#" },
+      { "name": "Instagram", "url": "#" },
+      { "name": "LinkedIn", "url": "#" }
     ]
   },
   {
     "id": "speaker-10",
-    "image": "Images/Index/Speakers/speaker-4.jpg",
-    "name": "William Anderson",
-    "role": "Keynote Speaker",
-    "company": "Future Tech Institute",
-    "description": "Visionary thinker exploring the intersection of technology, society, and the future of work.",
+    "image": "/Images/Index/Speakers/speaker-4.jpg",
+    "name": "Laura Gómez",
+    "role": "Venture Partner",
+    "company": "Sequoia Capital",
+    "description": "Supporting the next generation of tech leaders through strategic investment and mentorship.",
     "socials": [
-      {
-        "name": "LinkedIn",
-        "url": "#"
-      },
-      {
-        "name": "Twitter",
-        "url": "#"
-      },
-      {
-        "name": "Instagram",
-        "url": "#"
-      }
+      { "name": "LinkedIn", "url": "#" },
+      { "name": "Twitter", "url": "#" },
+      { "name": "Instagram", "url": "#" }
+    ]
+  },
+  {
+    "id": "speaker-11",
+    "image": "/Images/Index/Speakers/speaker-5.jpg",
+    "name": "Robert Johnson",
+    "role": "CTO",
+    "company": "IBM",
+    "description": "Visionary technology leader exploring the frontiers of enterprise computing and future tech.",
+    "socials": [
+      { "name": "Twitter", "url": "#" },
+      { "name": "LinkedIn", "url": "#" }
+    ]
+  },
+  {
+    "id": "speaker-12",
+    "image": "/Images/Index/Speakers/speaker-6.jpg",
+    "name": "Ethan Brown",
+    "role": "Blockchain Developer",
+    "company": "ConsenSys",
+    "description": "Developer advocate focused on decentralized applications and the evolving blockchain landscape.",
+    "socials": [
+      { "name": "LinkedIn", "url": "#" },
+      { "name": "Twitter", "url": "#" }
+    ]
+  },
+  {
+    "id": "speaker-13",
+    "image": "/Images/Index/Speakers/speaker-1.jpg",
+    "name": "Natalie Brooks",
+    "role": "Career Coach",
+    "company": "Tech Careers Hub",
+    "description": "Helping tech professionals navigate career growth, branding, and long-term career planning.",
+    "socials": [
+      { "name": "LinkedIn", "url": "#" },
+      { "name": "Twitter", "url": "#" },
+      { "name": "Instagram", "url": "#" }
     ]
   }
 ]
