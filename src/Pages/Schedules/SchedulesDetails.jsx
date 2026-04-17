@@ -173,9 +173,66 @@ const SchedulesDetails = () => {
               className="w-full h-full object-cover"
             />
           </div>
+
           <p className="text-[#737681] pt-5 text-lg leading-relaxed">
             {schedule.desc}
           </p>
+
+          <h3 className="mt-10 text-2xl lg:text-5xl font-bold font-unbounded">What to expect</h3>
+
+          <p className="text-[#737681] pt-5 text-lg leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+
+          <ul className="pt-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-6">
+            <li className="flex items-start gap-4 text-[#737681] text-lg">
+              <div className="mt-1 shrink-0">
+                <Icon
+                  icon="material-symbols:check-rounded"
+                  width="22"
+                  height="22"
+                  className="bg-prim text-white rounded-full p-0.5"
+                />
+              </div>
+              <span className="leading-snug">Hard to stay updated with fast-changing industry trends</span>
+            </li>
+
+            <li className="flex items-start gap-4 text-[#737681] text-lg">
+              <div className="mt-1 shrink-0">
+                <Icon
+                  icon="material-symbols:check-rounded"
+                  width="22"
+                  height="22"
+                  className="bg-prim text-white rounded-full p-0.5"
+                />
+              </div>
+              <span className="leading-snug">Limited opportunities to meet potential partners or clients</span>
+            </li>
+
+            <li className="flex items-start gap-4 text-[#737681] text-lg">
+              <div className="mt-1 shrink-0">
+                <Icon
+                  icon="material-symbols:check-rounded"
+                  width="22"
+                  height="22"
+                  className="bg-prim text-white rounded-full p-0.5"
+                />
+              </div>
+              <span className="leading-snug">Events that don't deliver value for the time invested</span>
+            </li>
+
+            <li className="flex items-start gap-4 text-[#737681] text-lg">
+              <div className="mt-1 shrink-0">
+                <Icon
+                  icon="material-symbols:check-rounded"
+                  width="22"
+                  height="22"
+                  className="bg-prim text-white rounded-full p-0.5"
+                />
+              </div>
+              <span className="leading-snug">Speakers who talk theory without real-world examples</span>
+            </li>
+          </ul>
         </div>
       </div>
     </>
