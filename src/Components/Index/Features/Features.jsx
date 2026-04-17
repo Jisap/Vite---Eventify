@@ -31,13 +31,10 @@ const Features = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-8 xl:gap-10">
           {featureData.slice(0, 4).map((item) => {
-            const iconName = item.icon.split('/').pop()
-            const iconUrl = `/Images/Index/Features/${iconName}`
-
             return (
               <FeatureCard
                 key={item.id}
-                icon={iconUrl}
+                icon={item.icon}
                 title={item.title}
                 description={item.description}
                 featurearrow="/Images/Index/Features/feature-arrow.svg"
