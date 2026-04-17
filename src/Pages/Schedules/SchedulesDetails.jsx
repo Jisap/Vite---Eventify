@@ -286,6 +286,17 @@ const SchedulesDetails = () => {
                 </li>
               </ul>
             </div>
+
+            <div className="speakers-content flex justify-between items-center px-10 py-5">
+              <div>
+                <h4></h4>
+                <p></p>
+              </div>
+
+              <a>
+                <img />
+              </a>
+            </div>
           </div>
         </div>
       </div>
