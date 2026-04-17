@@ -1,5 +1,6 @@
-import React, { useLayoutEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
 import Navbar from './Components/Navbar/Navbar'
 import Index from './Components/Index'
 import SmoothScroll from './Components/utils/SmoothScroll'
@@ -17,34 +18,46 @@ const App = () => {
   const location = useLocation()
   const lenis = useLenis()
 
-  // useLayoutEffect is essential here so the scroll is reset synchronously
-  // right BEFORE the new page paints, preventing any visual jumping.
-  useLayoutEffect(() => {
-    if (lenis) {
-      lenis.scrollTo(0, { immediate: true })
-    } else {
-      window.scrollTo(0, 0)
-    }
-
-    // A small timeout to let the page images load their basic structure
-    const timeout = setTimeout(() => {
-      ScrollTrigger.refresh()
-    }, 150)
-    
+  // El efecto de layout effect ya no es necesario si usamos AnimatePresence onExitComplete
+  // que garantiza que el scroll se resetee justo despues de destruir la antigua pagina.
+  useEffect(() => {
+    const refreshTrigger = () => ScrollTrigger.refresh()
+    const timeout = setTimeout(refreshTrigger, 500) // tiempo extra para estabilizar
     return () => clearTimeout(timeout)
-  }, [location.pathname, lenis])
+  }, [location.pathname])
 
   return (
     <SmoothScroll>
       <Navbar />
       
-      {/* Native ultra-fast routing. Removing Framer Motion eliminates layout shift chaos. */}
-      <div key={location.pathname} className='animate-fade-in min-h-screen'>
-        <Routes location={location}>
-          <Route path='/' element={<Index />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/schedules' element={<Schedules />} />
-        </Routes>
+      {/* 
+        Hemos envuelto la aplicacion en bg-prim-dark. 
+        Asi, cuando la opacidad baja a 0 en la transicion, NO se ve un fondo blanco cegador,
+        sino que fusiona con los PageHeaders oscuros de las demas paginas logrando un "Premium Fade".
+      */}
+      <div className="bg-prim-dark min-h-screen">
+        <AnimatePresence 
+          mode="wait" 
+          onExitComplete={() => {
+            if (lenis) lenis.scrollTo(0, { immediate: true })
+            else window.scrollTo(0, 0)
+          }}
+        >
+          <motion.div
+            key={location.pathname}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className='min-h-screen relative bg-white'
+          >
+            <Routes location={location}>
+              <Route path='/' element={<Index />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/schedules' element={<Schedules />} />
+            </Routes>
+          </motion.div>
+        </AnimatePresence>
       </div>
       
       <Footer />

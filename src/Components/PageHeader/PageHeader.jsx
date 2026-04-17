@@ -28,12 +28,13 @@ const PageHeader = ({ title, bgImage = defaultBanner }) => {
   return (
     <div
       ref={headerRef}
-      className="section-banner h-90 lg:h-120 flex flex-col justify-center items-center text-white relative px-[2%] overflow-hidden bg-prim-dark"
+      className="section-banner h-[350px] lg:h-[450px] flex flex-col justify-center items-center text-white relative px-[2%] overflow-hidden bg-prim-dark"
     >
       <img 
         src={bgImage} 
         alt="" 
-        className="absolute inset-0 w-full h-full object-cover z-0 animate-fade-in"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        loading="eager"
         fetchPriority="high"
         decoding="async"
       />

@@ -24,7 +24,7 @@ const Schedules = () => {
     <div className="bg-white overflow-hidden">
       <PageHeader title="Event Schedule" bgImage={sectionbanner} />
 
-      <div className='schedules-container px-[5%] sm:px-[8%] lg:px-[10%] py-[8%] md:py-[10%] max-w-7xl mx-auto'>
+      <div className='schedules-container px-[4%] md:px-[5%] xl:px-[6%] py-[5%] md:py-[6%] max-w-[1800px] mx-auto w-full'>
         {/* Tabs Navigation */}
         <div className='flex justify-center mb-12 md:mb-16'>
           <ul className='flex items-center flex-wrap justify-center bg-gray-light p-2 rounded-2xl md:rounded-full shadow-inner gap-2 w-full sm:w-auto h-fit'>
@@ -55,7 +55,7 @@ const Schedules = () => {
         {/* Schedule Grid */}
         <div
           key={activeDay}
-          className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-10 animate-fade-in-up'
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10'
         >
           {filteredSchedules.map((item, index) => (
             <ScheduleCard 
