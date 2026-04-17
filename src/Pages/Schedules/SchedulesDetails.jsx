@@ -233,6 +233,60 @@ const SchedulesDetails = () => {
               <span className="leading-snug">Speakers who talk theory without real-world examples</span>
             </li>
           </ul>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-8 w-full">
+            <div className="w-full schedulebox-image rounded-lg overflow-hidden glass-effect relative">
+              <img
+                src={schedulesexperctbox1} alt="schedulebox1" className="w-full h-full"
+              />
+            </div>
+
+            <div className="w-full schedulebox-image rounded-lg overflow-hidden glass-effect relative">
+              <img
+                src={schedulesexperctbox2} alt="schedulebox2" className="w-full h-full"
+              />
+            </div>
+          </div>
+
+          <div className="w-full flex justify-between items-start flex-col lg:flex-row gap-8 pt-8">
+            <div className="speakers-item p-3 relative overflow-hidden group h-100 lg:h-135">
+              <img
+                src={SpeakerImg1}
+                alt="speaker-image"
+                className="w-full h-full rounded-md object-cover"
+              />
+
+              <ul className="space-y-3 absolute right-8 opacity-0 bottom-8 translate-y-10 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <li className="text-prim bg-white hover:bg-prim hover:text-white w-fit p-2 rounded-full cursor-pointer transition-colors duration-300">
+                  <Link to="https://www.facebook.com/">
+                    <Icon
+                      icon="mage:facebook"
+                      width="24"
+                      height="24"
+                    />
+                  </Link>
+                </li>
+                <li className="text-prim bg-white hover:bg-prim hover:text-white w-fit p-2 rounded-full cursor-pointer transition-colors duration-300">
+                  <Link to="https://www.twitter.com/">
+                    <Icon
+                      icon="codicon:twitter"
+                      width="24"
+                      height="24"
+                    />
+                  </Link>
+                </li>
+                <li className="text-prim bg-white hover:bg-prim hover:text-white w-fit p-2 rounded-full cursor-pointer transition-colors duration-300">
+                  <Link to="https://www.instagram.com/">
+                    <Icon
+                      icon="fe:instagram"
+                      width="24"
+                      height="24"
+                    />
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </>
