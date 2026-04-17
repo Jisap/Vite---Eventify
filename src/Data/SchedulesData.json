@@ -2,6 +2,9 @@
   {
     "id": "creative-entrepreneurship-forum",
     "day": "day1",
+    "date": "22 March 2026",
+    "category": "Business",
+    "organizer": "Startup Hub Global",
     "image": "/Images/SchedulesPage/schedules-image01.jpg",
     "time": "8 AM - 10 AM",
     "place": "Sterling Conference Hall",
@@ -10,6 +13,9 @@
   {
     "id": "modern-web-architecture",
     "day": "day1",
+    "date": "22 March 2026",
+    "category": "Web Development",
+    "organizer": "Tech Innovators",
     "image": "/Images/SchedulesPage/schedules-image02.jpg",
     "time": "10 AM - 12 PM",
     "place": "Tech Arena A",
@@ -18,6 +24,9 @@
   {
     "id": "ai-in-development",
     "day": "day1",
+    "date": "22 March 2026",
+    "category": "Artificial Intelligence",
+    "organizer": "AI Labs",
     "image": "/Images/SchedulesPage/schedules-image03.jpg",
     "time": "12 PM - 1 PM",
     "place": "Innovation Room 1",
@@ -26,6 +35,9 @@
   {
     "id": "lunch-networking",
     "day": "day1",
+    "date": "22 March 2026",
+    "category": "Networking",
+    "organizer": "Event Team",
     "image": "/Images/SchedulesPage/schedules-image04.jpg",
     "time": "1 PM - 2 PM",
     "place": "Main Lobby",
@@ -34,6 +46,9 @@
   {
     "id": "cloud-native-apps",
     "day": "day1",
+    "date": "22 March 2026",
+    "category": "Cloud Computing",
+    "organizer": "Cloud Experts Group",
     "image": "/Images/SchedulesPage/schedules-image05.jpg",
     "time": "2 PM - 4 PM",
     "place": "Cloud Stage",
@@ -42,6 +57,9 @@
   {
     "id": "frontend-trends-2026",
     "day": "day1",
+    "date": "22 March 2026",
+    "category": "Frontend",
+    "organizer": "UI/UX Collective",
     "image": "/Images/SchedulesPage/schedules-image06.jpg",
     "time": "4 PM - 6 PM",
     "place": "UI/UX Lab",
@@ -50,6 +68,9 @@
   {
     "id": "cybersecurity-basics",
     "day": "day2",
+    "date": "23 March 2026",
+    "category": "Cybersecurity",
+    "organizer": "SecureNet",
     "image": "/Images/SchedulesPage/schedules-image01.jpg",
     "time": "8 AM - 10 AM",
     "place": "Security Hall",
@@ -58,6 +79,9 @@
   {
     "id": "devops-best-practices",
     "day": "day2",
+    "date": "23 March 2026",
+    "category": "DevOps",
+    "organizer": "DevOps Alliance",
     "image": "/Images/SchedulesPage/schedules-image02.jpg",
     "time": "10 AM - 12 PM",
     "place": "DevOps Arena",
@@ -66,6 +90,9 @@
   {
     "id": "microservices-architecture",
     "day": "day2",
+    "date": "23 March 2026",
+    "category": "Backend",
+    "organizer": "Tech Architects",
     "image": "/Images/SchedulesPage/schedules-image03.jpg",
     "time": "12 PM - 1 PM",
     "place": "Tech Arena B",
@@ -74,6 +101,9 @@
   {
     "id": "networking-lunch-day2",
     "day": "day2",
+    "date": "23 March 2026",
+    "category": "Networking",
+    "organizer": "Event Team",
     "image": "/Images/SchedulesPage/schedules-image04.jpg",
     "time": "1 PM - 2 PM",
     "place": "Main Lobby",
@@ -82,6 +112,9 @@
   {
     "id": "ai-workshop",
     "day": "day2",
+    "date": "23 March 2026",
+    "category": "Workshop",
+    "organizer": "AI Labs",
     "image": "/Images/SchedulesPage/schedules-image05.jpg",
     "time": "2 PM - 4 PM",
     "place": "Workshop Room",
@@ -90,6 +123,9 @@
   {
     "id": "startup-pitch",
     "day": "day2",
+    "date": "23 March 2026",
+    "category": "Startup",
+    "organizer": "Venture Capital Group",
     "image": "/Images/SchedulesPage/schedules-image06.jpg",
     "time": "4 PM - 6 PM",
     "place": "Main Stage",
@@ -98,6 +134,9 @@
   {
     "id": "future-of-tech",
     "day": "day3",
+    "date": "24 March 2026",
+    "category": "Technology",
+    "organizer": "Global Tech Council",
     "image": "/Images/SchedulesPage/schedules-image01.jpg",
     "time": "8 AM - 10 AM",
     "place": "Main Auditorium",
@@ -106,6 +145,9 @@
   {
     "id": "blockchain-explained",
     "day": "day3",
+    "date": "24 March 2026",
+    "category": "Blockchain",
+    "organizer": "Blockchain Association",
     "image": "/Images/SchedulesPage/schedules-image02.jpg",
     "time": "10 AM - 12 PM",
     "place": "Blockchain Hub",
@@ -114,6 +156,9 @@
   {
     "id": "data-science-panel",
     "day": "day3",
+    "date": "24 March 2026",
+    "category": "Data Science",
+    "organizer": "Data Experts Network",
     "image": "/Images/SchedulesPage/schedules-image03.jpg",
     "time": "12 PM - 1 PM",
     "place": "Data Lab",
@@ -122,6 +167,9 @@
   {
     "id": "closing-lunch",
     "day": "day3",
+    "date": "24 March 2026",
+    "category": "Networking",
+    "organizer": "Event Team",
     "image": "/Images/SchedulesPage/schedules-image04.jpg",
     "time": "1 PM - 2 PM",
     "place": "Main Lobby",
@@ -130,6 +178,9 @@
   {
     "id": "career-growth-tech",
     "day": "day3",
+    "date": "24 March 2026",
+    "category": "Career",
+    "organizer": "Tech Careers Hub",
     "image": "/Images/SchedulesPage/schedules-image05.jpg",
     "time": "2 PM - 4 PM",
     "place": "Career Hall",
@@ -138,6 +189,9 @@
   {
     "id": "closing-ceremony",
     "day": "day3",
+    "date": "24 March 2026",
+    "category": "Ceremony",
+    "organizer": "Event Team",
     "image": "/Images/SchedulesPage/schedules-image06.jpg",
     "time": "4 PM - 6 PM",
     "place": "Main Stage",
