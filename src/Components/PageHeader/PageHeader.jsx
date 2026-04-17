@@ -28,13 +28,19 @@ const PageHeader = ({ title, bgImage = defaultBanner }) => {
   return (
     <div
       ref={headerRef}
-      className="section-banner h-90 lg:h-120 bg-center bg-cover flex flex-col justify-center items-center text-white bg-no-repeat relative px-[2%] overflow-hidden"
-      style={{ backgroundImage: `url(${bgImage})` }}
+      className="section-banner h-90 lg:h-120 flex flex-col justify-center items-center text-white relative px-[2%] overflow-hidden bg-prim-dark"
     >
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-prim-dark/40 z-0"></div>
+      <img 
+        src={bgImage} 
+        alt="" 
+        className="absolute inset-0 w-full h-full object-cover z-0 animate-fade-in"
+        fetchPriority="high"
+        decoding="async"
+      />
 
-      <div className="relative z-10 text-center">
+      <div className="absolute inset-0 bg-prim-dark/50 z-10"></div>
+
+      <div className="relative z-20 text-center">
         <h1 className="header-title text-4xl sm:text-5xl lg:text-6xl font-semibold mb-6 uppercase tracking-tight opacity-0">
           {title}
         </h1>
@@ -42,10 +48,7 @@ const PageHeader = ({ title, bgImage = defaultBanner }) => {
         <nav aria-label="Breadcrumb" className="flex justify-center items-center">
           <ol className="flex items-center space-x-2 text-sm md:text-md lg:text-lg font-medium">
             <li className="breadcrumb-item opacity-0">
-              <Link
-                to="/"
-                className="text-white/80 hover:text-white transition-colors duration-300 flex items-center gap-1"
-              >
+              <Link to="/" className="text-white/80 hover:text-white transition-colors duration-300">
                 Home
               </Link>
             </li>
@@ -62,10 +65,7 @@ const PageHeader = ({ title, bgImage = defaultBanner }) => {
                       {value.replace(/-/g, " ")}
                     </span>
                   ) : (
-                    <Link
-                      to={to}
-                      className="text-white/80 hover:text-white transition-colors duration-300 capitalize"
-                    >
+                    <Link to={to} className="text-white/80 hover:text-white transition-colors duration-300 capitalize">
                       {value.replace(/-/g, " ")}
                     </Link>
                   )}

@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
+import React, { useLayoutEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
 import Navbar from './Components/Navbar/Navbar'
 import Index from './Components/Index'
 import SmoothScroll from './Components/utils/SmoothScroll'
@@ -16,39 +15,38 @@ gsap.registerPlugin(ScrollTrigger)
 
 const App = () => {
   const location = useLocation()
-  const lenis = useLenis()                   // Obtén la instancia de Lenis
+  const lenis = useLenis()
 
-  useEffect(() => {
+  // useLayoutEffect is essential here so the scroll is reset synchronously
+  // right BEFORE the new page paints, preventing any visual jumping.
+  useLayoutEffect(() => {
     if (lenis) {
-      lenis.scrollTo(0, { immediate: true }) // Reset instantáneo al cambiar ruta
+      lenis.scrollTo(0, { immediate: true })
+    } else {
+      window.scrollTo(0, 0)
     }
 
-    const timeout = setTimeout(() => {       // Espera a que Framer Motion termine su animación de entrada
+    // A small timeout to let the page images load their basic structure
+    const timeout = setTimeout(() => {
       ScrollTrigger.refresh()
-    }, 350)                                  // un poco más que la duración de la transición (300ms)
-
+    }, 150)
+    
     return () => clearTimeout(timeout)
-  }, [location, lenis])
+  }, [location.pathname, lenis])
 
   return (
     <SmoothScroll>
       <Navbar />
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={location.pathname}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3, ease: "linear" }}
-          className='min-h-screen'
-        >
-          <Routes location={location} key={location.pathname}>
-            <Route path='/' element={<Index />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/schedules' element={<Schedules />} />
-          </Routes>
-        </motion.div>
-      </AnimatePresence>
+      
+      {/* Native ultra-fast routing. Removing Framer Motion eliminates layout shift chaos. */}
+      <div key={location.pathname} className='animate-fade-in min-h-screen'>
+        <Routes location={location}>
+          <Route path='/' element={<Index />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/schedules' element={<Schedules />} />
+        </Routes>
+      </div>
+      
       <Footer />
       <ScrollToTop />
     </SmoothScroll>

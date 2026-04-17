@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom"
-import { Icon } from "@iconify/react"
+import { FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa"
 
-
+const getSocialIcon = (name) => {
+  switch (name.toLowerCase()) {
+    case "twitter": return <FaTwitter className="w-5 h-5 shrink-0" />
+    case "linkedin": return <FaLinkedinIn className="w-5 h-5 shrink-0" />
+    case "instagram": return <FaInstagram className="w-5 h-5 shrink-0" />
+    default: return null
+  }
+}
 
 const SpeakersCard = ({
   id,
@@ -12,27 +19,25 @@ const SpeakersCard = ({
   className = "",
   nameClass = "",
   roleClass = "",
-  priority = false   // ← solo la primera card recibe true
+  priority = false
 }) => {
   return (
     <div className={`speakers-item bg-gray-light rounded-md relative ${className}`}>
-      <div className="speakers-image p-3 relative overflow-hidden group h-90 lg:h-135 glass-effect">
+      {/* Contenedor estricto de imagen con skeleton integrado para prevenir Layout Shift */}
+      <div className="speakers-image p-3 relative overflow-hidden group w-full aspect-[3/4] bg-gray-200 glass-effect">
         <img
           src={image}
           alt={name}
-          width={400}
-          height={533}
-          loading={priority ? "eager" : "lazy"}        // ← lazy por defecto
-          fetchPriority={priority ? "high" : "auto"}   // ← high solo para la primera
-          decoding="async"                             // ← no bloquea el hilo principal
-          className="w-full h-full rounded-md object-cover"
+          loading={priority ? "eager" : "lazy"}
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover rounded-md group-hover:scale-110 transition-transform duration-700 ease-out will-change-transform"
         />
 
         <ul className="space-y-3 absolute right-8 bottom-8 opacity-0 translate-y-10 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
           {socials.map((item, index) => (
-            <li key={index} className="text-prim bg-white hover:bg-prim hover:text-white w-fit p-2 rounded-full transition-colors duration-300">
-              <Link to={item.url}>
-                <Icon icon={item.icon} width="24" height="24" />
+            <li key={index} className="text-prim bg-white hover:bg-prim hover:text-white w-fit p-3 rounded-full transition-colors duration-300 shadow-md">
+              <Link to={item.url} aria-label={item.name} className="flex items-center justify-center">
+                {getSocialIcon(item.name)}
               </Link>
             </li>
           ))}
