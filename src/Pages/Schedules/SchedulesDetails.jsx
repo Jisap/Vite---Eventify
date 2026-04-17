@@ -2,6 +2,8 @@ import { useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import ScheduleData from "../../Data/SchedulesData.json"
 import PageHeader from "../../Components/PageHeader/PageHeader"
+import Logo from "../../Components/Navbar/Logo/Logo"
+import { Icon } from "@iconify/react"
 
 
 const sectionbanner = "/Images/section-banner.jpg"
@@ -134,6 +136,46 @@ const SchedulesDetails = () => {
               </li>
             </ul>
           </div>
+
+          <div className="bg-prim-dark text-white p-10 rounded-lg overflow-hidden">
+            <Logo />
+
+            <h3 className="pt-5 font-semibold text-2xl">
+              We're here to help-reach out today.
+            </h3>
+
+            <span className="flex items-center font-semibold text-2xl mt-8">
+              <Icon
+                icon="famicons:call-outline"
+                width="45"
+                height="45"
+                className="bg-prim p-2 rounded-full me-3"
+              />
+
+              +91 123 456 789
+            </span>
+
+            <div className="w-130 mt-8 xl:mt-0 xl:translate-x-10 xl:translate-y-23 relative">
+              <img
+                src={sidebarimg}
+                alt=""
+                className="border-10 border-[#ffffff1a] rounded-full"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full xl:w-[70%]">
+          <div className="schedule-image h-130 rounded-lg overflow-hidden glass-effect relative">
+            <img
+              src={schedule.image}
+              alt="schedule-image"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <p className="text-[#737681] pt-5 text-lg leading-relaxed">
+            {schedule.desc}
+          </p>
         </div>
       </div>
     </>
