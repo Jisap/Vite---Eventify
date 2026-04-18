@@ -215,10 +215,10 @@ const InfoCard = ({ icon: Icon, label, value, href, isLink = false }) => {
 
   const content = (
     <>
-      <div className="w-14 h-14 bg-gradient-to-br from-prim/10 to-prim/5 rounded-xl flex items-center justify-center shadow-inner">
+      <div className="w-14 h-14 flex-shrink-0 bg-gradient-to-br from-prim/10 to-prim/5 rounded-xl flex items-center justify-center shadow-inner">
         <Icon className="w-7 h-7 text-prim" />
       </div>
-      <div>
+      <div className="min-w-0 flex-1">
         <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">
           {label}
         </p>
@@ -226,11 +226,14 @@ const InfoCard = ({ icon: Icon, label, value, href, isLink = false }) => {
           <a
             href={href}
             className="text-prim-dark font-bold hover:text-prim transition-colors truncate block"
+            title={value}
           >
             {value}
           </a>
         ) : (
-          <p className="text-prim-dark font-bold">{value}</p>
+          <p className="text-prim-dark font-bold truncate" title={value}>
+            {value}
+          </p>
         )}
       </div>
     </>
@@ -239,7 +242,7 @@ const InfoCard = ({ icon: Icon, label, value, href, isLink = false }) => {
   return (
     <div
       ref={cardRef}
-      className="flex items-center gap-5 p-6 bg-white rounded-2xl border border-gray-200 shadow-md transition-all duration-300"
+      className="flex items-center gap-5 p-6 bg-white rounded-2xl border border-gray-200 shadow-md transition-all duration-300 overflow-hidden"
     >
       {content}
     </div>
