@@ -171,12 +171,26 @@ const SchedulesDetails = () => {
         </div>
 
         <div className="w-full xl:w-[70%]">
-          <div className="schedule-image h-130 rounded-lg overflow-hidden glass-effect relative">
+          <div className="schedule-image h-130 rounded-lg overflow-hidden glass-effect relative group">
             <img
               src={schedule.image}
               alt="schedule-image"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
+            {/* Overlay for Title and Speaker */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 lg:p-12">
+               <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  <h2 className="text-white text-3xl lg:text-5xl font-bold font-unbounded mb-4 leading-tight">
+                    {schedule.title}
+                  </h2>
+                  <div className="flex items-center gap-4">
+                    <div className="h-1 w-12 bg-prim rounded-full"></div>
+                    <p className="text-gray-200 text-xl lg:text-2xl font-medium">
+                      {schedule.speaker && schedule.speaker !== "—" ? `Hosted by ${schedule.speaker}` : "Community Session"}
+                    </p>
+                  </div>
+               </div>
+            </div>
           </div>
 
           <p className="text-[#737681] pt-5 text-lg leading-relaxed">
@@ -189,39 +203,39 @@ const SchedulesDetails = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
 
-          <ul className="pt-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-6">
-            <li className="flex items-start gap-4 text-[#737681] text-lg">
-              <div className="mt-1 shrink-0">
+          <ul className="pt-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <li className="flex items-start gap-4 p-5 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-prim/20 transition-all duration-300">
+              <div className="mt-1 shrink-0 p-2 bg-prim/10 rounded-lg">
                 <CheckCircle2 size={22} className="text-prim" />
               </div>
-              <span className="leading-snug">Hard to stay updated with fast-changing industry trends</span>
+              <span className="text-[#737681] text-lg leading-snug font-medium">Hard to stay updated with fast-changing industry trends</span>
             </li>
 
-            <li className="flex items-start gap-4 text-[#737681] text-lg">
-              <div className="mt-1 shrink-0">
+            <li className="flex items-start gap-4 p-5 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-prim/20 transition-all duration-300">
+              <div className="mt-1 shrink-0 p-2 bg-prim/10 rounded-lg">
                 <CheckCircle2
                   size={22}
                   className="text-prim"
                 />
               </div>
-              <span className="leading-snug">Limited opportunities to meet potential partners or clients</span>
+              <span className="text-[#737681] text-lg leading-snug font-medium">Limited opportunities to meet potential partners or clients</span>
             </li>
 
-            <li className="flex items-start gap-4 text-[#737681] text-lg">
-              <div className="mt-1 shrink-0">
+            <li className="flex items-start gap-4 p-5 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-prim/20 transition-all duration-300">
+              <div className="mt-1 shrink-0 p-2 bg-prim/10 rounded-lg">
                 <CheckCircle2
                   size={22}
                   className="text-prim"
                 />
               </div>
-              <span className="leading-snug">Events that don't deliver value for the time invested</span>
+              <span className="text-[#737681] text-lg leading-snug font-medium">Events that don't deliver value for the time invested</span>
             </li>
 
-            <li className="flex items-start gap-4 text-[#737681] text-lg">
-              <div className="mt-1 shrink-0">
+            <li className="flex items-start gap-4 p-5 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-prim/20 transition-all duration-300">
+              <div className="mt-1 shrink-0 p-2 bg-prim/10 rounded-lg">
                 <CheckCircle2 size={22} className="text-prim" />
               </div>
-              <span className="leading-snug">Speakers who talk theory without real-world examples</span>
+              <span className="text-[#737681] text-lg leading-snug font-medium">Speakers who talk theory without real-world examples</span>
             </li>
           </ul>
 
