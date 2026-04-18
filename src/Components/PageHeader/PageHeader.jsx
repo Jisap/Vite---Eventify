@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react"
 
 const defaultBanner = "/Images/section-banner.jpg"
 
-const PageHeader = ({ title, bgImage = defaultBanner }) => {
+const PageHeader = ({ title, bgImage = defaultBanner, breadcrumbTitle }) => {
   const location = useLocation()
   const pathnames = location.pathname.split("/").filter((x) => x)
   const headerRef = useRef(null)
@@ -63,7 +63,7 @@ const PageHeader = ({ title, bgImage = defaultBanner }) => {
                   <span className="text-white/40">/</span>
                   {last ? (
                     <span className="text-prim font-semibold capitalize">
-                      {value.replace(/-/g, " ")}
+                      {breadcrumbTitle || value.replace(/-/g, " ")}
                     </span>
                   ) : (
                     <Link to={to} className="text-white/80 hover:text-white transition-colors duration-300 capitalize">
