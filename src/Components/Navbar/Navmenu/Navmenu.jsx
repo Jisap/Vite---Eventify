@@ -64,8 +64,8 @@ const Navmenu = ({ menuOpen, toggleMenu }) => {
             </li>
 
             <li>
-              <Link to="/speakers/1" className='block px-4 py-2 hover:bg-black transition-colors duration-300 hover:text-white'>
-                Speaker Details
+              <Link to="/speakers" className='block px-4 py-2 hover:bg-black transition-colors duration-300 hover:text-white'>
+                Speakers
               </Link>
             </li>
 
