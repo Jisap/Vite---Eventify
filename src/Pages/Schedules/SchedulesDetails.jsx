@@ -6,6 +6,7 @@ import PageHeader from "../../Components/PageHeader/PageHeader"
 import Logo from "../../Components/Navbar/Logo/Logo"
 import { PhoneCall, CheckCircle2 } from "lucide-react"
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa"
+import Faqs from "../../Components/Index/Faqs/Faqs"
 
 
 const sectionbanner = "/Images/section-banner.jpg"
@@ -27,7 +28,7 @@ const SchedulesDetails = () => {
 
   const { id } = useParams();
 
-  const schedule = useMemo(() => 
+  const schedule = useMemo(() =>
     ScheduleData.find((s) => s.id === id), [id]
   );
 
@@ -54,7 +55,8 @@ const SchedulesDetails = () => {
     <>
       <PageHeader title="Event Schedule Details" bgImage={sectionbanner} />
 
-      <div className="px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] flex justify-between items-start flex-col xl:flex-row gap-10">
+      <div className="px-[2%] sm:px-[8%] lg:px-[10%] py-[8%] md:py-[10%] xl:py-[4%] flex justify-between items-start flex-col xl:flex-row gap-10">
+        {/* Izquierda */}
         <div className="w-full xl:w-[30%] space-y-10 relative xl:sticky xl:top-0 xl:left-0 h-full">
           <div className="event-info w-full bg-gray-light rounded-lg overflow-hidden">
             <h4 className="text-2xl text-center bg-prim text-white font-medium py-4">
@@ -153,7 +155,7 @@ const SchedulesDetails = () => {
             </h3>
 
             <span className="flex items-center font-semibold text-2xl mt-8">
-              <PhoneCall 
+              <PhoneCall
                 size={45}
                 className="bg-prim p-3 rounded-full me-3 text-white shrink-0"
               />
@@ -170,6 +172,7 @@ const SchedulesDetails = () => {
           </div>
         </div>
 
+        {/* Derecha */}
         <div className="w-full xl:w-[70%]">
           <div className="schedule-image h-130 rounded-lg overflow-hidden glass-effect relative group">
             <img
@@ -179,17 +182,17 @@ const SchedulesDetails = () => {
             />
             {/* Overlay for Title and Speaker */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 lg:p-12">
-               <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <h2 className="text-white text-3xl lg:text-5xl font-bold font-unbounded mb-4 leading-tight">
-                    {schedule.title}
-                  </h2>
-                  <div className="flex items-center gap-4">
-                    <div className="h-1 w-12 bg-prim rounded-full"></div>
-                    <p className="text-gray-200 text-xl lg:text-2xl font-medium">
-                      {schedule.speaker && schedule.speaker !== "—" ? `Hosted by ${schedule.speaker}` : "Community Session"}
-                    </p>
-                  </div>
-               </div>
+              <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h2 className="text-white text-3xl lg:text-5xl font-bold font-unbounded mb-4 leading-tight">
+                  {schedule.title}
+                </h2>
+                <div className="flex items-center gap-4">
+                  <div className="h-1 w-12 bg-prim rounded-full"></div>
+                  <p className="text-gray-200 text-xl lg:text-2xl font-medium">
+                    {schedule.speaker && schedule.speaker !== "—" ? `Hosted by ${schedule.speaker}` : "Community Session"}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -293,17 +296,19 @@ const SchedulesDetails = () => {
                     <img src={SpeakerIcon} alt="speaker-icon" className="w-full h-full object-contain invert" />
                   </div>
                 </div>
-                
+
                 <div className="mt-6 border-t border-gray-300 pt-6">
-                   <p className="text-gray-500 leading-relaxed italic">
-                     "{speaker ? speaker.description : "Expert voice sharing knowledge and insights in this session."}"
-                   </p>
+                  <p className="text-gray-500 leading-relaxed italic">
+                    "{speaker ? speaker.description : "Expert voice sharing knowledge and insights in this session."}"
+                  </p>
                 </div>
               </div>
             </div>
           )}
         </div>
       </div>
+
+      <Faqs />
     </>
   )
 }
