@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "icon": "/Index/Features/features-icon01.svg",
+    "icon": "/Images/Index/Features/features-icon01.svg",
     "title": "Live Coding Sessions",
     "description": "Engage with real-time coding demonstrations led by industry experts, allowing participants to learn best practices and modern development techniques."
   },

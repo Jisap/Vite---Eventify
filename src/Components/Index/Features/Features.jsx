@@ -38,6 +38,7 @@ const Features = () => {
                 title={item.title}
                 description={item.description}
                 featurearrow="/Images/Index/Features/feature-arrow.svg"
+                dark={true}
               />
             )
           })}

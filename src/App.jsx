@@ -12,6 +12,7 @@ import About from './Pages/About/About'
 import { useLenis } from 'lenis/react'
 import Schedules from './Pages/Schedules/Schedules'
 import SchedulesDetails from './Pages/Schedules/SchedulesDetails'
+import Features from './Pages/Features/Features'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -57,6 +58,7 @@ const App = () => {
               <Route path='/about' element={<About />} />
               <Route path='/schedules' element={<Schedules />} />
               <Route path='/schedules/:id' element={<SchedulesDetails />} />
+              <Route path='/features' element={<Features />} />
             </Routes>
           </motion.div>
         </AnimatePresence>
