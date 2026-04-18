@@ -6,10 +6,69 @@
     "role": "Founder & CEO",
     "company": "Creative Ventures",
     "description": "Renowned expert in creative industries and business scaling with over 15 years of leadership experience.",
+    "location": "London, UK",
+    "bio": "Emma started her first company at 22 and has since helped over 50 creative startups scale globally. She is a frequent keynote speaker at events like SXSW and Web Summit, and mentors young entrepreneurs through various accelerators.",
+    "expertise": [
+      "Business Strategy",
+      "Venture Capital",
+      "Creative Leadership",
+      "Mentorship"
+    ],
+    "email": "emma.richardson@creativeventures.co.uk",
+    "phone": "+44 20 7946 0123",
     "socials": [
-      { "name": "Twitter", "url": "#" },
-      { "name": "LinkedIn", "url": "#" },
-      { "name": "Instagram", "url": "#" }
+      {
+        "name": "Twitter",
+        "url": "#"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "url": "#"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Business Strategy",
+        "percent": 95
+      },
+      {
+        "name": "Creative Direction",
+        "percent": 90
+      },
+      {
+        "name": "Team Leadership",
+        "percent": 88
+      },
+      {
+        "name": "Public Speaking",
+        "percent": 85
+      },
+      {
+        "name": "Fundraising",
+        "percent": 82
+      },
+      {
+        "name": "Brand Development",
+        "percent": 87
+      }
+    ],
+    "stats": [
+      {
+        "label": "Experience",
+        "value": "15+ years"
+      },
+      {
+        "label": "Companies Founded",
+        "value": "3"
+      },
+      {
+        "label": "Projects Led",
+        "value": "120+"
+      }
     ]
   },
   {
@@ -19,10 +78,69 @@
     "role": "Senior Software Architect",
     "company": "Google",
     "description": "Leading voice in modern web architecture, cloud-native systems, and high-scale infrastructure.",
+    "location": "Mountain View, CA",
+    "bio": "Daniel has been a key contributor to Google's internal cloud infrastructure for over a decade. He is passionate about open source and has spoken at KubeCon and AWS re:Invent about distributed systems and resilience patterns.",
+    "expertise": [
+      "Cloud Architecture",
+      "Microservices",
+      "Kubernetes",
+      "Scalability"
+    ],
+    "email": "daniel.kim@google.com",
+    "phone": "+1 (650) 555-0142",
     "socials": [
-      { "name": "Twitter", "url": "#" },
-      { "name": "LinkedIn", "url": "#" },
-      { "name": "Instagram", "url": "#" }
+      {
+        "name": "Twitter",
+        "url": "#"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "url": "#"
+      }
+    ],
+    "skills": [
+      {
+        "name": "System Design",
+        "percent": 98
+      },
+      {
+        "name": "Cloud Architecture",
+        "percent": 95
+      },
+      {
+        "name": "Microservices",
+        "percent": 92
+      },
+      {
+        "name": "Kubernetes",
+        "percent": 88
+      },
+      {
+        "name": "Go & Rust",
+        "percent": 85
+      },
+      {
+        "name": "DevOps",
+        "percent": 90
+      }
+    ],
+    "stats": [
+      {
+        "label": "Experience",
+        "value": "12+ years"
+      },
+      {
+        "label": "Systems Architected",
+        "value": "50+"
+      },
+      {
+        "label": "Patents",
+        "value": "8"
+      }
     ]
   },
   {
@@ -32,10 +150,70 @@
     "role": "AI Engineer",
     "company": "OpenAI",
     "description": "Specialist in machine learning models and AI integration within software development lifecycles.",
+    "location": "San Francisco, CA",
+    "bio": "Sophia worked on fine-tuning large language models before joining OpenAI, where she now focuses on making AI more accessible to developers. She holds a PhD in NLP from Stanford and regularly contributes to open-source ML libraries.",
+    "expertise": [
+      "Machine Learning",
+      "Deep Learning",
+      "NLP",
+      "MLOps",
+      "Ethical AI"
+    ],
+    "email": "sophia.martinez@openai.com",
+    "phone": "+1 (415) 555-0198",
     "socials": [
-      { "name": "LinkedIn", "url": "#" },
-      { "name": "Instagram", "url": "#" },
-      { "name": "Twitter", "url": "#" }
+      {
+        "name": "LinkedIn",
+        "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "url": "#"
+      },
+      {
+        "name": "Twitter",
+        "url": "#"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Machine Learning",
+        "percent": 96
+      },
+      {
+        "name": "Deep Learning",
+        "percent": 94
+      },
+      {
+        "name": "Python & PyTorch",
+        "percent": 92
+      },
+      {
+        "name": "NLP",
+        "percent": 89
+      },
+      {
+        "name": "MLOps",
+        "percent": 85
+      },
+      {
+        "name": "Research",
+        "percent": 91
+      }
+    ],
+    "stats": [
+      {
+        "label": "Experience",
+        "value": "8+ years"
+      },
+      {
+        "label": "Papers Published",
+        "value": "25+"
+      },
+      {
+        "label": "Models Deployed",
+        "value": "40+"
+      }
     ]
   },
   {
@@ -45,10 +223,70 @@
     "role": "Cloud Solutions Architect",
     "company": "AWS",
     "description": "Expert in cloud-native application design, deployment strategies, and serverless architectures.",
+    "location": "Seattle, WA",
+    "bio": "Michael has helped over 200 enterprises migrate to the cloud with zero downtime. He is an AWS Ambassador and author of 'Serverless Patterns for Scale', a practical guide for modern cloud teams.",
+    "expertise": [
+      "AWS",
+      "Serverless",
+      "Infrastructure as Code",
+      "Cloud Security",
+      "Migration Strategy"
+    ],
+    "email": "michael.chen@aws.com",
+    "phone": "+1 (206) 555-0173",
     "socials": [
-      { "name": "Twitter", "url": "#" },
-      { "name": "LinkedIn", "url": "#" },
-      { "name": "Instagram", "url": "#" }
+      {
+        "name": "Twitter",
+        "url": "#"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "url": "#"
+      }
+    ],
+    "skills": [
+      {
+        "name": "AWS Services",
+        "percent": 98
+      },
+      {
+        "name": "Serverless",
+        "percent": 95
+      },
+      {
+        "name": "Infrastructure as Code",
+        "percent": 92
+      },
+      {
+        "name": "Security",
+        "percent": 88
+      },
+      {
+        "name": "Cost Optimization",
+        "percent": 90
+      },
+      {
+        "name": "Migration",
+        "percent": 87
+      }
+    ],
+    "stats": [
+      {
+        "label": "Experience",
+        "value": "10+ years"
+      },
+      {
+        "label": "Certifications",
+        "value": "6"
+      },
+      {
+        "label": "Migrations Led",
+        "value": "200+"
+      }
     ]
   },
   {
@@ -58,10 +296,70 @@
     "role": "Lead Frontend Engineer",
     "company": "Vercel",
     "description": "Passionate developer focused on the latest web trends, performance optimization, and UI/UX excellence.",
+    "location": "Madrid, Spain",
+    "bio": "Lucas is an early adopter of Next.js App Router and a core contributor to several popular React libraries. He runs a YouTube channel about frontend performance and has spoken at React Summit and JSNation.",
+    "expertise": [
+      "React/Next.js",
+      "TypeScript",
+      "Web Performance",
+      "Accessibility",
+      "Design Systems"
+    ],
+    "email": "lucas.fernandez@vercel.com",
+    "phone": "+34 91 123 45 67",
     "socials": [
-      { "name": "LinkedIn", "url": "#" },
-      { "name": "Twitter", "url": "#" },
-      { "name": "Instagram", "url": "#" }
+      {
+        "name": "LinkedIn",
+        "url": "#"
+      },
+      {
+        "name": "Twitter",
+        "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "url": "#"
+      }
+    ],
+    "skills": [
+      {
+        "name": "React & Next.js",
+        "percent": 98
+      },
+      {
+        "name": "TypeScript",
+        "percent": 95
+      },
+      {
+        "name": "Performance",
+        "percent": 92
+      },
+      {
+        "name": "CSS & Animation",
+        "percent": 90
+      },
+      {
+        "name": "Accessibility",
+        "percent": 88
+      },
+      {
+        "name": "Design Systems",
+        "percent": 85
+      }
+    ],
+    "stats": [
+      {
+        "label": "Experience",
+        "value": "9+ years"
+      },
+      {
+        "label": "Open Source",
+        "value": "15k stars"
+      },
+      {
+        "label": "Talks Given",
+        "value": "50+"
+      }
     ]
   },
   {
@@ -71,10 +369,70 @@
     "role": "Security Analyst",
     "company": "Palo Alto Networks",
     "description": "Cybersecurity professional dedicated to identifying emerging threats and securing complex digital ecosystems.",
+    "location": "Austin, TX",
+    "bio": "Olivia has led red teams for Fortune 500 companies and discovered over 30 CVEs. She is a frequent speaker at Black Hat and DEF CON, and teaches ethical hacking workshops for underrepresented groups.",
+    "expertise": [
+      "Threat Intelligence",
+      "Penetration Testing",
+      "Incident Response",
+      "SIEM",
+      "Compliance"
+    ],
+    "email": "olivia.carter@paloaltonetworks.com",
+    "phone": "+1 (512) 555-0129",
     "socials": [
-      { "name": "Twitter", "url": "#" },
-      { "name": "LinkedIn", "url": "#" },
-      { "name": "Instagram", "url": "#" }
+      {
+        "name": "Twitter",
+        "url": "#"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "url": "#"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Threat Analysis",
+        "percent": 96
+      },
+      {
+        "name": "Penetration Testing",
+        "percent": 94
+      },
+      {
+        "name": "SIEM",
+        "percent": 90
+      },
+      {
+        "name": "Incident Response",
+        "percent": 92
+      },
+      {
+        "name": "Compliance",
+        "percent": 88
+      },
+      {
+        "name": "Forensics",
+        "percent": 85
+      }
+    ],
+    "stats": [
+      {
+        "label": "Experience",
+        "value": "11+ years"
+      },
+      {
+        "label": "Threats Blocked",
+        "value": "10M+"
+      },
+      {
+        "label": "Certifications",
+        "value": "7"
+      }
     ]
   },
   {
@@ -84,10 +442,70 @@
     "role": "DevOps Engineer",
     "company": "Microsoft",
     "description": "Streamlining development workflows through automation, CI/CD, and robust infrastructure as code.",
+    "location": "Redmond, WA",
+    "bio": "James designed the CI/CD pipeline that serves millions of Azure customers. He is a HashiCorp Ambassador and co-organizer of the Seattle DevOps Days conference.",
+    "expertise": [
+      "CI/CD",
+      "Azure DevOps",
+      "Terraform",
+      "Docker",
+      "Observability"
+    ],
+    "email": "james.walker@microsoft.com",
+    "phone": "+1 (425) 555-0187",
     "socials": [
-      { "name": "LinkedIn", "url": "#" },
-      { "name": "Instagram", "url": "#" },
-      { "name": "Twitter", "url": "#" }
+      {
+        "name": "LinkedIn",
+        "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "url": "#"
+      },
+      {
+        "name": "Twitter",
+        "url": "#"
+      }
+    ],
+    "skills": [
+      {
+        "name": "CI/CD",
+        "percent": 96
+      },
+      {
+        "name": "Azure DevOps",
+        "percent": 94
+      },
+      {
+        "name": "Terraform",
+        "percent": 92
+      },
+      {
+        "name": "Docker",
+        "percent": 95
+      },
+      {
+        "name": "Monitoring",
+        "percent": 88
+      },
+      {
+        "name": "Scripting",
+        "percent": 90
+      }
+    ],
+    "stats": [
+      {
+        "label": "Experience",
+        "value": "10+ years"
+      },
+      {
+        "label": "Pipelines Built",
+        "value": "500+"
+      },
+      {
+        "label": "Downtime Reduced",
+        "value": "99.9%"
+      }
     ]
   },
   {
@@ -97,10 +515,70 @@
     "role": "Backend Architect",
     "company": "Spotify",
     "description": "Specializing in microservices, distributed systems, and backend performance at global scale.",
+    "location": "Stockholm, Sweden",
+    "bio": "Anna led the migration of Spotify's playback backend from monolith to 800+ microservices. She is a co-author of 'Building Event-Driven Systems' and mentors women in tech through Rails Girls.",
+    "expertise": [
+      "Distributed Systems",
+      "Kafka",
+      "Microservices",
+      "Scalability",
+      "Event-Driven Architecture"
+    ],
+    "email": "anna.muller@spotify.com",
+    "phone": "+46 8 520 123 45",
     "socials": [
-      { "name": "Twitter", "url": "#" },
-      { "name": "LinkedIn", "url": "#" },
-      { "name": "Instagram", "url": "#" }
+      {
+        "name": "Twitter",
+        "url": "#"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "url": "#"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Java & Kotlin",
+        "percent": 96
+      },
+      {
+        "name": "Distributed Systems",
+        "percent": 94
+      },
+      {
+        "name": "Kafka",
+        "percent": 92
+      },
+      {
+        "name": "PostgreSQL",
+        "percent": 90
+      },
+      {
+        "name": "GraphQL",
+        "percent": 88
+      },
+      {
+        "name": "Scalability",
+        "percent": 95
+      }
+    ],
+    "stats": [
+      {
+        "label": "Experience",
+        "value": "13+ years"
+      },
+      {
+        "label": "Services Running",
+        "value": "1000+"
+      },
+      {
+        "label": "Users Served",
+        "value": "500M+"
+      }
     ]
   },
   {
@@ -110,10 +588,70 @@
     "role": "ML Engineer",
     "company": "DeepMind",
     "description": "Researching and implementing advanced machine learning algorithms to solve real-world problems.",
+    "location": "London, UK",
+    "bio": "David contributed to AlphaFold's protein folding breakthrough and now works on reinforcement learning for robotics. He holds a PhD from MIT and has over 5,000 academic citations.",
+    "expertise": [
+      "Reinforcement Learning",
+      "Computer Vision",
+      "TensorFlow",
+      "Research",
+      "Optimization"
+    ],
+    "email": "david.lee@deepmind.com",
+    "phone": "+44 20 7946 0891",
     "socials": [
-      { "name": "Twitter", "url": "#" },
-      { "name": "Instagram", "url": "#" },
-      { "name": "LinkedIn", "url": "#" }
+      {
+        "name": "Twitter",
+        "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "url": "#"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "#"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Reinforcement Learning",
+        "percent": 97
+      },
+      {
+        "name": "Computer Vision",
+        "percent": 94
+      },
+      {
+        "name": "TensorFlow",
+        "percent": 92
+      },
+      {
+        "name": "Research",
+        "percent": 96
+      },
+      {
+        "name": "Optimization",
+        "percent": 90
+      },
+      {
+        "name": "Data Engineering",
+        "percent": 88
+      }
+    ],
+    "stats": [
+      {
+        "label": "Experience",
+        "value": "9+ years"
+      },
+      {
+        "label": "Citations",
+        "value": "5000+"
+      },
+      {
+        "label": "Algorithms",
+        "value": "30+"
+      }
     ]
   },
   {
@@ -123,10 +661,70 @@
     "role": "Venture Partner",
     "company": "Sequoia Capital",
     "description": "Supporting the next generation of tech leaders through strategic investment and mentorship.",
+    "location": "Menlo Park, CA",
+    "bio": "Laura has led investments in 10+ unicorns including Stripe and Figma. Before venture capital, she was a product leader at Google. She is a founding member of LatinxVC.",
+    "expertise": [
+      "Venture Capital",
+      "Due Diligence",
+      "Portfolio Management",
+      "Startup Mentoring",
+      "Market Analysis"
+    ],
+    "email": "laura.gomez@sequoiacap.com",
+    "phone": "+1 (650) 555-0234",
     "socials": [
-      { "name": "LinkedIn", "url": "#" },
-      { "name": "Twitter", "url": "#" },
-      { "name": "Instagram", "url": "#" }
+      {
+        "name": "LinkedIn",
+        "url": "#"
+      },
+      {
+        "name": "Twitter",
+        "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "url": "#"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Investment Analysis",
+        "percent": 96
+      },
+      {
+        "name": "Due Diligence",
+        "percent": 94
+      },
+      {
+        "name": "Portfolio Management",
+        "percent": 92
+      },
+      {
+        "name": "Strategic Advisory",
+        "percent": 90
+      },
+      {
+        "name": "Networking",
+        "percent": 98
+      },
+      {
+        "name": "Market Analysis",
+        "percent": 88
+      }
+    ],
+    "stats": [
+      {
+        "label": "Experience",
+        "value": "14+ years"
+      },
+      {
+        "label": "Investments",
+        "value": "80+"
+      },
+      {
+        "label": "Exits",
+        "value": "15"
+      }
     ]
   },
   {
@@ -136,9 +734,66 @@
     "role": "CTO",
     "company": "IBM",
     "description": "Visionary technology leader exploring the frontiers of enterprise computing and future tech.",
+    "location": "New York, NY",
+    "bio": "Robert oversees IBM's global research division and has been instrumental in developing quantum computing prototypes. He is a member of the National Academy of Engineering and advises the White House on tech policy.",
+    "expertise": [
+      "Enterprise Architecture",
+      "Quantum Computing",
+      "AI Strategy",
+      "R&D Leadership",
+      "Innovation Management"
+    ],
+    "email": "robert.johnson@ibm.com",
+    "phone": "+1 (212) 555-0456",
     "socials": [
-      { "name": "Twitter", "url": "#" },
-      { "name": "LinkedIn", "url": "#" }
+      {
+        "name": "Twitter",
+        "url": "#"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "#"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Enterprise Architecture",
+        "percent": 98
+      },
+      {
+        "name": "Quantum Computing",
+        "percent": 85
+      },
+      {
+        "name": "AI Strategy",
+        "percent": 92
+      },
+      {
+        "name": "Technical Leadership",
+        "percent": 96
+      },
+      {
+        "name": "Innovation",
+        "percent": 94
+      },
+      {
+        "name": "R&D Management",
+        "percent": 90
+      }
+    ],
+    "stats": [
+      {
+        "label": "Experience",
+        "value": "20+ years"
+      },
+      {
+        "label": "Patents",
+        "value": "25+"
+      },
+      {
+        "label": "Teams Led",
+        "value": "500+"
+      }
     ]
   },
   {
@@ -148,9 +803,66 @@
     "role": "Blockchain Developer",
     "company": "ConsenSys",
     "description": "Developer advocate focused on decentralized applications and the evolving blockchain landscape.",
+    "location": "Berlin, Germany",
+    "bio": "Ethan has built DeFi protocols that process over $1B in TVL. He is a core contributor to the Web3.js library and runs a popular newsletter about Ethereum layer-2 solutions.",
+    "expertise": [
+      "Solidity",
+      "Ethereum",
+      "Smart Contracts",
+      "DeFi",
+      "Security Auditing"
+    ],
+    "email": "ethan.brown@consensys.net",
+    "phone": "+49 30 12345678",
     "socials": [
-      { "name": "LinkedIn", "url": "#" },
-      { "name": "Twitter", "url": "#" }
+      {
+        "name": "LinkedIn",
+        "url": "#"
+      },
+      {
+        "name": "Twitter",
+        "url": "#"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Solidity",
+        "percent": 96
+      },
+      {
+        "name": "Ethereum",
+        "percent": 95
+      },
+      {
+        "name": "Smart Contracts",
+        "percent": 94
+      },
+      {
+        "name": "Web3.js",
+        "percent": 92
+      },
+      {
+        "name": "DeFi Protocols",
+        "percent": 88
+      },
+      {
+        "name": "Security Auditing",
+        "percent": 90
+      }
+    ],
+    "stats": [
+      {
+        "label": "Experience",
+        "value": "7+ years"
+      },
+      {
+        "label": "DApps Built",
+        "value": "40+"
+      },
+      {
+        "label": "Contracts Audited",
+        "value": "200+"
+      }
     ]
   },
   {
@@ -160,10 +872,70 @@
     "role": "Career Coach",
     "company": "Tech Careers Hub",
     "description": "Helping tech professionals navigate career growth, branding, and long-term career planning.",
+    "location": "Remote (Denver, CO)",
+    "bio": "Natalie has coached over 2,000 engineers and product managers to get promoted and land roles at FAANG companies. She is the author of 'The Resilient Coder' and hosts a top 10 career podcast.",
+    "expertise": [
+      "Career Strategy",
+      "Personal Branding",
+      "Interview Coaching",
+      "Salary Negotiation",
+      "Leadership Development"
+    ],
+    "email": "natalie.brooks@techcareershub.com",
+    "phone": "+1 (720) 555-0321",
     "socials": [
-      { "name": "LinkedIn", "url": "#" },
-      { "name": "Twitter", "url": "#" },
-      { "name": "Instagram", "url": "#" }
+      {
+        "name": "LinkedIn",
+        "url": "#"
+      },
+      {
+        "name": "Twitter",
+        "url": "#"
+      },
+      {
+        "name": "Instagram",
+        "url": "#"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Career Strategy",
+        "percent": 98
+      },
+      {
+        "name": "Personal Branding",
+        "percent": 95
+      },
+      {
+        "name": "Interview Coaching",
+        "percent": 94
+      },
+      {
+        "name": "Negotiation",
+        "percent": 92
+      },
+      {
+        "name": "Networking",
+        "percent": 96
+      },
+      {
+        "name": "Resume Writing",
+        "percent": 90
+      }
+    ],
+    "stats": [
+      {
+        "label": "Experience",
+        "value": "12+ years"
+      },
+      {
+        "label": "Clients Helped",
+        "value": "2000+"
+      },
+      {
+        "label": "Success Rate",
+        "value": "94%"
+      }
     ]
   }
 ]

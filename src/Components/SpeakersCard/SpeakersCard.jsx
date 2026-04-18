@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa"
 
-const getSocialIcon = (name) => {
+export const getSocialIcon = (name) => {
   switch (name.toLowerCase()) {
     case "twitter": return <FaTwitter className="w-5 h-5 shrink-0" />
     case "linkedin": return <FaLinkedinIn className="w-5 h-5 shrink-0" />
