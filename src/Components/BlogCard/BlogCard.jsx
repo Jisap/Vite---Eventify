@@ -1,5 +1,4 @@
 import { Icon } from "@iconify/react"
-import { desc } from "framer-motion/client"
 import { Link } from "react-router-dom"
 
 
@@ -20,7 +19,7 @@ const BlogCard = ({
   return (
     <>
       <Link
-        to={`/blog/${id}`}
+        to={`/blogs/${id}`}
         className={`blog-item bg-gray-light p-3 rounded-md space-y-5 group cursor-pointer shadow-md block ${className}`}
       >
         <div className="blog-image rounded-md overflow-hidden">
