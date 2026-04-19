@@ -1,8 +1,15 @@
 import React from 'react'
+import PageHeader from '../../Components/PageHeader/PageHeader'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <>
+      <PageHeader
+        title="Contact Us"
+        breadcrumbTitle="Contact"
+        bgImage="/Images/section-banner.jpg"
+      />
+    </>
   )
 }
 
