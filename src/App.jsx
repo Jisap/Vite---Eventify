@@ -15,6 +15,9 @@ import SchedulesDetails from './Pages/Schedules/SchedulesDetails'
 import Features from './Pages/Features/Features'
 import Speakers from './Pages/Speakers/Speakers'
 import SpeakersDetails from './Pages/Speakers/SpeakersDetails'
+import Blog from './Pages/Blogs/Blog'
+import BlogDetails from './Pages/Blogs/BlogDetails'
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -63,6 +66,8 @@ const App = () => {
               <Route path='/features' element={<Features />} />
               <Route path="/speakers" element={<Speakers />} />
               <Route path="/speakers/:id" element={<SpeakersDetails />} />
+              <Route path="/blogs" element={<Blog />} />
+              <Route path="/blogs/:id" element={<BlogDetails />} />
             </Routes>
           </motion.div>
         </AnimatePresence>

@@ -16,7 +16,7 @@ const Features = () => {
     <>
       <PageHeader title="Our Features" bgImage={sectionbanner} />
 
-      <div className="features px-[2%] sm:px-[8%] lg:px-[10%] py-[8%] md:py-[12%] bg-white">
+      <div className="features px-[2%] sm:px-[8%] lg:px-[10%] py-[8%] md:py-[12%] xl:py-[5%] bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 text-center lg:text-left">
             <h2 className="text-4xl lg:text-6xl font-bold font-unbounded text-prim-dark mb-6">

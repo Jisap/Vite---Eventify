@@ -418,7 +418,7 @@ const SpeakersDetails = () => {
         breadcrumbTitle={speaker.name}
       />
 
-      <div className="px-[5%] lg:px-[10%] py-[8%] md:py-[10%]">
+      <div className="px-[5%] lg:px-[10%] py-[10%] md:py-[10%]">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section con GSAP */}
           <div ref={heroRef} className="flex flex-col xl:flex-row gap-16 items-start mb-24">
