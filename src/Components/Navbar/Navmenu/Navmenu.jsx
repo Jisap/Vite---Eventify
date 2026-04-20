@@ -52,7 +52,7 @@ const Navmenu = ({ menuOpen, toggleMenu }) => {
             </li>
 
             <li>
-              <Link to="/schedules/global-hr-excellence-workshop" className='block px-4 py-2 hover:bg-black transition-colors duration-300 hover:text-white'>
+              <Link to="/schedules/creative-entrepreneurship-forum" className='block px-4 py-2 hover:bg-black transition-colors duration-300 hover:text-white'>
                 Schedules Details
               </Link>
             </li>
