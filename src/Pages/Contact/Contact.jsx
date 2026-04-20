@@ -2,7 +2,7 @@ import React from 'react'
 import PageHeader from '../../Components/PageHeader/PageHeader'
 import Mainbtn from '../../Components/Buttons/Mainbtn'
 
-const contactimg = "../../Images/contact-us-img.jpg"
+const contactimg = "/Images/contact-us-img.jpg"
 
 
 
@@ -26,7 +26,7 @@ const Contact = () => {
             <span className='absolute top-0 left-0 bg-black/20 w-full h-full'></span>
           </div>
 
-          <form className='space-y-6 w-full xl:w-[55%] p-3 sm:p-5 lg:p-10'>
+          <form onSubmit={(e) => e.preventDefault()} className='space-y-6 w-full xl:w-[55%] p-3 sm:p-5 lg:p-10'>
             <span className="flex items-center bg-prim w-fit rounded-full text-white pe-3 text-sm md:text-md font-medium mb-3">
               <img
                 src="/Images/Index/About/icon-marquee.svg"
@@ -39,6 +39,55 @@ const Contact = () => {
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">
               Get in touch with our team anytime today
             </h2>
+
+            <p className="text-gray-500 text-sm md:text-lg">
+              Our team is always here to listen, support, and guide you. Whether you have questions,
+              need assistance, or want to discuss your next project or event.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
+              <div className="flex flex-col space-y-2">
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-prim focus:ring-4 focus:ring-prim/10 outline-none transition-all duration-300 bg-white placeholder:text-gray-400 font-sen"
+                  required
+                />
+              </div>
+              <div className="flex flex-col space-y-2">
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-prim focus:ring-4 focus:ring-prim/10 outline-none transition-all duration-300 bg-white placeholder:text-gray-400 font-sen"
+                  required
+                />
+              </div>
+              <div className="flex flex-col space-y-2">
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-prim focus:ring-4 focus:ring-prim/10 outline-none transition-all duration-300 bg-white placeholder:text-gray-400 font-sen"
+                />
+              </div>
+              <div className="flex flex-col space-y-2">
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-prim focus:ring-4 focus:ring-prim/10 outline-none transition-all duration-300 bg-white placeholder:text-gray-400 font-sen"
+                />
+              </div>
+              <div className="flex flex-col space-y-2 md:col-span-2">
+                <textarea
+                  rows="4"
+                  placeholder="Your Message..."
+                  className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-prim focus:ring-4 focus:ring-prim/10 outline-none transition-all duration-300 bg-white placeholder:text-gray-400 font-sen resize-none"
+                  required
+                ></textarea>
+              </div>
+              <div className="md:col-span-2 pt-2">
+                <Mainbtn text="Send Your Message" className="w-full sm:w-auto px-10" />
+              </div>
+            </div>
           </form>
         </div>
       </div>
