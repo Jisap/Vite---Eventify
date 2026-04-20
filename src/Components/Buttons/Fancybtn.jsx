@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react'
 import styles from '../Buttons/Fancybtn.module.css'
 import { Link } from 'react-router-dom'
 
-const Fancybtn = ({ toggleMenu, onFancyClick }) => {
+const Fancybtn = ({ toggleMenu, onFancyClick, scrolled }) => {
   return (
     <>
       <div className='flex items-center gap-5'>
@@ -11,7 +11,7 @@ const Fancybtn = ({ toggleMenu, onFancyClick }) => {
           <button
             onClick={onFancyClick}
             className={`
-            ${styles.btn} ${styles.Fancybtn} border! border-gray-50/20!
+            ${styles.btn} ${styles.Fancybtn} border! ${scrolled ? 'border-prim/20' : 'border-gray-50/20'}!
           `}>
             <span>
               Join The Conference

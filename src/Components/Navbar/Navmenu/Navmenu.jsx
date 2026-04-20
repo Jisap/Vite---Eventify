@@ -2,13 +2,19 @@ import { Icon } from '@iconify/react';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
-const Navmenu = ({ menuOpen, toggleMenu }) => {
+const Navmenu = ({ menuOpen, toggleMenu, scrolled }) => {
 
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <ul className='lg:flex hidden items-center gap-4 text-white'>
+      <ul className={`
+        lg:flex hidden items-center gap-4 transition-colors 
+        ${scrolled
+          ? 'text-gray-900'
+          : 'text-white'}
+        `}
+      >
         <li>
           <Link to="/" className="hover:bg-black hover:text-white px-3 py-2 rounded-sm transition-colors">
             Home
