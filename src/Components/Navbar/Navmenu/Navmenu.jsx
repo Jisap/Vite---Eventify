@@ -108,102 +108,142 @@ const Navmenu = ({ menuOpen, toggleMenu, scrolled }) => {
         </li>
       </ul>
 
+      {/* Backdrop overlay */}
       <div
         onClick={toggleMenu}
         className={`
-          fixed top-0 left-0 bg-black/40 z-30 transition-opacity duration-500 
+          fixed inset-0 bg-black/60 backdrop-blur-sm z-30 transition-opacity duration-500 
           ${menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}
         `}
       />
 
+      {/* Side Panel */}
       <div className={`
-        fixed top-0 left-0 h-screen w-full sm:w-[60%] bg-white z-40 px-8 py-5 transform transition-transform duration-700 ease-in-out 
+        fixed top-0 left-0 h-screen w-full sm:w-[400px] bg-prim-dark z-50 transform transition-transform duration-700 cubic-bezier(0.16, 1, 0.3, 1) text-white flex flex-col justify-between
         ${menuOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
-        <div className='flex justify-end mb-5'>
-          <Icon
-            icon="material-symbols-light:close"
-            width="30"
-            height="30"
-            className='bg-prim text-white cursor-pointer'
-            onClick={toggleMenu}
-          />
-        </div>
-
-        <ul className='flex flex-col gap4'>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About us</Link></li>
-          <li><Link to="/schedules">Schedules</Link></li>
-          <li><Link to="/blogs">Blog</Link></li>
-          <li className='relative'>
-            <span
-              onClick={() => setOpen(prev => !prev)}
-              className='cursor-pointer hover:bg-prim hover:text-white rounded-sm transition-colors flex items-center'
+        {/* Header mobile menu */}
+        <div>
+          <div className='flex justify-between items-center px-8 py-6 border-b border-white/10 mb-8'>
+            <div className='text-xl font-unbounded font-medium'>
+              Menu
+            </div>
+            <div
+              onClick={toggleMenu}
+              className='w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-prim transition-colors rounded-full cursor-pointer'
             >
-              Pages
               <Icon
-                icon={open ? "ep:arrow-up-bold" : "ep-arrow-down-bold"}
-                width="16"
-                height="16"
-                className='transition-transform duration-300 ms-2'
+                icon="material-symbols-light:close"
+                width="28"
+                height="28"
               />
-            </span>
+            </div>
+          </div>
 
-            <ul className={`
-                absolute left-0 top-full mt-2 w-56 bg-white sm:shadow-lg rounded-md duration-300 z-50
-                ${open ? 'opacity-100 visible' : 'opacity-0 invisible'}
-              `}>
-              <li>
-                <Link to="/features" className='block'>
-                  Features
-                </Link>
+          <nav className='px-8'>
+            <ul className='flex flex-col gap-2'>
+              {[
+                { to: "/", label: "Home", icon: "solar:home-2-linear" },
+                { to: "/about", label: "About Us", icon: "solar:info-circle-linear" },
+                { to: "/schedules", label: "Schedules", icon: "solar:calendar-calendar-linear" },
+                { to: "/blogs", label: "Blog", icon: "solar:document-text-linear" },
+              ].map((item, index) => (
+                <li
+                  key={index}
+                  className={`transform transition-all duration-500 border-b border-white/5 pb-2 ${menuOpen ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  <Link
+                    to={item.to}
+                    onClick={toggleMenu}
+                    className='flex items-center gap-4 py-3 text-lg font-medium hover:text-prim transition-colors group'
+                  >
+                    <Icon icon={item.icon} width="22" className='text-prim group-hover:scale-110 transition-transform' />
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+
+              {/* Accordion Pages */}
+              <li
+                className={`transform transition-all duration-500 border-b border-white/5 pb-2 ${menuOpen ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}
+                style={{ transitionDelay: `400ms` }}
+              >
+                <div
+                  onClick={() => setOpen(!open)}
+                  className='flex items-center justify-between py-3 text-lg font-medium cursor-pointer hover:text-prim transition-colors group'
+                >
+                  <div className='flex items-center gap-4'>
+                    <Icon icon="solar:layers-linear" width="22" className='text-prim group-hover:scale-110 transition-transform' />
+                    Pages
+                  </div>
+                  <Icon
+                    icon={open ? "ep:arrow-up-bold" : "ep:arrow-down-bold"}
+                    width="14"
+                    className={`transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
+                  />
+                </div>
+
+                <div className={`
+                    overflow-hidden transition-all duration-300 bg-white/5 rounded-lg px-4
+                    ${open ? 'max-h-[500px] py-4 mt-2' : 'max-h-0'}
+                  `}>
+                  {[
+                    { to: "/features", label: "Features" },
+                    { to: "/schedules/global-hr-excellence-workshop", label: "Schedules Details" },
+                    { to: "/blogs/1", label: "Blog Details" },
+                    { to: "/speakers", label: "Speakers" },
+                    { to: "/pricingplan", label: "Pricing Plan" },
+                    { to: "/imagegallery", label: "Image Gallery" },
+                    { to: "/faqs", label: "FAQs" },
+                    { to: "/page404", label: "Page 404" },
+                  ].map((sub, sIndex) => (
+                    <Link
+                      key={sIndex}
+                      to={sub.to}
+                      onClick={toggleMenu}
+                      className='block py-2 text-gray-400 hover:text-white transition-colors'
+                    >
+                      {sub.label}
+                    </Link>
+                  ))}
+                </div>
               </li>
 
-              <li>
-                <Link to="/schedules/global-hr-excellence-workshop" className='block'>
-                  Schedules Details
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/blogs/1" className='block'>
-                  Blog Details
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/speakers/1" className='block'>
-                  Speaker Details
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/pricingplan" className='block'>
-                  Pricing Plan
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/imagegallery" className='block'>
-                  Image Gallery
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/faqs" className='block'>
-                  Faqs
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/page404" className='block'>
-                  Page 404
+              <li
+                className={`transform transition-all duration-500 ${menuOpen ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'}`}
+                style={{ transitionDelay: `500ms` }}
+              >
+                <Link
+                  to="/contact"
+                  onClick={toggleMenu}
+                  className='flex items-center gap-4 py-3 text-lg font-medium hover:text-prim transition-colors group'
+                >
+                  <Icon icon="solar:letter-linear" width="22" className='text-prim group-hover:scale-110 transition-transform' />
+                  Contact
                 </Link>
               </li>
             </ul>
-          </li>
-          <li><Link to="/contact">Contact</Link></li>
-        </ul>
+          </nav>
+        </div>
+
+        {/* Footer mobile menu */}
+        <div className={`
+          p-8 border-t border-white/10 transform transition-all duration-1000 
+          ${menuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}
+        `}>
+          <div className='flex gap-4 mb-6'>
+            {['ri:facebook-fill', 'ri:twitter-x-fill', 'ri:instagram-line', 'ri:linkedin-fill'].map((social, idx) => (
+              <a key={idx} href="#" className='w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-prim hover:scale-110 transition-all'>
+                <Icon icon={social} width="20" />
+              </a>
+            ))}
+          </div>
+          <p className='text-sm text-gray-500'>
+            © 2026 Eventify. <br />
+            Join the tech revolution.
+          </p>
+        </div>
       </div>
     </>
   )
