@@ -1,18 +1,26 @@
 import { Icon } from "@iconify/react"
 import { Link } from "react-router-dom"
-import { useState } from "react"
+import { useLayoutEffect, useRef, useState } from "react"
 import Circletext from "../../Circletext/Circletext"
 import Mainbtn from "../../Buttons/Mainbtn"
-
-
+import { revealLeft, revealUp } from "../../../utils/gsapAnimations"
+import { gsap } from "gsap"
 
 const AboutComponent = () => {
-
   const [active, setActive] = useState("mission")
+  const sectionRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      revealLeft(".about-image")
+      revealUp(".about-content")
+    }, sectionRef)
+    return () => ctx.revert()
+  }, [])
 
   return (
     <>
-      <div className='about px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] flex items-center justify-between flex-col lg:flex-row lg:gap-20'>
+      <div ref={sectionRef} className='about px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] flex items-center justify-between flex-col lg:flex-row lg:gap-20'>
         <div className='about-image lg:w-1/2 w-full relative'>
           <div className='glass-effect relative overflow-hidden rounded-xl'>
             <img src="/Images/Index/About/about-us-image.jpg" alt="about-image" className="w-full rounded-xl" />

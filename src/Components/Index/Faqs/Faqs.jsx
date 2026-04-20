@@ -1,16 +1,30 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import faqData from "../../../Data/Faqs.json"
 import { Icon } from "@iconify/react"
+import { revealLeft, revealUp } from "../../../utils/gsapAnimations"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Faqs = () => {
   const [openIndex, setOpenIndex] = useState(0);
+  const sectionRef = useRef(null)
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      revealLeft(".faqs-image")
+      revealUp(".faq-content")
+    }, sectionRef)
+    return () => ctx.revert()
+  }, [])
+
   return (
-    <section className="faqs px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] bg-white overflow-hidden">
+    <section ref={sectionRef} className="faqs px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] bg-white overflow-hidden">
       <div className="flex flex-col lg:flex-row gap-16 items-start">
         {/* Left Side: Interactive Image & Info Card */}
         <div className="faqs-image lg:w-[45%] w-full relative group">

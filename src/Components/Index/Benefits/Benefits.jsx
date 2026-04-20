@@ -1,14 +1,24 @@
-
 import Mainbtn from "../../Buttons/Mainbtn";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
-
-
+import { useLayoutEffect, useRef } from "react";
+import { revealUp, revealRight } from "../../../utils/gsapAnimations";
+import { gsap } from "gsap";
 
 const Benefits = () => {
+  const sectionRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      revealUp(".benefits-content")
+      revealRight(".benefits-image")
+    }, sectionRef)
+    return () => ctx.revert()
+  }, [])
+
   return (
     <>
-      <div className="benefits px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] flex items-flex justify-between flex-col xl:flex-row gap-10 xl:gap-20">
+      <div ref={sectionRef} className="benefits px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] flex items-flex justify-between flex-col xl:flex-row gap-10 xl:gap-20">
         <div className='benefits-content xl:w-1/2 w-full'>
           <span className="flex items-center bg-prim w-fit  rounded-full text-white pe-3 text-sm md:text-md font-medium mb-3">
             <img

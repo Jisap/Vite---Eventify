@@ -1,6 +1,9 @@
 import { Icon } from "@iconify/react"
 import Mainbtn from "../../Buttons/Mainbtn"
 import { Link } from "react-router-dom"
+import { useLayoutEffect, useRef } from "react"
+import { revealUp, staggerReveal } from "../../../utils/gsapAnimations"
+import { gsap } from "gsap"
 
 const pricingPlans = [
   {
@@ -53,8 +56,17 @@ const pricingPlans = [
 ]
 
 const Pricing = () => {
+  const sectionRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      revealUp(".pricing-content")
+      staggerReveal(".pricing-wrap > div")
+    }, sectionRef)
+    return () => ctx.revert()
+  }, [])
   return (
-    <section className="pricing px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] relative overflow-hidden bg-white">
+    <section ref={sectionRef} className="pricing px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] relative overflow-hidden bg-white">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-prim/5 rounded-full blur-[120px] -z-1" />
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-prim/10 rounded-full blur-[100px] -z-1" />

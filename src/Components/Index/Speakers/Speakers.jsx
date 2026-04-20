@@ -1,11 +1,23 @@
 import { PhoneCall } from "lucide-react"
 import SpeakersCard from "../../SpeakersCard/SpeakersCard"
 import speakerData from "../../../Data/Speakers.json"
+import { useLayoutEffect, useRef } from "react"
+import { revealUp, staggerReveal } from "../../../utils/gsapAnimations"
+import { gsap } from "gsap"
 
 const Speakers = () => {
+  const sectionRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      revealUp(".features-content")
+      staggerReveal(".speakers-wrap > div")
+    }, sectionRef)
+    return () => ctx.revert()
+  }, [])
   return (
     <>
-      <div className="features px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] relative space-y-10 lg:space-y-20">
+      <div ref={sectionRef} className="features px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] relative space-y-10 lg:space-y-20">
 
         <div className="features-content text-center mx-auto w-full max-w-4xl z-10 relative">
           <span className="flex items-center bg-prim w-fit mx-auto rounded-full text-white pe-3 text-sm md:text-md font-medium mb-3 shadow-lg">

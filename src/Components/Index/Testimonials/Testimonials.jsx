@@ -5,12 +5,25 @@ import { Autoplay, Navigation } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/pagination"
 import { Link } from "react-router-dom"
+import { useLayoutEffect, useRef } from "react"
+import { revealUp, staggerReveal } from "../../../utils/gsapAnimations"
+import { gsap } from "gsap"
 
 
 
 
 
 const Testimonials = () => {
+  const sectionRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      revealUp(".testimonials-content")
+      revealUp(".testimonials-main")
+      revealUp(".brands")
+    }, sectionRef)
+    return () => ctx.revert()
+  }, [])
 
   const testimonials = [
     {
@@ -50,7 +63,7 @@ const Testimonials = () => {
 
   return (
     <>
-      <div className="testimonials px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] bg-prim-dark relative space-y-10 lg:space-y-20">
+      <div ref={sectionRef} className="testimonials px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] bg-prim-dark relative space-y-10 lg:space-y-20">
         <div className="absolute top-0 left-0 w-full h-full">
           <img
             src="/Images/bg-image.png"

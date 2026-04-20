@@ -1,4 +1,6 @@
-import { useState } from "react"
+import { useLayoutEffect, useRef, useState } from "react"
+import { revealUp, staggerReveal } from "../../../utils/gsapAnimations"
+import { gsap } from "gsap"
 
 const events = {
   day1: [
@@ -98,10 +100,19 @@ const events = {
 const Events = () => {
 
   const [activeDay, setActiveDay] = useState("day1")
+  const sectionRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      revealUp(".features-content")
+      staggerReveal(".event-item")
+    }, sectionRef)
+    return () => ctx.revert()
+  }, [])
 
   return (
     <>
-      <div className="features px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] bg-prim-dark relative space-y-10 lg:space-y-20">
+      <div ref={sectionRef} className="features px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] bg-prim-dark relative space-y-10 lg:space-y-20">
         <div className="absolute top-0 left-0 w-full h-full">
           <img
             src="/Images/bg-image.png"

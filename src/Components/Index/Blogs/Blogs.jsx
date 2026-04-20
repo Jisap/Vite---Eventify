@@ -2,10 +2,22 @@ import { Icon } from "@iconify/react"
 import { Link } from "react-router-dom"
 import BlogsData from "../../../Data/Blog.json"
 import BlogCard from "../../BlogCard/BlogCard"
+import { useLayoutEffect, useRef } from "react"
+import { revealUp } from "../../../utils/gsapAnimations"
+import { gsap } from "gsap"
 
 
 
 const Blogs = () => {
+  const sectionRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      revealUp(".blog-conten")
+      revealUp(".blog-main")
+    }, sectionRef)
+    return () => ctx.revert()
+  }, [])
 
   const MarqueeIcon = "/Images/Index/About/icon-marquee.svg"
   const arrowImg = "/Images/Index/Blogs/arrow-icon.svg"
@@ -18,7 +30,7 @@ const Blogs = () => {
 
   return (
     <>
-      <div className='blog px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] relative space-y-10 lg:space-y-20'>
+      <div ref={sectionRef} className='blog px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] relative space-y-10 lg:space-y-20'>
         <div className='blog-conten text-center mx-auto max-w-full lg:max-w-180 z-1 relative'>
           <span className='flex items-center bg-prim w-fit mx-auto rounded-full text-white pe-3 text-sm md:text-md font-medium mb-3'>
             <img src={MarqueeIcon} alt="marquee-icon" className='p-2 w-7 h-7 md:w-8 md:h-8' />

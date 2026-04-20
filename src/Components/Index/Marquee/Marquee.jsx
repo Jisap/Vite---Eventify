@@ -1,11 +1,20 @@
 import { Autoplay } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
-
-
-
+import { useLayoutEffect, useRef } from "react"
+import { revealUp } from "../../../utils/gsapAnimations"
+import { gsap } from "gsap"
 
 const Marquee = () => {
+  const sectionRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      revealUp(sectionRef.current)
+    }, sectionRef)
+    return () => ctx.revert()
+  }, [])
+
 
   const items = [
     "Workshop Alerts",
@@ -27,7 +36,7 @@ const Marquee = () => {
 
   return (
     <>
-      <div className="w-full bg-prim text-white py-5 overflow-hidden">
+      <div ref={sectionRef} className="w-full bg-prim text-white py-5 overflow-hidden">
         <Swiper
           modules={[Autoplay]}
           slidesPerView="auto"

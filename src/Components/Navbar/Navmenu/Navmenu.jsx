@@ -108,7 +108,7 @@ const Navmenu = ({ menuOpen, toggleMenu, scrolled }) => {
         </li>
       </ul>
 
-      {/* Backdrop overlay */}
+      {/* Movil Backdrop overlay */}
       <div
         onClick={toggleMenu}
         className={`
@@ -145,7 +145,7 @@ const Navmenu = ({ menuOpen, toggleMenu, scrolled }) => {
               {[
                 { to: "/", label: "Home", icon: "solar:home-2-linear" },
                 { to: "/about", label: "About Us", icon: "solar:info-circle-linear" },
-                { to: "/schedules", label: "Schedules", icon: "solar:calendar-calendar-linear" },
+                { to: "/schedules", label: "Schedules", icon: "solar:calendar-outline" },
                 { to: "/blogs", label: "Blog", icon: "solar:document-text-linear" },
               ].map((item, index) => (
                 <li

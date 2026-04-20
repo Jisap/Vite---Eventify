@@ -1,6 +1,7 @@
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState, useRef, useLayoutEffect } from "react"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
+import { revealUp } from "../../../utils/gsapAnimations"
 
 const items = [
   { title: "Interactive Panel Discussions", desc: "Build meaningful relationships with industry leaders, innovators", img: "/Images/Index/Highlights/highlights-image01.jpg" },
@@ -12,6 +13,13 @@ const items = [
 const Highlights = () => {
   const [activeIndex, setActiveIndex] = useState(0)
   const container = useRef()
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+        revealUp(container.current)
+    }, container)
+    return () => ctx.revert()
+  }, [])
 
   useEffect(() => {
     items.forEach(item => {

@@ -1,8 +1,21 @@
 import featureData from "../../../Data/Features.json"
 import FeatureCard from "../../FeatureCard/FeatureCard"
 import { Icon } from "@iconify/react"
+import { useLayoutEffect, useRef } from "react"
+import { revealUp, staggerReveal } from "../../../utils/gsapAnimations"
+import { gsap } from "gsap"
 
 const Features = () => {
+  const sectionRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      revealUp(".features-content")
+      staggerReveal(".grid > div")
+    }, sectionRef)
+    return () => ctx.revert()
+  }, [])
+
   return (
     <>
       <div className="features px-[2%] sm:px-[8%] lg:px-[10%] py-[6%] md:py-[10%] bg-prim-dark relative space-y-10 lg:space-y-20">

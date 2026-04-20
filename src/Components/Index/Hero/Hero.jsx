@@ -1,14 +1,23 @@
 import { Icon } from "@iconify/react"
 import Mainbtn from "../../Buttons/Mainbtn"
 import { Link } from "react-router-dom"
-
-
-
+import { useLayoutEffect, useRef } from "react"
+import { heroReveal } from "../../../utils/gsapAnimations"
+import { gsap } from "gsap"
 
 const Hero = () => {
+  const heroRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      heroReveal(heroRef.current)
+    }, heroRef)
+    return () => ctx.revert()
+  }, [])
+
   return (
     <>
-      <div className='hero-bg h-screen w-full px-[2%] sm:px-[8%] lg:px-[10%]'>
+      <div ref={heroRef} className='hero-bg h-screen w-full px-[2%] sm:px-[8%] lg:px-[10%]'>
         <div className='hero-content lg:max-w-6xl mx-auto text-center h-full flex flex-col justify-center items-center z-10 relative'>
           <div className='flex items-center px-2 py-1 rounded-full bg-white/20 backdrop-blur-md text-white mb-3'>
             <div className="flex items-center authro-images">

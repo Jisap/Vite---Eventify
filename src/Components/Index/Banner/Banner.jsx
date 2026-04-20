@@ -1,7 +1,10 @@
 
-import { useEffect, useRef } from "react"
+import { useLayoutEffect, useRef } from "react"
 import { Icon } from "@iconify/react"
 import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Banner = ({
   image,
@@ -14,7 +17,7 @@ const Banner = ({
 }) => {
   const containerRef = useRef(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".banner-item", {
         y: 40,
@@ -22,6 +25,11 @@ const Banner = ({
         duration: 1,
         ease: "power3.out",
         stagger: 0.15,
+        scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
       })
 
       gsap.from(".play-btn", {
@@ -30,6 +38,11 @@ const Banner = ({
         duration: 0.8,
         delay: 0.3,
         ease: "back.out(1.7)",
+        scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
       })
     }, containerRef)
 
