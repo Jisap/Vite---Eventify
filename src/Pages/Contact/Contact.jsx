@@ -25,6 +25,21 @@ const Contact = () => {
             />
             <span className='absolute top-0 left-0 bg-black/20 w-full h-full'></span>
           </div>
+
+          <form className='space-y-6 w-full xl:w-[55%] p-3 sm:p-5 lg:p-10'>
+            <span className="flex items-center bg-prim w-fit rounded-full text-white pe-3 text-sm md:text-md font-medium mb-3">
+              <img
+                src="/Images/Index/About/icon-marquee.svg"
+                alt="marquee-icon"
+                className="p-2 w-7 h-7 md:w-8 md:h-8"
+              />
+              Contact Us
+            </span>
+
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">
+              Get in touch with our team anytime today
+            </h2>
+          </form>
         </div>
       </div>
     </>
