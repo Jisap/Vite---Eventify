@@ -4,16 +4,29 @@ import SpeakersCard from '../../Components/SpeakersCard/SpeakersCard'
 import speakerData from "../../Data/Speakers.json"
 import Highlights from "../../Components/Index/Highlights/Highlights"
 import Faqs from "../../Components/Index/Faqs/Faqs"
+import { useLayoutEffect, useRef } from 'react'
+import { revealUp, staggerReveal } from '../../utils/gsapAnimations'
+import { gsap } from 'gsap'
 
 const sectionbanner = "/Images/section-banner.jpg"
 
 const Speakers = () => {
+  const sectionRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+        revealUp(".speakers-header")
+        staggerReveal(".speakers-wrap > div")
+    }, sectionRef)
+    return () => ctx.revert()
+  }, [])
+
   return (
-    <>
+    <div ref={sectionRef}>
       <PageHeader title="Our Speakers" bgImage={sectionbanner} />
 
       <div className='px-[2%] sm:px-[8%] lg:px-[10%] py-[10%] md:py-[12%] xl:py-[8%]'>
-        <div className="mb-16 text-center lg:text-left animate-fade-in-up">
+        <div className="speakers-header mb-16 text-center lg:text-left">
           <h2 className="text-4xl lg:text-6xl font-bold font-unbounded text-prim-dark mb-6">
             Expert speakers <br /> <span className="text-prim">sharing insights</span>
           </h2>
@@ -37,7 +50,7 @@ const Speakers = () => {
 
       <Highlights />
       <Faqs />
-    </>
+    </div>
   )
 }
 

@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import PageHeader from '../../Components/PageHeader/PageHeader'
 import Mainbtn from '../../Components/Buttons/Mainbtn'
+import { revealLeft, revealUp } from '../../utils/gsapAnimations'
+import { gsap } from 'gsap'
 
 const contactimg = "/Images/contact-us-img.jpg"
 
 
 
 const Contact = () => {
+  const sectionRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+        revealLeft(".contact-image")
+        revealUp("form")
+    }, sectionRef)
+    return () => ctx.revert()
+  }, [])
+
   return (
-    <>
+    <div ref={sectionRef}>
       <PageHeader
         title="Contact Us"
         breadcrumbTitle="Contact"
@@ -95,7 +107,7 @@ const Contact = () => {
       <div className='contact-map h-100 lg:h-150 w-full'>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58156.08203067076!2d-3.7155974393020905!3d40.4192166440563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid!5e1!3m2!1ses!2ses!4v1776684104245!5m2!1ses!2ses" width="100%" height="100%"></iframe>
       </div>
-    </>
+    </div>
   )
 }
 

@@ -10,6 +10,9 @@ import Speakers from "../../Components/Index/Speakers/Speakers"
 import Banner from "../../Components/Index/Banner/Banner"
 import Testimonials from "../../Components/Index/Testimonials/Testimonials"
 import Faqs from "../../Components/Index/Faqs/Faqs"
+import { useLayoutEffect, useRef } from "react"
+import { revealUp, staggerReveal, revealLeft } from "../../utils/gsapAnimations"
+import { gsap } from "gsap"
 
 
 const approachbg = "/Images/bg-image.png"
@@ -80,8 +83,20 @@ const approachData = [
 
 
 const About = () => {
+  const sectionRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+        revealUp(".approach-content")
+        staggerReveal(".approach-card")
+        revealLeft(".milestones-image")
+        revealUp(".milestones-content")
+    }, sectionRef)
+    return () => ctx.revert()
+  }, [])
+
   return (
-    <>
+    <div ref={sectionRef}>
       <PageHeader title="About Us" bgImage={sectionbanner} />
 
       <AboutComponent />
@@ -153,11 +168,11 @@ const About = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-8">
-          <div className="w-full lg:w-1/2 z-2">
+          <div className="w-full lg:w-1/2 z-2 milestones-image">
             <img src={achievementsImg} alt="achievements-img" className="rounded-2xl w-full h-full object-cover" />
           </div>
 
-          <div className="w-full lg:w-1/2 z-2">
+          <div className="w-full lg:w-1/2 z-2 milestones-content">
             <span className="flex items-center bg-prim w-fit rounded-full text-white pe-3 text-sm md:text-md font-medium mb-6">
               <img src={MarqueeIcon} alt="marquee-icon" className="p-2 w-7 h-7 md:w-8 md:h-8" />
               Our Achievements
@@ -222,7 +237,7 @@ const About = () => {
       <Testimonials />
 
       <Faqs />
-    </>
+    </div>
   )
 }
 

@@ -3,7 +3,9 @@ import PageHeader from '../../Components/PageHeader/PageHeader'
 import Faqs from '../../Components/Index/Faqs/Faqs'
 import { Icon } from '@iconify/react'
 import Logo from '../../Components/Navbar/Logo/Logo'
-import { useRef, useState } from 'react'
+import { useRef, useState, useLayoutEffect } from 'react'
+import { revealUp, revealLeft } from '../../utils/gsapAnimations'
+import { gsap } from 'gsap'
 
 const sidebarimg = "/Images/sidebar-image.jpg"
 const faqicon = "/Images/FaqsPage/faqs-icon.svg"
@@ -133,8 +135,18 @@ const FaqsPage = () => {
     })
   }
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+        revealLeft(".faq-sidebar")
+        revealUp(".faq-section")
+    }, mainRef)
+    return () => ctx.revert()
+  }, [])
+
+  const mainRef = useRef(null)
+
   return (
-    <div className="bg-white min-h-screen">
+    <div ref={mainRef} className="bg-white min-h-screen">
       <PageHeader
         title="FAQ Center"
         breadcrumbTitle="Frequently Asked Questions"
@@ -143,7 +155,7 @@ const FaqsPage = () => {
 
       <div className='px-[5%] lg:px-[10%] py-20 lg:py-32 flex justify-between items-start flex-col xl:flex-row gap-16'>
         {/* Sidebar */}
-        <div className='w-full xl:w-[30%] space-y-10 relative xl:sticky xl:top-32 h-full'>
+        <div className='faq-sidebar w-full xl:w-[30%] space-y-10 relative xl:sticky xl:top-32 h-full'>
           <div className='info w-full bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-100'>
             <div className="bg-prim p-6 text-white">
               <h4 className="text-xl font-bold flex items-center gap-2">
@@ -207,7 +219,7 @@ const FaqsPage = () => {
         {/* FAQ Content */}
         <div className='w-full xl:w-[70%] space-y-20'>
           {FAQ_DATA.map((section) => (
-            <div key={section.id} ref={sectionRefs[section.refName]} className="scroll-mt-32">
+            <div key={section.id} ref={sectionRefs[section.refName]} className="faq-section scroll-mt-32">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-2 h-10 bg-prim rounded-full"></div>
                 <h3 className='text-3xl lg:text-4xl font-bold font-unbounded text-prim-dark'>
