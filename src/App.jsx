@@ -21,6 +21,7 @@ import PricingPlan from './Pages/PricingPlan/PricingPlan'
 import FaqsPage from './Pages/Faqs/Faqs'
 import ImageGallery from './Pages/ImageGallery/ImageGallery'
 import Contact from './Pages/Contact/Contact'
+import Page404 from './Pages/Page404/Page404'
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -76,6 +77,7 @@ const App = () => {
               <Route path="/faqs" element={<FaqsPage />} />
               <Route path="/imagegallery" element={<ImageGallery />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/page404" element={<Page404 />} />
             </Routes>
           </motion.div>
         </AnimatePresence>
